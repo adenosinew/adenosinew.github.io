@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Documentation for Hugo Learn Theme</title>
+    <title>aboutme on Documentation for Hugo Learn Theme</title>
     <link>/</link>
-    <description>Recent content on Documentation for Hugo Learn Theme</description>
+    <description>Recent content in aboutme on Documentation for Hugo Learn Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sat, 09 Feb 2019 23:53:32 -0500</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Collections</title>
+      <link>/me/collections/</link>
+      <pubDate>Sun, 10 Feb 2019 21:52:45 -0500</pubDate>
+      
+      <guid>/me/collections/</guid>
+      <description> Collection  Don&amp;rsquo;t do something you&amp;rsquo;ll lie to yourself later. Live in a matter you can bear to remember accurately.
+It is fruitless to wish you had started years ago. In the future you will wish you had started now. Don&amp;rsquo;t wish. Act.
+&amp;ldquo;Why did this happen to me?&amp;rdquo; Why not? Events will never conform perfectly to your desires. Move forward.
+ </description>
+    </item>
     
   </channel>
 </rss>

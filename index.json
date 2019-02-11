@@ -1,10 +1,10 @@
 [
 {
 	"uri": "/me/",
-	"title": "Me",
+	"title": "me",
 	"tags": [],
 	"description": "",
-	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
+	"content": " Chapter Some Chapter title Lorem Ipsum.\n"
 },
 {
 	"uri": "/datascience/",
@@ -28,11 +28,18 @@
 	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
 },
 {
-	"uri": "/",
-	"title": "",
+	"uri": "/me/collections/",
+	"title": "Collections",
 	"tags": [],
 	"description": "",
-	"content": " About Me and this site "
+	"content": " Collection  Don\u0026rsquo;t do something you\u0026rsquo;ll lie to yourself later. Live in a matter you can bear to remember accurately.\nIt is fruitless to wish you had started years ago. In the future you will wish you had started now. Don\u0026rsquo;t wish. Act.\n\u0026ldquo;Why did this happen to me?\u0026rdquo; Why not? Events will never conform perfectly to your desires. Move forward.\n "
+},
+{
+	"uri": "/",
+	"title": "aboutme",
+	"tags": [],
+	"description": "",
+	"content": " About Me and this site My name is Adenosine. And this is my site to record my learning and thinking process.\n4 years ago, I was a undergraduate student majored in the Plant Genetics. 2 years ago, I was a Applied Math and Statistics master student. And now, I am a data scientist and developer in Cloud Computing. And I found switching between different area is fantastic experience, and it also give me different perspectives to look at questions.\nAs a engineer, I always believe \u0026ldquo;quantity\u0026rdquo; is the only factor that make difference. When you stack up ideas and work, everything changes. Such as nucleic acid sequence, only needs A,C,G,T, it can generate billions of forms of life. And in the world of computer, 1 and 0 carry enormous information in a light speed.\n\u0026ldquo;How could I make difference?\u0026rdquo; I asked myself. That\u0026rsquo;s why I started publish my thinking and works on this site. My goal is update this site once a week at the beginning. When I am more familiar with english writing and get more time, I am going to update it more often.\nAdenosine Feb 10th 2019\n"
 },
 {
 	"uri": "/categories/",

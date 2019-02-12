@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>/cs/docker_useful/</loc>
+    <lastmod>2019-02-11T22:00:25-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/me/collections/</loc>
     <lastmod>2019-02-10T21:52:45-05:00</lastmod>
   </url>
@@ -30,6 +35,46 @@
   <url>
     <loc>/</loc>
     <lastmod>2019-02-09T23:53:32-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cs/10_basic_commands_for_linux_performance_detection/</loc>
+  </url>
+  
+  <url>
+    <loc>/cs/cli_best_practice/</loc>
+  </url>
+  
+  <url>
+    <loc>/cs/readme/</loc>
+  </url>
+  
+  <url>
+    <loc>/cs/raspberry_pi_3_nas/</loc>
+  </url>
+  
+  <url>
+    <loc>/cs/cli_improved/</loc>
+  </url>
+  
+  <url>
+    <loc>/cs/commands_for_data_scientist/</loc>
+  </url>
+  
+  <url>
+    <loc>/cs/common_commands_useful/</loc>
+  </url>
+  
+  <url>
+    <loc>/cs/git_useful/</loc>
+  </url>
+  
+  <url>
+    <loc>/cs/ssh_useful/</loc>
+  </url>
+  
+  <url>
+    <loc>/cs/vim_useful/</loc>
   </url>
   
   <url>

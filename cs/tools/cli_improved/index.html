@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/apple-icon-180x180.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/apple-icon-180x180.png" type="image/x-icon" />
-    <title>me :: Documentation for Hugo Learn Theme</title>
+    <title> :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1550083433" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/me/">
+  <body class="" data-url="/cs/tools/cli_improved/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -79,8 +79,8 @@
   
     
     <li data-nav-id="/me/" title="me" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/me/">
@@ -185,7 +185,7 @@
   
     
     <li data-nav-id="/cs/" title="Cs" class="dd-item 
-        
+        parent
         
         
         ">
@@ -214,7 +214,7 @@
   
     
     <li data-nav-id="/cs/tools/" title="Tools" class="dd-item 
-        
+        parent
         
         
         ">
@@ -335,7 +335,7 @@
  
   
     
-      <li data-nav-id="/cs/tools/cli_improved/" title="" class="dd-item ">
+      <li data-nav-id="/cs/tools/cli_improved/" title="" class="dd-item active">
         <a href="/cs/tools/cli_improved/">
         
         <i class="fas fa-check read-icon"></i>
@@ -556,6 +556,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -566,7 +568,19 @@
             
           
           
-            <a href='/'>aboutme</a> > me
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>aboutme</a> > <a href='/cs/'>Cs</a> > <a href='/cs/tools/'>Tools</a> > 
+          
+         
+          
+         
           
          
           
@@ -575,34 +589,117 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li><a href="#better-cli-tools">Better cli tools</a>
+<ul>
+<li><a href="#ignore-alias">Ignore alias</a></li>
+<li><a href="#bat-cat">bat &gt; cat</a></li>
+<li><a href="#prettyping-ping">prettyping &gt; ping</a></li>
+<li><a href="#fzf-ctrl-r">fzf &gt; ctrl + r</a></li>
+<li><a href="#htop-top">htop &gt; top</a></li>
+<li><a href="#diff-so-fancy-diff">diff-so-fancy &gt; diff</a></li>
+<li><a href="#fd-find">fd &gt; find</a></li>
+<li><a href="#tldr-man">tldr &gt; man</a></li>
+<li><a href="#ack-ag-grep">ack || ag &gt;  grep</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1></h1>
           
 
         
 
+<div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li><a href="#better-cli-tools">Better cli tools</a>
+<ul>
+<li><a href="#ignore-alias">Ignore alias</a></li>
+<li><a href="#bat-cat">bat &gt; cat</a></li>
+<li><a href="#prettyping-ping">prettyping &gt; ping</a></li>
+<li><a href="#fzf-ctrl-r">fzf &gt; ctrl + r</a></li>
+<li><a href="#htop-top">htop &gt; top</a></li>
+<li><a href="#diff-so-fancy-diff">diff-so-fancy &gt; diff</a></li>
+<li><a href="#fd-find">fd &gt; find</a></li>
+<li><a href="#tldr-man">tldr &gt; man</a></li>
+<li><a href="#ack-ag-grep">ack || ag &gt;  grep</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
 
 
 
-<h3 id="chapter">Chapter</h3>
 
-<h1 id="some-chapter-title">Some Chapter title</h1>
+<h1 id="better-cli-tools">Better cli tools</h1>
 
-<p>Lorem Ipsum.</p>
+<h2 id="ignore-alias">Ignore alias</h2>
+
+<pre><code class="language-shell">\cat # ignore aliases named &quot;cat&quot; - explanation: https://stackoverflow.com/a/16506263/22617
+command cat # ignore functions and aliases
+</code></pre>
+
+<h2 id="bat-cat">bat &gt; cat</h2>
+
+<p><a href="https://github.com/sharkdp/bat">bat</a></p>
+
+<p>Comparing with <em>cat</em>, bat also offers highlighting, paging, line numbers and git integration.</p>
+
+<p>Installation command:</p>
+
+<pre><code class="language-shell">yaourt -S bat
+</code></pre>
+
+<h2 id="prettyping-ping">prettyping &gt; ping</h2>
+
+<h2 id="fzf-ctrl-r">fzf &gt; ctrl + r</h2>
+
+<p>In addition to searching through the history, <code>fzf</code> can also preview and open files, which is what I&rsquo;ve done in the video below:</p>
+
+<pre><code class="language-shell">alias preview=&quot;fzf --preview 'bat --color \&quot;always\&quot; {}'&quot;
+# add support for ctrl+o to open selected file in VS Code
+export FZF_DEFAULT_OPTS=&quot;--bind='ctrl-o:execute(code {})+abort'&quot;
+</code></pre>
+
+<h2 id="htop-top">htop &gt; top</h2>
+
+<ul>
+<li><code>P</code>  sort by CPU</li>
+<li><code>M</code>  sort by memory usage</li>
+<li><code>F4</code>  filter processes by string (to narrow to just &ldquo;node&rdquo; for instance)</li>
+<li><code>space</code> mark a single process so I can watch if the process is spiking</li>
+</ul>
+
+<h2 id="diff-so-fancy-diff">diff-so-fancy &gt; diff</h2>
+
+<h2 id="fd-find">fd &gt; find</h2>
+
+<h2 id="tldr-man">tldr &gt; man</h2>
+
+<h2 id="ack-ag-grep">ack || ag &gt;  grep</h2>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -634,41 +731,8 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -707,21 +771,6 @@
 
                     
                     
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                     
 
                     
@@ -741,10 +790,46 @@
             
         
                     
+            
+        
+                    
                         
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -825,6 +910,26 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -932,10 +1037,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/" title="aboutme"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/cs/tools/raspberry_pi_3_nas/" title=""> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/me/collections/" title="Collections" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cs/tools/common_commands_useful/" title="" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -966,3 +1071,4 @@
 
   </body>
 </html>
+

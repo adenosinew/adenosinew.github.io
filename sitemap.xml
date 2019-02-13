@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/cs/tools/</loc>
+    <lastmod>2019-02-13T12:24:50-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cs/webtech/</loc>
+    <lastmod>2019-02-13T12:23:19-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cs/algorithm/</loc>
+    <lastmod>2019-02-13T11:59:45-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/me/</loc>
     <lastmod>2019-02-10T00:05:45-05:00</lastmod>
   </url>
@@ -23,12 +38,12 @@
   </url>
   
   <url>
-    <loc>/cs/git_useful/</loc>
+    <loc>/cs/tools/git_useful/</loc>
     <lastmod>2019-02-11T22:00:25-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/cs/docker_useful/</loc>
+    <loc>/cs/tools/docker_useful/</loc>
     <lastmod>2019-02-11T22:00:25-05:00</lastmod>
   </url>
   
@@ -43,39 +58,35 @@
   </url>
   
   <url>
-    <loc>/cs/10_basic_commands_for_linux_performance_detection/</loc>
+    <loc>/cs/tools/10_basic_commands_for_linux_performance_detection/</loc>
   </url>
   
   <url>
-    <loc>/cs/cli_best_practice/</loc>
+    <loc>/cs/tools/cli_best_practice/</loc>
   </url>
   
   <url>
-    <loc>/cs/readme/</loc>
+    <loc>/cs/tools/raspberry_pi_3_nas/</loc>
   </url>
   
   <url>
-    <loc>/cs/raspberry_pi_3_nas/</loc>
+    <loc>/cs/tools/cli_improved/</loc>
   </url>
   
   <url>
-    <loc>/cs/cli_improved/</loc>
+    <loc>/cs/tools/common_commands_useful/</loc>
   </url>
   
   <url>
-    <loc>/cs/commands_for_data_scientist/</loc>
+    <loc>/cs/tools/ssh_useful/</loc>
   </url>
   
   <url>
-    <loc>/cs/common_commands_useful/</loc>
+    <loc>/cs/tools/vim_useful/</loc>
   </url>
   
   <url>
-    <loc>/cs/ssh_useful/</loc>
-  </url>
-  
-  <url>
-    <loc>/cs/vim_useful/</loc>
+    <loc>/datascience/commands_for_data_scientist/</loc>
   </url>
   
   <url>

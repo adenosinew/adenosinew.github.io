@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>Useful Git commands</title>
+      <link>/cs/git_useful/</link>
+      <pubDate>Mon, 11 Feb 2019 22:00:25 -0500</pubDate>
+      
+      <guid>/cs/git_useful/</guid>
+      <description>Overview:
+There are tons of tutorial of git. For those basic concepts, I am going to link to some good tutorial. This one is focusing on some real life use case. What if you encounter these errors or what if I want to do this&amp;hellip;
+Update a branch (feature) with different branch (develop) git checkout develop git pull git checkout feature git merge develop # or git rebase develop  The difference between with git rebase is that rebase keep all commits history from your branch, and that is important if your partial commits have a lot of content that can be interesting to keep.</description>
+    </item>
+    
+    <item>
       <title>Useful commands for docker</title>
       <link>/cs/docker_useful/</link>
       <pubDate>Mon, 11 Feb 2019 22:00:25 -0500</pubDate>
@@ -94,16 +105,6 @@ ICONV HEAD TR WC SPLIT SORT &amp;amp; UNIQ CUT PASTE JOIN GREP  SED AWK  </descr
       <guid>/cs/common_commands_useful/</guid>
       <description>Common Commands for linux File operations Compare two directory diff --brief -r dir1/ dir2/
 If you want to see differences for files that may not exist in either directory diff --brief -Nr dir1/ dir2</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/cs/git_useful/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/cs/git_useful/</guid>
-      <description>Useful Git command [toc]
-Update a branch (feature) with different branch (develop) git checkout develop git pull git checkout feature git merge develop # or git rebase develop  The difference between with git rebase is that rebase keep all commits history from your branch, and that is important if your partial commits have a lot of content that can be interesting to keep. This option is obligatory in some teams.</description>
     </item>
     
     <item>

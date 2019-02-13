@@ -28,6 +28,13 @@
 	"content": " Chapter X Some Chapter title Lorem Ipsum.\n"
 },
 {
+	"uri": "/cs/git_useful/",
+	"title": "Useful Git commands",
+	"tags": [],
+	"description": "",
+	"content": " Overview:\nThere are tons of tutorial of git. For those basic concepts, I am going to link to some good tutorial. This one is focusing on some real life use case. What if you encounter these errors or what if I want to do this\u0026hellip;\nUpdate a branch (feature) with different branch (develop) git checkout develop git pull git checkout feature git merge develop # or git rebase develop  The difference between with git rebase is that rebase keep all commits history from your branch, and that is important if your partial commits have a lot of content that can be interesting to keep. This option is obligatory in some teams.\nRemove grey submodule git rm --cached \u0026lt;folder_name\u0026gt; git add . git commit -m \u0026quot;\u0026lt;your_message\u0026gt;\u0026quot; git push --all  git merge TODO\nFix conflicts "
+},
+{
 	"uri": "/cs/docker_useful/",
 	"title": "Useful commands for docker",
 	"tags": [],
@@ -46,7 +53,7 @@
 	"title": "aboutme",
 	"tags": [],
 	"description": "",
-	"content": " About Me and this site My name is Adenosine. And this is my site to record my learning and thinking process.\n4 years ago, I was a undergraduate student majored in the Plant Genetics. 2 years ago, I was a Applied Math and Statistics master student. And now, I am a data scientist and developer in Cloud Computing. And I found switching between different area is fantastic experience, and it also give me different perspectives to look at questions.\nAs a engineer, I always believe \u0026ldquo;quantity\u0026rdquo; is the only factor that make difference. When you stack up ideas and work, everything changes. Such as nucleic acid sequence, only needs A,C,G,T, it can generate billions of forms of life. And in the world of computer, 1 and 0 carry enormous information in a light speed.\n\u0026ldquo;How could I make difference?\u0026rdquo; I asked myself. That\u0026rsquo;s why I started publish my thinking and works on this site. My goal is update this site once a week at the beginning. When I am more familiar with english writing and get more time, I am going to update it more often.\nGoal for 2019 I am here -\u0026gt; semi-automation -\u0026gt; full automation -\u0026gt; Intelligence\nJPG (Javascript, Python, Go) developer.  Javascript : Learning how to build a website and other web knowleage. Python : My main language. Data Science + Machine Learning Go : For dev-ops and some tasks which require high performance.  Machine Learning practioner.  General Data Science: numpy, pandas, scipy Machine Learning : scikit-learn Deep Learning : Tensorflow, Pytorch Reinforcement Learning :  Dev-ops.  Linux Docker K8s Vim  Adenosine Feb 10th 2019\n"
+	"content": " About Me and this site My name is Adenosine. And this is my site to record my learning and thinking process.\nI am using a star as my profile picture because star is some word play of my Chinese name.\n 4 years ago, I was a undergraduate student majored in the Plant Genetics. 2 years ago, I was a Applied Math and Statistics master student. And now, I am a data scientist and developer in Cloud Computing. And I found switching between different area is fantastic experience, and it also give me different perspectives to look at questions.\nAs a engineer, I always believe \u0026ldquo;quantity\u0026rdquo; is the only factor that make difference. When you stack up ideas and work, everything changes. Such as nucleic acid sequence, only needs A,C,G,T, it can generate billions of forms of life. And in the world of computer, 1 and 0 carry enormous information in a light speed.\n\u0026ldquo;How could I make difference?\u0026rdquo; I asked myself. That\u0026rsquo;s why I started publish my thinking and works on this site. My goal is update this site once a week at the beginning. When I am more familiar with english writing and get more time, I am going to update it more often.\nGoal for 2019 I am here -\u0026gt; semi-automation -\u0026gt; full automation -\u0026gt; Intelligence\nJPG (Javascript, Python, Go) developer.  Javascript : Learning how to build a website and other web knowleage. Python : My main language. Data Science + Machine Learning Go : For dev-ops and some tasks which require high performance.  Machine Learning practioner.  General Data Science: numpy, pandas, scipy Machine Learning : scikit-learn Deep Learning : Tensorflow, Pytorch Reinforcement Learning :  Dev-ops.  Linux Docker K8s Vim  Adenosine Feb 10th 2019\n"
 },
 {
 	"uri": "/cs/10_basic_commands_for_linux_performance_detection/",
@@ -96,13 +103,6 @@
 	"tags": [],
 	"description": "",
 	"content": " Common Commands for linux File operations Compare two directory diff --brief -r dir1/ dir2/\nIf you want to see differences for files that may not exist in either directory diff --brief -Nr dir1/ dir2\n"
-},
-{
-	"uri": "/cs/git_useful/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": " Useful Git command [toc]\nUpdate a branch (feature) with different branch (develop) git checkout develop git pull git checkout feature git merge develop # or git rebase develop  The difference between with git rebase is that rebase keep all commits history from your branch, and that is important if your partial commits have a lot of content that can be interesting to keep. This option is obligatory in some teams.\nRemove grey submodule git rm --cached \u0026lt;folder_name\u0026gt; git add . git commit -m \u0026quot;\u0026lt;your_message\u0026gt;\u0026quot; git push --all  "
 },
 {
 	"uri": "/cs/ssh_useful/",

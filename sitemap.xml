@@ -3,12 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/datascience/ml/</loc>
+    <lastmod>2019-02-13T13:48:42-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/cs/tools/</loc>
     <lastmod>2019-02-13T12:24:50-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/cs/webtech/</loc>
+    <loc>/cs/tools/vim_useful/</loc>
+    <lastmod>2019-02-13T12:23:19-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/me/</loc>
+    <lastmod>2019-02-10T00:05:45-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cs/tools/ssh_useful/</loc>
     <lastmod>2019-02-13T12:23:19-05:00</lastmod>
   </url>
   
@@ -18,13 +33,13 @@
   </url>
   
   <url>
-    <loc>/me/</loc>
-    <lastmod>2019-02-10T00:05:45-05:00</lastmod>
+    <loc>/datascience/</loc>
+    <lastmod>2019-02-10T00:04:27-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/datascience/</loc>
-    <lastmod>2019-02-10T00:04:27-05:00</lastmod>
+    <loc>/cs/webtech/</loc>
+    <lastmod>2019-02-13T12:23:19-05:00</lastmod>
   </url>
   
   <url>
@@ -33,8 +48,27 @@
   </url>
   
   <url>
-    <loc>/collections/</loc>
-    <lastmod>2019-02-10T00:05:08-05:00</lastmod>
+    <loc>/cs/tools/raspberry_pi_3_nas/</loc>
+  </url>
+  
+  <url>
+    <loc>/cs/tools/common_commands_useful/</loc>
+    <lastmod>2019-02-13T12:23:19-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cs/tools/cli_improved/</loc>
+    <lastmod>2019-02-13T12:23:19-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cs/tools/cli_best_practice/</loc>
+    <lastmod>2019-02-13T12:23:19-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cs/tools/10_basic_commands_for_linux_performance_detection/</loc>
+    <lastmod>2019-02-13T12:23:19-05:00</lastmod>
   </url>
   
   <url>
@@ -53,40 +87,13 @@
   </url>
   
   <url>
+    <loc>/datascience/commands_for_data_scientist/</loc>
+    <lastmod>2019-02-10T21:52:45-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/</loc>
     <lastmod>2019-02-09T23:53:32-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/cs/tools/10_basic_commands_for_linux_performance_detection/</loc>
-  </url>
-  
-  <url>
-    <loc>/cs/tools/cli_best_practice/</loc>
-  </url>
-  
-  <url>
-    <loc>/cs/tools/raspberry_pi_3_nas/</loc>
-  </url>
-  
-  <url>
-    <loc>/cs/tools/cli_improved/</loc>
-  </url>
-  
-  <url>
-    <loc>/cs/tools/common_commands_useful/</loc>
-  </url>
-  
-  <url>
-    <loc>/cs/tools/ssh_useful/</loc>
-  </url>
-  
-  <url>
-    <loc>/cs/tools/vim_useful/</loc>
-  </url>
-  
-  <url>
-    <loc>/datascience/commands_for_data_scientist/</loc>
   </url>
   
   <url>

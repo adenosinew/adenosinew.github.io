@@ -12,13 +12,12 @@
     
     
     <item>
-      <title></title>
+      <title>Command line tricks for data scientist</title>
       <link>/datascience/commands_for_data_scientist/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 10 Feb 2019 21:52:45 -0500</pubDate>
       
       <guid>/datascience/commands_for_data_scientist/</guid>
-      <description> Command line tricks for data scientist [TOC]
-reference
+      <description> reference
 ICONV HEAD TR WC SPLIT SORT &amp;amp; UNIQ CUT PASTE JOIN GREP  SED AWK  </description>
     </item>
     

@@ -12,6 +12,80 @@
     
     
     <item>
+      <title>Vim Cheatsheet</title>
+      <link>/cs/tools/vim_useful/</link>
+      <pubDate>Wed, 13 Feb 2019 12:23:19 -0500</pubDate>
+      
+      <guid>/cs/tools/vim_useful/</guid>
+      <description>Vim cheatsheet Move Faster Move to previous word (b) Move to end of line ($) Move to end of word (e) Move to beginning of line (0) Move down one line (j) Move left one character (h) Move to last line of screen (L) Move up one line (k) Move to middle line of screen (M) Move to first line of screen (H) Move right one character (l) Move to beginning of word (b) Move to next word (w)</description>
+    </item>
+    
+    <item>
+      <title>SSH Bestpractice</title>
+      <link>/cs/tools/ssh_useful/</link>
+      <pubDate>Wed, 13 Feb 2019 12:23:19 -0500</pubDate>
+      
+      <guid>/cs/tools/ssh_useful/</guid>
+      <description> SSH reference1
+reference2
+Generate a key ssh-keygen -t rsa -b 4096 -C &amp;quot;your_email@gmail.com&amp;quot;  Give a proper name for the key, or else, it would overwrite the id_rsa file
+Add a key ssh-add -K ~/.ssh/id_rsa_my_key  For Mac, you need to add -k
+# Use the following command to check the result ssh-add -l  Config </description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi 3</title>
+      <link>/cs/tools/raspberry_pi_3_nas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cs/tools/raspberry_pi_3_nas/</guid>
+      <description> Raspberry Pi 3 NAS [TOC]
+Mount hard driver Create NAS Enable Time machine </description>
+    </item>
+    
+    <item>
+      <title>Most-used Linux CLI</title>
+      <link>/cs/tools/common_commands_useful/</link>
+      <pubDate>Wed, 13 Feb 2019 12:23:19 -0500</pubDate>
+      
+      <guid>/cs/tools/common_commands_useful/</guid>
+      <description>File operations Compare two directory diff --brief -r dir1/ dir2/
+If you want to see differences for files that may not exist in either directory diff --brief -Nr dir1/ dir2</description>
+    </item>
+    
+    <item>
+      <title>Better CLI tools</title>
+      <link>/cs/tools/cli_improved/</link>
+      <pubDate>Wed, 13 Feb 2019 12:23:19 -0500</pubDate>
+      
+      <guid>/cs/tools/cli_improved/</guid>
+      <description>Better cli tools Ignore alias \cat # ignore aliases named &amp;quot;cat&amp;quot; - explanation: https://stackoverflow.com/a/16506263/22617 command cat # ignore functions and aliases  bat &amp;gt; cat bat
+Comparing with cat, bat also offers highlighting, paging, line numbers and git integration.
+Installation command:
+yaourt -S bat  prettyping &amp;gt; ping fzf &amp;gt; ctrl + r In addition to searching through the history, fzf can also preview and open files, which is what I&amp;rsquo;ve done in the video below:</description>
+    </item>
+    
+    <item>
+      <title>Build CLI Best practice</title>
+      <link>/cs/tools/cli_best_practice/</link>
+      <pubDate>Wed, 13 Feb 2019 12:23:19 -0500</pubDate>
+      
+      <guid>/cs/tools/cli_best_practice/</guid>
+      <description> CLI best practice reference
+[TOC]
+12 factors  Great help is essential Prefer flags to args What version am I on? Mind the streams Handle things going wrong Be fancy! Prompt if you can Use tables Be speedy Encourage contributions Be clear about subcommands Follow XDG-spec  </description>
+    </item>
+    
+    <item>
+      <title>Check Linux Performance CLI</title>
+      <link>/cs/tools/10_basic_commands_for_linux_performance_detection/</link>
+      <pubDate>Wed, 13 Feb 2019 12:23:19 -0500</pubDate>
+      
+      <guid>/cs/tools/10_basic_commands_for_linux_performance_detection/</guid>
+      <description>1. uptime uptime 20:25:38 up 7 min, 3 users, load average: 0.24, 0.45, 0.27 #该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。  2. dmesg | tail dmesg | tail [ 51.424401] wlp5s0: RX AssocResp from 38:4c:90:8f:8c:85 (capab=0x831 status=0 aid=3) [ 51.426461] wlp5s0: associated [ 51.429463] ath: EEPROM regdomain: 0x8348 [ 51.429463] ath: EEPROM indicates we should expect a country code [ 51.429464] ath: doing EEPROM country-&amp;gt;regdmn map search [ 51.429465] ath: country maps to regdmn code: 0x3a [ 51.</description>
+    </item>
+    
+    <item>
       <title>Useful Git commands</title>
       <link>/cs/tools/git_useful/</link>
       <pubDate>Mon, 11 Feb 2019 22:00:25 -0500</pubDate>
@@ -46,89 +120,12 @@ It is fruitless to wish you had started years ago. In the future you will wish y
     </item>
     
     <item>
-      <title></title>
-      <link>/cs/tools/10_basic_commands_for_linux_performance_detection/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/cs/tools/10_basic_commands_for_linux_performance_detection/</guid>
-      <description>10 basic commands for Linux performance detection 1. uptime uptime 20:25:38 up 7 min, 3 users, load average: 0.24, 0.45, 0.27 #该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。  2. dmesg | tail dmesg | tail [ 51.424401] wlp5s0: RX AssocResp from 38:4c:90:8f:8c:85 (capab=0x831 status=0 aid=3) [ 51.426461] wlp5s0: associated [ 51.429463] ath: EEPROM regdomain: 0x8348 [ 51.429463] ath: EEPROM indicates we should expect a country code [ 51.429464] ath: doing EEPROM country-&amp;gt;regdmn map search [ 51.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/cs/tools/cli_best_practice/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/cs/tools/cli_best_practice/</guid>
-      <description> CLI best practice reference
-[TOC]
-12 factors  Great help is essential Prefer flags to args What version am I on? Mind the streams Handle things going wrong Be fancy! Prompt if you can Use tables Be speedy Encourage contributions Be clear about subcommands Follow XDG-spec  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/cs/tools/raspberry_pi_3_nas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/cs/tools/raspberry_pi_3_nas/</guid>
-      <description> Raspberry Pi 3 NAS [TOC]
-Mount hard driver Create NAS Enable Time machine </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/cs/tools/cli_improved/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/cs/tools/cli_improved/</guid>
-      <description>Better cli tools Ignore alias \cat # ignore aliases named &amp;quot;cat&amp;quot; - explanation: https://stackoverflow.com/a/16506263/22617 command cat # ignore functions and aliases  bat &amp;gt; cat bat
-Comparing with cat, bat also offers highlighting, paging, line numbers and git integration.
-Installation command:
-yaourt -S bat  prettyping &amp;gt; ping fzf &amp;gt; ctrl + r In addition to searching through the history, fzf can also preview and open files, which is what I&amp;rsquo;ve done in the video below:</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/cs/tools/common_commands_useful/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/cs/tools/common_commands_useful/</guid>
-      <description>Common Commands for linux File operations Compare two directory diff --brief -r dir1/ dir2/
-If you want to see differences for files that may not exist in either directory diff --brief -Nr dir1/ dir2</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/cs/tools/ssh_useful/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/cs/tools/ssh_useful/</guid>
-      <description> SSH [TOC]
-reference1
-reference2
-Generate a key ssh-keygen -t rsa -b 4096 -C &amp;quot;your_email@gmail.com&amp;quot;  Give a proper name for the key, or else, it would overwrite the id_rsa file
-Add a key ssh-add -K ~/.ssh/id_rsa_my_key  For Mac, you need to add -k
-# Use the following command to check the result ssh-add -l  Config </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/cs/tools/vim_useful/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/cs/tools/vim_useful/</guid>
-      <description>Vim cheatsheet [toc]
-Move Faster Move to previous word (b) Move to end of line ($) Move to end of word (e) Move to beginning of line (0) Move down one line (j) Move left one character (h) Move to last line of screen (L) Move up one line (k) Move to middle line of screen (M) Move to first line of screen (H) Move right one character (l) Move to beginning of word (b) Move to next word (w)</description>
-    </item>
-    
-    <item>
-      <title></title>
+      <title>Command line tricks for data scientist</title>
       <link>/datascience/commands_for_data_scientist/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 10 Feb 2019 21:52:45 -0500</pubDate>
       
       <guid>/datascience/commands_for_data_scientist/</guid>
-      <description> Command line tricks for data scientist [TOC]
-reference
+      <description> reference
 ICONV HEAD TR WC SPLIT SORT &amp;amp; UNIQ CUT PASTE JOIN GREP  SED AWK  </description>
     </item>
     

@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>SSH Bestpractice :: Documentation for Hugo Learn Theme</title>
+    <title>Mount a filesystem :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1550200897" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/cs/tools/ssh_useful/">
+  <body class="" data-url="/cs/linux/systemd_mount/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -261,7 +261,7 @@
   
     
     <li data-nav-id="/cs/tools/" title="Tools" class="dd-item 
-        parent
+        
         
         
         ">
@@ -306,7 +306,7 @@
  
   
     
-      <li data-nav-id="/cs/tools/ssh_useful/" title="SSH Bestpractice" class="dd-item active">
+      <li data-nav-id="/cs/tools/ssh_useful/" title="SSH Bestpractice" class="dd-item ">
         <a href="/cs/tools/ssh_useful/">
         SSH Bestpractice
         <i class="fas fa-check read-icon"></i>
@@ -520,7 +520,7 @@
   
     
     <li data-nav-id="/cs/linux/" title="Linux" class="dd-item 
-        
+        parent
         
         
         ">
@@ -546,7 +546,7 @@
  
   
     
-      <li data-nav-id="/cs/linux/systemd_mount/" title="Mount a filesystem" class="dd-item ">
+      <li data-nav-id="/cs/linux/systemd_mount/" title="Mount a filesystem" class="dd-item active">
         <a href="/cs/linux/systemd_mount/">
         Mount a filesystem
         <i class="fas fa-check read-icon"></i>
@@ -742,7 +742,7 @@
             
           
           
-            <a href='/'>adenosinew</a> > <a href='/cs/'>Cs</a> > <a href='/cs/tools/'>Tools</a> > SSH Bestpractice
+            <a href='/'>adenosinew</a> > <a href='/cs/'>Cs</a> > <a href='/cs/linux/'>Linux</a> > Mount a filesystem
           
          
           
@@ -759,11 +759,16 @@
     <div class="wrapper">
 <nav id="TableOfContents">
 <ul>
-<li><a href="#ssh">SSH</a>
+<li>
 <ul>
-<li><a href="#generate-a-key">Generate a key</a></li>
-<li><a href="#add-a-key">Add a key</a></li>
-<li><a href="#config">Config</a></li>
+<li><a href="#tldr-description-of-mount">tldr description of <code>mount</code></a></li>
+<li><a href="#use-cli-to-mount-a-filesystem">Use CLI to mount a filesystem</a></li>
+<li><a href="#use-systemd-to-mount-a-filesystem">Use systemd to mount a filesystem</a>
+<ul>
+<li><a href="#mount-as-a-specific-user">Mount as a specific user</a></li>
+</ul></li>
+<li><a href="#using-etc-fstab">Using /etc/fstab</a></li>
+<li><a href="#reference">Reference</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -778,7 +783,7 @@
         
         <div id="body-inner">
           
-            <h1>SSH Bestpractice</h1>
+            <h1>Mount a filesystem</h1>
           
 
         
@@ -787,31 +792,79 @@
 
 
 
-<h1 id="ssh">SSH</h1>
+<h2 id="tldr-description-of-mount">tldr description of <code>mount</code></h2>
 
-<p><a href="http://shinancao.github.io/2016/12/18/Programming-Git-1/">reference1</a></p>
+<pre><code class="language-shell">tldr mount
 
-<p><a href="https://www.ssh.com/ssh/keygen/">reference2</a></p>
-
-<h2 id="generate-a-key">Generate a key</h2>
-
-<pre><code class="language-shell">ssh-keygen -t rsa -b 4096 -C &quot;your_email@gmail.com&quot;
+mount
+Provides access to an entire filesystem in one directory.
+- Show all mounted filesystems:
+    mount
+- Mount a device to a directory:
+    mount -t filesystem_type path/to/device_file path/to/target_directory
+- Mount a CD-ROM device (with the filetype ISO9660) to /cdrom (readonly):
+    mount -t iso9660 -o ro /dev/cdrom /cdrom
+- Mount all the filesystem defined in /etc/fstab:
+    mount -a
+- Mount a specific filesystem described in /etc/fstab (e.g. &quot;/dev/sda1 /my_drive ext2 defaults 0 2&quot;):
+    mount /my_drive
 </code></pre>
 
-<p>Give a proper name for the key, or else, it would overwrite the <code>id_rsa</code> file</p>
+<h2 id="use-cli-to-mount-a-filesystem">Use CLI to mount a filesystem</h2>
 
-<h2 id="add-a-key">Add a key</h2>
+<p>For instance, mount a AWS EFS filesystem to your EC2 instance <code>/files</code> folder</p>
 
-<pre><code class="language-shell">ssh-add -K ~/.ssh/id_rsa_my_key
+<pre><code class="language-shell">mount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-XXXXXX.efs.us-west-2.amazonaws.com:/ /files
 </code></pre>
 
-<p>For Mac, you need to add <code>-k</code></p>
+<h2 id="use-systemd-to-mount-a-filesystem">Use systemd to mount a filesystem</h2>
 
-<pre><code class="language-shell"># Use the following command to check the result
-ssh-add -l
+<pre><code class="language-shell">[Unit]
+Description=Mount The File System
+After=network.target
+
+[Mount]
+What=fs-XXXXX.efs.us-west-2.amazonaws.com:/
+Where=/files
+Type=nfs
+Options=auto
+
+[Install]
+WantedBy=multi-user.target
 </code></pre>
 
-<h2 id="config">Config</h2>
+<h3 id="mount-as-a-specific-user">Mount as a specific user</h3>
+
+<p>If I want to mount the filesystem as the <em>ubuntu</em> user, specify it in the <code>Options</code> field.</p>
+
+<pre><code class="language-shell">[Unit]
+Description=Mount The File System
+After=network.target
+
+[Mount]
+What=fs-XXXXXX.efs.us-east-2.amazonaws.com:/
+Where=/files
+Type=nfs
+Options=nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,uid=$(id -u ubuntu),gid=$(id -g ubuntu)
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+
+<h2 id="using-etc-fstab">Using /etc/fstab</h2>
+
+<p>We can mount the remote NFS shares automatically at boot by adding them to <code>/etc/fstab</code> file on the client.</p>
+
+<pre><code class="language-shell"># /etc/fstab entry
+. . .
+203.0.113.0:/var/nfs/general    /nfs/general   nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0
+203.0.113.0:/home       /nfs/home      nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0
+</code></pre>
+
+<h2 id="reference">Reference</h2>
+
+<p><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/storage_administration_guide/nfs-clientconfig">Redhat NFS client reference</a><br />
+<a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-16-04">How to setup a nfs mount</a></p>
 
 
 <footer class=" footline" >
@@ -967,6 +1020,8 @@ ssh-add -l
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -980,26 +1035,6 @@ ssh-add -l
             
             
                 
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -1016,9 +1051,6 @@ ssh-add -l
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1127,6 +1159,22 @@ ssh-add -l
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1167,6 +1215,7 @@ ssh-add -l
             
                 
                     
+                    
                 
                 
 
@@ -1180,6 +1229,7 @@ ssh-add -l
             
                 
                     
+                    
                 
                 
 
@@ -1201,6 +1251,9 @@ ssh-add -l
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1256,10 +1309,10 @@ ssh-add -l
 	 
 	 
 		
-			<a class="nav nav-prev" href="/cs/tools/vim_useful/" title="Vim Cheatsheet"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/cs/linux/" title="Linux"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/cs/tools/raspberry_pi_3_nas/" title="Raspberry Pi 3" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/collections/" title="Collections" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

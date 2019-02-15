@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>aboutme on Documentation for Hugo Learn Theme</title>
+    <title>adenosinew on Documentation for Hugo Learn Theme</title>
     <link>/</link>
-    <description>Recent content in aboutme on Documentation for Hugo Learn Theme</description>
+    <description>Recent content in adenosinew on Documentation for Hugo Learn Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sat, 09 Feb 2019 23:53:32 -0500</lastBuildDate>
@@ -83,6 +83,25 @@ yaourt -S bat  prettyping &amp;gt; ping fzf &amp;gt; ctrl + r In addition to sea
       
       <guid>/cs/tools/10_basic_commands_for_linux_performance_detection/</guid>
       <description>1. uptime uptime 20:25:38 up 7 min, 3 users, load average: 0.24, 0.45, 0.27 #该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。  2. dmesg | tail dmesg | tail [ 51.424401] wlp5s0: RX AssocResp from 38:4c:90:8f:8c:85 (capab=0x831 status=0 aid=3) [ 51.426461] wlp5s0: associated [ 51.429463] ath: EEPROM regdomain: 0x8348 [ 51.429463] ath: EEPROM indicates we should expect a country code [ 51.429464] ath: doing EEPROM country-&amp;gt;regdmn map search [ 51.429465] ath: country maps to regdmn code: 0x3a [ 51.</description>
+    </item>
+    
+    <item>
+      <title>Mount a filesystem</title>
+      <link>/cs/linux/systemd_mount/</link>
+      <pubDate>Thu, 14 Feb 2019 18:05:39 -0500</pubDate>
+      
+      <guid>/cs/linux/systemd_mount/</guid>
+      <description>tldr description of mount tldr mount mount Provides access to an entire filesystem in one directory. - Show all mounted filesystems: mount - Mount a device to a directory: mount -t filesystem_type path/to/device_file path/to/target_directory - Mount a CD-ROM device (with the filetype ISO9660) to /cdrom (readonly): mount -t iso9660 -o ro /dev/cdrom /cdrom - Mount all the filesystem defined in /etc/fstab: mount -a - Mount a specific filesystem described in /etc/fstab (e.</description>
+    </item>
+    
+    <item>
+      <title>Better Develpoer</title>
+      <link>/me/better_develpoer/</link>
+      <pubDate>Thu, 14 Feb 2019 14:08:33 -0500</pubDate>
+      
+      <guid>/me/better_develpoer/</guid>
+      <description>Reference Use the full power of Your Brain to be a Better Developer 
+Useful suggestions  The human brain is a complex machine and it&amp;rsquo;s a result of thousands of years of human evolution. Our world has evolved very fast. For the brain, being such an old machine, working in today&amp;rsquo;s complex and distracted world is very hard. But if we use our brain as our ancestors did, we can use most of it.</description>
     </item>
     
     <item>

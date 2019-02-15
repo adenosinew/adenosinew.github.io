@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Documentation for Hugo Learn Theme</title>
+    <link>/cs/linux/</link>
+    <description>Recent content in Linux on Documentation for Hugo Learn Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 14 Feb 2019 18:04:45 -0500</lastBuildDate>
+    
+	<atom:link href="/cs/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mount a filesystem</title>
+      <link>/cs/linux/systemd_mount/</link>
+      <pubDate>Thu, 14 Feb 2019 18:05:39 -0500</pubDate>
+      
+      <guid>/cs/linux/systemd_mount/</guid>
+      <description>tldr description of mount tldr mount mount Provides access to an entire filesystem in one directory. - Show all mounted filesystems: mount - Mount a device to a directory: mount -t filesystem_type path/to/device_file path/to/target_directory - Mount a CD-ROM device (with the filetype ISO9660) to /cdrom (readonly): mount -t iso9660 -o ro /dev/cdrom /cdrom - Mount all the filesystem defined in /etc/fstab: mount -a - Mount a specific filesystem described in /etc/fstab (e.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>SSH Bestpractice :: Documentation for Hugo Learn Theme</title>
+    <title>Bestpractice :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1550200897" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/cs/tools/ssh_useful/">
+  <body class="" data-url="/collections/bestpractice/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -232,7 +232,7 @@
   
     
     <li data-nav-id="/cs/" title="Cs" class="dd-item 
-        parent
+        
         
         
         ">
@@ -261,7 +261,7 @@
   
     
     <li data-nav-id="/cs/tools/" title="Tools" class="dd-item 
-        parent
+        
         
         
         ">
@@ -306,7 +306,7 @@
  
   
     
-      <li data-nav-id="/cs/tools/ssh_useful/" title="SSH Bestpractice" class="dd-item active">
+      <li data-nav-id="/cs/tools/ssh_useful/" title="SSH Bestpractice" class="dd-item ">
         <a href="/cs/tools/ssh_useful/">
         SSH Bestpractice
         <i class="fas fa-check read-icon"></i>
@@ -582,7 +582,7 @@
   
     
     <li data-nav-id="/collections/" title="Collections" class="dd-item 
-        
+        parent
         
         
         ">
@@ -611,8 +611,8 @@
   
     
     <li data-nav-id="/collections/bestpractice/" title="Bestpractice" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/collections/bestpractice/">
@@ -722,8 +722,6 @@
                         </a>
                     </span>
                   
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  
                   <span class="links">
                  
                  
@@ -738,13 +736,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/'>adenosinew</a> > <a href='/cs/'>Cs</a> > <a href='/cs/tools/'>Tools</a> > SSH Bestpractice
-          
-         
+            <a href='/'>adenosinew</a> > <a href='/collections/'>Collections</a> > Bestpractice
           
          
           
@@ -755,70 +747,51 @@
                   </span>
                 </div>
                 
-                    <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li><a href="#ssh">SSH</a>
-<ul>
-<li><a href="#generate-a-key">Generate a key</a></li>
-<li><a href="#add-a-key">Add a key</a></li>
-<li><a href="#config">Config</a></li>
-</ul></li>
-</ul>
-</nav>
-    </div>
-</div>
-
-                
               </div>
             </div>
             
 
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>SSH Bestpractice</h1>
           
 
         
 
 
+<p>Placeholder of best practice</p>
 
 
 
-<h1 id="ssh">SSH</h1>
 
-<p><a href="http://shinancao.github.io/2016/12/18/Programming-Git-1/">reference1</a></p>
 
-<p><a href="https://www.ssh.com/ssh/keygen/">reference2</a></p>
 
-<h2 id="generate-a-key">Generate a key</h2>
 
-<pre><code class="language-shell">ssh-keygen -t rsa -b 4096 -C &quot;your_email@gmail.com&quot;
-</code></pre>
 
-<p>Give a proper name for the key, or else, it would overwrite the <code>id_rsa</code> file</p>
+<ul class="children children-li">
+	
+    
+    
 
-<h2 id="add-a-key">Add a key</h2>
+	
+		
+	
 
-<pre><code class="language-shell">ssh-add -K ~/.ssh/id_rsa_my_key
-</code></pre>
+	
+</ul>
 
-<p>For Mac, you need to add <code>-k</code></p>
 
-<pre><code class="language-shell"># Use the following command to check the result
-ssh-add -l
-</code></pre>
 
-<h2 id="config">Config</h2>
+
 
 
 <footer class=" footline" >
 	
 </footer>
 
-
+        
+            </div> 
         
         </div> 
         
@@ -951,7 +924,6 @@ ssh-add -l
             
                 
                     
-                    
                 
                 
 
@@ -967,7 +939,6 @@ ssh-add -l
             
                 
                     
-                    
                 
                 
 
@@ -980,9 +951,6 @@ ssh-add -l
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1000,7 +968,6 @@ ssh-add -l
             
                 
                     
-                    
                 
                 
 
@@ -1016,9 +983,6 @@ ssh-add -l
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1202,6 +1166,7 @@ ssh-add -l
             
                 
                     
+                    
                 
                 
 
@@ -1216,6 +1181,7 @@ ssh-add -l
             
             
                 
+                    
                     
                 
                 
@@ -1232,6 +1198,9 @@ ssh-add -l
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1256,10 +1225,10 @@ ssh-add -l
 	 
 	 
 		
-			<a class="nav nav-prev" href="/cs/tools/vim_useful/" title="Vim Cheatsheet"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/collections/" title="Collections"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/cs/tools/raspberry_pi_3_nas/" title="Raspberry Pi 3" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/collections/snippets/" title="Snippets" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1290,4 +1259,3 @@ ssh-add -l
 
   </body>
 </html>
-

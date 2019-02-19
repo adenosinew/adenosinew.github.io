@@ -12,19 +12,19 @@
     <title>Mount a filesystem :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/css/nucleus.css?1550200897" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1550200897" rel="stylesheet">
-    <link href="/css/hybrid.css?1550200897" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1550200897" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1550200897" rel="stylesheet">
-    <link href="/css/auto-complete.css?1550200897" rel="stylesheet">
-    <link href="/css/theme.css?1550200897" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1550200897" rel="stylesheet">
+    <link href="/css/nucleus.css?1550592750" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1550592750" rel="stylesheet">
+    <link href="/css/hybrid.css?1550592750" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1550592750" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1550592750" rel="stylesheet">
+    <link href="/css/auto-complete.css?1550592750" rel="stylesheet">
+    <link href="/css/theme.css?1550592750" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1550592750" rel="stylesheet">
     
-      <link href="/css/theme-mine.css?1550200897" rel="stylesheet">
+      <link href="/css/theme-mine.css?1550592750" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1550200897"></script>
+    <script src="/js/jquery-2.x.min.js?1550592750"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1550200897"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1550200897"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1550592750"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1550592750"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1550200897"></script>
+<script type="text/javascript" src="/js/search.js?1550592750"></script>
 
     
   </div>
@@ -186,6 +186,32 @@
         ">
       <a href="/datascience/ml/">
           Ml
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/datascience/pytorch/" title="Pytorch Learning" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/datascience/pytorch/">
+          Pytorch Learning
           
             <i class="fas read-icon"></i>
           
@@ -767,6 +793,7 @@
 <ul>
 <li><a href="#mount-as-a-specific-user">Mount as a specific user</a></li>
 </ul></li>
+<li><a href="#mount-as-a-normal-user">Mount as a normal user</a></li>
 <li><a href="#using-etc-fstab">Using /etc/fstab</a></li>
 <li><a href="#reference">Reference</a></li>
 </ul></li>
@@ -819,7 +846,10 @@ Provides access to an entire filesystem in one directory.
 
 <h2 id="use-systemd-to-mount-a-filesystem">Use systemd to mount a filesystem</h2>
 
-<pre><code class="language-shell">[Unit]
+<p><strong>Requirement</strong>: the filename of the mount file should be the same as the <code>Where</code> field.</p>
+
+<pre><code class="language-shell"># files.mount
+[Unit]
 Description=Mount The File System
 After=network.target
 
@@ -831,6 +861,14 @@ Options=auto
 
 [Install]
 WantedBy=multi-user.target
+</code></pre>
+
+<p>Start the service</p>
+
+<pre><code class="language-shell"># In ubuntu, move it to /etc/systemd/system/
+cp files.mount /etc/systemd/system/
+systemctl daemon-reload
+systemctl start files.mount
 </code></pre>
 
 <h3 id="mount-as-a-specific-user">Mount as a specific user</h3>
@@ -851,6 +889,32 @@ Options=nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,uid=$(i
 WantedBy=multi-user.target
 </code></pre>
 
+<h2 id="mount-as-a-normal-user">Mount as a normal user</h2>
+
+<p>In above section, <code>uid</code> and <code>gid</code> is not available for sudo user. <del>Reason unknown.</del></p>
+
+<p><strong>TODO</strong>: Find out why <code>uid</code> and <code>gid</code> are invalid options for <code>sudo</code> and <code>ubuntu</code> user.</p>
+
+<p>Found this option can be used for <code>sudo</code> user:</p>
+
+<p><code>nosuid</code></p>
+
+<p>Disables the <code>set-user-identifier</code> and <code>set-group-identifier</code> bits. This prevents remote users from gaining higher privileges by running a <code>setuid</code> program.</p>
+
+<pre><code class="language-shell">[Unit]
+Description=Mount The File System
+After=network.target
+
+[Mount]
+What=fs-XXXXXX.efs.us-east-2.amazonaws.com:/
+Where=/files
+Type=nfs
+Options=nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,nosuid
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+
 <h2 id="using-etc-fstab">Using /etc/fstab</h2>
 
 <p>We can mount the remote NFS shares automatically at boot by adding them to <code>/etc/fstab</code> file on the client.</p>
@@ -863,8 +927,11 @@ WantedBy=multi-user.target
 
 <h2 id="reference">Reference</h2>
 
-<p><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/storage_administration_guide/nfs-clientconfig">Redhat NFS client reference</a><br />
-<a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-16-04">How to setup a nfs mount</a></p>
+<p><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/storage_administration_guide/nfs-clientconfig">Redhat NFS client reference</a></p>
+
+<p><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8-beta/html/configuring_and_managing_file_systems/mounting-nfs-shares_configuring-and-managing-file-systems">Redhat NFS Mount reference</a></p>
+
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-16-04">How to setup a nfs mount</a></p>
 
 
 <footer class=" footline" >
@@ -963,6 +1030,22 @@ WantedBy=multi-user.target
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1322,20 +1405,20 @@ WantedBy=multi-user.target
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1550200897"></script>
-    <script src="/js/perfect-scrollbar.min.js?1550200897"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1550200897"></script>
-    <script src="/js/jquery.sticky.js?1550200897"></script>
-    <script src="/js/featherlight.min.js?1550200897"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1550200897"></script>
-    <script src="/js/highlight.pack.js?1550200897"></script>
+    <script src="/js/clipboard.min.js?1550592750"></script>
+    <script src="/js/perfect-scrollbar.min.js?1550592750"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1550592750"></script>
+    <script src="/js/jquery.sticky.js?1550592750"></script>
+    <script src="/js/featherlight.min.js?1550592750"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1550592750"></script>
+    <script src="/js/highlight.pack.js?1550592750"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1550200897"></script>
-    <script src="/js/learn.js?1550200897"></script>
-    <script src="/js/hugo-learn.js?1550200897"></script>
+    <script src="/js/modernizr.custom.71422.js?1550592750"></script>
+    <script src="/js/learn.js?1550592750"></script>
+    <script src="/js/hugo-learn.js?1550592750"></script>
 
-    <link href="/mermaid/mermaid.css?1550200897" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1550200897"></script>
+    <link href="/mermaid/mermaid.css?1550592750" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1550592750"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

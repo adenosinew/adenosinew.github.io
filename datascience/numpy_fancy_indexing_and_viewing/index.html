@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>Raspberry Pi 3 :: Documentation for Hugo Learn Theme</title>
+    <title>Fancy indexing, view and copy :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1551407863" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/cs/tools/raspberry_pi_3_nas/">
+  <body class="" data-url="/datascience/numpy_fancy_indexing_and_viewing/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -151,7 +151,7 @@
   
     
     <li data-nav-id="/datascience/" title="Datascience" class="dd-item 
-        
+        parent
         
         
         ">
@@ -205,7 +205,7 @@
  
   
     
-      <li data-nav-id="/datascience/numpy_fancy_indexing_and_viewing/" title="Fancy indexing, view and copy" class="dd-item ">
+      <li data-nav-id="/datascience/numpy_fancy_indexing_and_viewing/" title="Fancy indexing, view and copy" class="dd-item active">
         <a href="/datascience/numpy_fancy_indexing_and_viewing/">
         Fancy indexing and view in numpy
         <i class="fas fa-check read-icon"></i>
@@ -277,7 +277,7 @@
   
     
     <li data-nav-id="/cs/" title="Cs" class="dd-item 
-        parent
+        
         
         
         ">
@@ -361,7 +361,7 @@
   
     
     <li data-nav-id="/cs/tools/" title="Tools" class="dd-item 
-        parent
+        
         
         
         ">
@@ -425,7 +425,7 @@
  
   
     
-      <li data-nav-id="/cs/tools/raspberry_pi_3_nas/" title="Raspberry Pi 3" class="dd-item active">
+      <li data-nav-id="/cs/tools/raspberry_pi_3_nas/" title="Raspberry Pi 3" class="dd-item ">
         <a href="/cs/tools/raspberry_pi_3_nas/">
         Raspberry Pi 3
         <i class="fas fa-check read-icon"></i>
@@ -838,13 +838,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/'>adenosinew</a> > <a href='/cs/'>Cs</a> > <a href='/cs/tools/'>Tools</a> > Raspberry Pi 3
-          
-         
+            <a href='/'>adenosinew</a> > <a href='/datascience/'>Datascience</a> > Fancy indexing, view and copy
           
          
           
@@ -859,11 +853,12 @@
     <div class="wrapper">
 <nav id="TableOfContents">
 <ul>
-<li><a href="#raspberry-pi-3-nas">Raspberry Pi 3 NAS</a>
+<li>
 <ul>
-<li><a href="#mount-hard-driver">Mount hard driver</a></li>
-<li><a href="#create-nas">Create NAS</a></li>
-<li><a href="#enable-time-machine">Enable Time machine</a></li>
+<li><a href="#normal-numpy-indexing">Normal Numpy Indexing</a></li>
+<li><a href="#numpy-fancy-indexing">Numpy Fancy Indexing</a></li>
+<li><a href="#numpy-view-and-copy">Numpy view and copy</a></li>
+<li><a href="#reference">Reference</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -878,7 +873,7 @@
         
         <div id="body-inner">
           
-            <h1>Raspberry Pi 3</h1>
+            <h1>Fancy indexing, view and copy</h1>
           
 
         
@@ -887,15 +882,121 @@
 
 
 
-<h1 id="raspberry-pi-3-nas">Raspberry Pi 3 NAS</h1>
+<h2 id="normal-numpy-indexing">Normal Numpy Indexing</h2>
 
-<p>[TOC]</p>
+<p>Numpy arrays using:</p>
 
-<h2 id="mount-hard-driver">Mount hard driver</h2>
+<ul>
+<li>simple indices (e.g., <code>arr[0]</code>),</li>
+<li>slices (e.g., <code>arr[:5]</code>)</li>
+<li>Boolean masks (e.g., <code>arr[arr &gt; 0]</code>)</li>
+</ul>
 
-<h2 id="create-nas">Create NAS</h2>
+<h2 id="numpy-fancy-indexing">Numpy Fancy Indexing</h2>
 
-<h2 id="enable-time-machine">Enable Time machine</h2>
+<p>Fancy indexing is conceptually simple: it means passing an array of indices to access multiple array elements at once.</p>
+
+<pre><code class="language-python">import numpy as np
+rand = np.random.RandomState(42)
+
+x = rand.randint(100, size=10)
+print(x)
+# Output
+# [51 92 14 71 60 20 82 86 74 74]
+
+# Normal indexing
+[x[3], x[7], x[2]]
+# [71, 86, 14]
+
+# Fancy indexing
+ind = [3, 7, 4]
+x[ind]
+# [71, 86, 14]
+</code></pre>
+
+<p>When using fancy indexing, the shape of the result reflects the shape of the <em>index arrays</em> rather than the shape of the <em>array being indexed</em>:</p>
+
+<pre><code class="language-python">ind = np.array([[3, 7],
+                [4, 5]])
+x[ind]
+# array([[71, 86],
+#       [60, 20]])
+</code></pre>
+
+<p>Fancy indexing also works in multiple dimensions. Consider the following array:</p>
+
+<pre><code class="language-python">X = np.arange(12).reshape((3, 4))
+X
+
+# array([[ 0,  1,  2,  3],
+#       [ 4,  5,  6,  7],
+#       [ 8,  9, 10, 11]])
+</code></pre>
+
+<p>Like with standard indexing, the first index refers to the row, and the second to the column:</p>
+
+<pre><code class="language-python">row = np.array([0, 1, 2])
+col = np.array([2, 1, 3])
+X[row, col]
+
+# array([ 2,  5, 11])
+</code></pre>
+
+<p>Notice that the first value in the result is <code>X[0, 2]</code>, the second is <code>X[1, 1]</code>, and the third is <code>X[2, 3]</code>. The pairing of indices in fancy indexing follows all the broadcasting rules that were mentioned in <a href="https://jakevdp.github.io/PythonDataScienceHandbook/02.05-computation-on-arrays-broadcasting.html">Computation on Arrays: Broadcasting</a>.</p>
+
+<blockquote>
+<p>It is always important to remember with fancy indexing that the return value reflects the <em>broadcasted shape of the indices</em>, rather than the shape of the array being indexed.</p>
+</blockquote>
+
+<h2 id="numpy-view-and-copy">Numpy view and copy</h2>
+
+<p>With a <strong>view</strong>, it’s like you are <em>viewing</em> the original (base) array. The view is actually part of the original array even though it looks like you’re working with something else. These are analogous to shallow copies in Python.</p>
+
+<p><strong>Copies</strong> are separate objects from the original array, though right after copying the two look the same. These are analogous to deep copies in Python.</p>
+
+<p>In short, <strong>view</strong> == <strong>shallow copy</strong>, <strong>copy</strong> == <strong>deep copy</strong></p>
+
+<p><code>array.base</code></p>
+
+<p>###When you get a view vs a copy</p>
+
+<p>So when do you get a view and when do you get a copy?</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>View</strong></th>
+<th><strong>Copy</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>Slices</strong></td>
+<td>Indexing, e.g. Z[0,:]</td>
+<td>Fancy indexing, e.g. Z[[0],:]</td>
+</tr>
+
+<tr>
+<td><strong>Changing dtype</strong></td>
+<td>/</td>
+<td>W = Z.as_type(np.float32)</td>
+</tr>
+
+<tr>
+<td><strong>Converting to 1D array</strong></td>
+<td>Z.ravel()</td>
+<td>Z.flatten()</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="reference">Reference</h2>
+
+<p><a href="https://jakevdp.github.io/PythonDataScienceHandbook/02.07-fancy-indexing.html">Fancy index</a></p>
+
+<p><a href="http://www.jessicayung.com/numpy-views-vs-copies-avoiding-costly-mistakes/">view vs copy</a></p>
 
 
 <footer class=" footline" >
@@ -985,12 +1086,147 @@
             
                 
                     
+                    
                 
                 
 
                     
                     
                         
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
                     
                     
 
@@ -1047,145 +1283,6 @@
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -1407,10 +1504,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/cs/tools/ssh_useful/" title="SSH Bestpractice"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/datascience/ml/" title="Ml"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/cs/tools/common_commands_useful/" title="Most-used Linux CLI" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/datascience/pytorch/" title="Pytorch Learning" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

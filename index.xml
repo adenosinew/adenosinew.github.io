@@ -86,6 +86,31 @@ yaourt -S bat  prettyping &amp;gt; ping fzf &amp;gt; ctrl + r In addition to sea
     </item>
     
     <item>
+      <title>Active_directory</title>
+      <link>/cs/windows/active_directory/</link>
+      <pubDate>Thu, 28 Feb 2019 11:11:39 -0500</pubDate>
+      
+      <guid>/cs/windows/active_directory/</guid>
+      <description> Windows Active Directory What is Active Directory Domain Controller (DC) A server of Active Directory service
+Schema (database)
+ User account Computer account  Schema extentable
+User Account Contains
+ username password Email and etc.  Computer Account Contains
+ computer name UID and etc.  Groups OU (Organization Unit) </description>
+    </item>
+    
+    <item>
+      <title>Fancy indexing, view and copy</title>
+      <link>/datascience/numpy_fancy_indexing_and_viewing/</link>
+      <pubDate>Wed, 20 Feb 2019 10:14:37 -0500</pubDate>
+      
+      <guid>/datascience/numpy_fancy_indexing_and_viewing/</guid>
+      <description>Normal Numpy Indexing Numpy arrays using:
+ simple indices (e.g., arr[0]), slices (e.g., arr[:5]) Boolean masks (e.g., arr[arr &amp;gt; 0])  Numpy Fancy Indexing Fancy indexing is conceptually simple: it means passing an array of indices to access multiple array elements at once.
+import numpy as np rand = np.random.RandomState(42) x = rand.randint(100, size=10) print(x) # Output # [51 92 14 71 60 20 82 86 74 74] # Normal indexing [x[3], x[7], x[2]] # [71, 86, 14] # Fancy indexing ind = [3, 7, 4] x[ind] # [71, 86, 14]  When using fancy indexing, the shape of the result reflects the shape of the index arrays rather than the shape of the array being indexed:</description>
+    </item>
+    
+    <item>
       <title>Mount a filesystem</title>
       <link>/cs/linux/systemd_mount/</link>
       <pubDate>Thu, 14 Feb 2019 18:05:39 -0500</pubDate>
@@ -111,8 +136,8 @@ Useful suggestions  The human brain is a complex machine and it&amp;rsquo;s a re
       
       <guid>/cs/tools/git_useful/</guid>
       <description>Overview:
-There are tons of tutorial of git. For those basic concepts, I am going to link to some good tutorial. This one is focusing on some real life use case. What if you encounter these errors or what if I want to do this&amp;hellip;
-Update a branch (feature) with different branch (develop) git checkout develop git pull git checkout feature git merge develop # or git rebase develop  The difference between with git rebase is that rebase keep all commits history from your branch, and that is important if your partial commits have a lot of content that can be interesting to keep.</description>
+There are tons of tutorial of git. For those basic concepts, I am going to link to some good tutorial. This one is focusing on some real life use cases, what if you encounter these errors or what if I want to do this&amp;hellip;
+Basic Git commands git fetch The git fetch command downloads commits, files, and refs from a remote repository into your local repo. Fetching is what you do when you want to see what everybody else has been working on.</description>
     </item>
     
     <item>

@@ -1,5 +1,12 @@
 [
 {
+	"uri": "/cs/windows/",
+	"title": "Windows",
+	"tags": [],
+	"description": "",
+	"content": "Placeholder for windows server\n"
+},
+{
 	"uri": "/collections/bestpractice/",
 	"title": "Bestpractice",
 	"tags": [],
@@ -112,6 +119,20 @@
 	"content": " 1. uptime uptime 20:25:38 up 7 min, 3 users, load average: 0.24, 0.45, 0.27 #该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。  2. dmesg | tail dmesg | tail [ 51.424401] wlp5s0: RX AssocResp from 38:4c:90:8f:8c:85 (capab=0x831 status=0 aid=3) [ 51.426461] wlp5s0: associated [ 51.429463] ath: EEPROM regdomain: 0x8348 [ 51.429463] ath: EEPROM indicates we should expect a country code [ 51.429464] ath: doing EEPROM country-\u0026gt;regdmn map search [ 51.429465] ath: country maps to regdmn code: 0x3a [ 51.429465] ath: Country alpha2 being used: US [ 51.429466] ath: Regpair used: 0x3a [ 51.429466] ath: regdomain 0x8348 dynamically updated by country IE [ 51.679984] IPv6: ADDRCONF(NETDEV_CHANGE): wlp5s0: link becomes ready # 打印内核环形缓存区中的内容，可以用来查看一些错误；  3. vmstat 1 vmstat 1  4. mpstat -P ALL 1 "
 },
 {
+	"uri": "/cs/windows/active_directory/",
+	"title": "Active_directory",
+	"tags": [],
+	"description": "",
+	"content": " Windows Active Directory What is Active Directory Domain Controller (DC) A server of Active Directory service\nSchema (database)\n User account Computer account  Schema extentable\nUser Account Contains\n username password Email and etc.  Computer Account Contains\n computer name UID and etc.  Groups OU (Organization Unit) "
+},
+{
+	"uri": "/datascience/numpy_fancy_indexing_and_viewing/",
+	"title": "Fancy indexing, view and copy",
+	"tags": [],
+	"description": "",
+	"content": " Normal Numpy Indexing Numpy arrays using:\n simple indices (e.g., arr[0]), slices (e.g., arr[:5]) Boolean masks (e.g., arr[arr \u0026gt; 0])  Numpy Fancy Indexing Fancy indexing is conceptually simple: it means passing an array of indices to access multiple array elements at once.\nimport numpy as np rand = np.random.RandomState(42) x = rand.randint(100, size=10) print(x) # Output # [51 92 14 71 60 20 82 86 74 74] # Normal indexing [x[3], x[7], x[2]] # [71, 86, 14] # Fancy indexing ind = [3, 7, 4] x[ind] # [71, 86, 14]  When using fancy indexing, the shape of the result reflects the shape of the index arrays rather than the shape of the array being indexed:\nind = np.array([[3, 7], [4, 5]]) x[ind] # array([[71, 86], # [60, 20]])  Fancy indexing also works in multiple dimensions. Consider the following array:\nX = np.arange(12).reshape((3, 4)) X # array([[ 0, 1, 2, 3], # [ 4, 5, 6, 7], # [ 8, 9, 10, 11]])  Like with standard indexing, the first index refers to the row, and the second to the column:\nrow = np.array([0, 1, 2]) col = np.array([2, 1, 3]) X[row, col] # array([ 2, 5, 11])  Notice that the first value in the result is X[0, 2], the second is X[1, 1], and the third is X[2, 3]. The pairing of indices in fancy indexing follows all the broadcasting rules that were mentioned in Computation on Arrays: Broadcasting.\n It is always important to remember with fancy indexing that the return value reflects the broadcasted shape of the indices, rather than the shape of the array being indexed.\n Numpy view and copy With a view, it’s like you are viewing the original (base) array. The view is actually part of the original array even though it looks like you’re working with something else. These are analogous to shallow copies in Python.\nCopies are separate objects from the original array, though right after copying the two look the same. These are analogous to deep copies in Python.\nIn short, view == shallow copy, copy == deep copy\narray.base\n###When you get a view vs a copy\nSo when do you get a view and when do you get a copy?\n    View Copy     Slices Indexing, e.g. Z[0,:] Fancy indexing, e.g. Z[[0],:]   Changing dtype / W = Z.as_type(np.float32)   Converting to 1D array Z.ravel() Z.flatten()    Reference Fancy index\nview vs copy\n"
+},
+{
 	"uri": "/datascience/pytorch/",
 	"title": "Pytorch Learning",
 	"tags": [],
@@ -151,7 +172,7 @@
 	"title": "Useful Git commands",
 	"tags": [],
 	"description": "",
-	"content": " Overview:\nThere are tons of tutorial of git. For those basic concepts, I am going to link to some good tutorial. This one is focusing on some real life use case. What if you encounter these errors or what if I want to do this\u0026hellip;\nUpdate a branch (feature) with different branch (develop) git checkout develop git pull git checkout feature git merge develop # or git rebase develop  The difference between with git rebase is that rebase keep all commits history from your branch, and that is important if your partial commits have a lot of content that can be interesting to keep. This option is obligatory in some teams.\nRemove grey submodule git rm --cached \u0026lt;folder_name\u0026gt; git add . git commit -m \u0026quot;\u0026lt;your_message\u0026gt;\u0026quot; git push --all  git merge TODO\nFix conflicts "
+	"content": " Overview:\nThere are tons of tutorial of git. For those basic concepts, I am going to link to some good tutorial. This one is focusing on some real life use cases, what if you encounter these errors or what if I want to do this\u0026hellip;\nBasic Git commands git fetch The git fetch command downloads commits, files, and refs from a remote repository into your local repo. Fetching is what you do when you want to see what everybody else has been working on.\ngit merge TODO\ngit log TODO\nGit use case (snippets) Create a new branch based on a arbitrary branch TODO\nCreate a new branch based on a commit git log # Get a commit id git checkout -b \u0026lt;new_branch_name\u0026gt; \u0026lt;commit_id\u0026gt;  Update a branch (feature) with different branch (develop) git checkout develop git pull git checkout feature git merge develop # or git rebase develop  The difference between with git rebase is that rebase keep all commits history from your branch, and that is important if your partial commits have a lot of content that can be interesting to keep. This option is obligatory in some teams.\nRemove grey submodule git rm --cached \u0026lt;folder_name\u0026gt; git add . git commit -m \u0026quot;\u0026lt;your_message\u0026gt;\u0026quot; git push --all  Fix conflicts TODO\nReference Atlassian git fetch\n"
 },
 {
 	"uri": "/cs/tools/docker_useful/",

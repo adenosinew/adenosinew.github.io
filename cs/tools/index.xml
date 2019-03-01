@@ -92,8 +92,8 @@ yaourt -S bat  prettyping &amp;gt; ping fzf &amp;gt; ctrl + r In addition to sea
       
       <guid>/cs/tools/git_useful/</guid>
       <description>Overview:
-There are tons of tutorial of git. For those basic concepts, I am going to link to some good tutorial. This one is focusing on some real life use case. What if you encounter these errors or what if I want to do this&amp;hellip;
-Update a branch (feature) with different branch (develop) git checkout develop git pull git checkout feature git merge develop # or git rebase develop  The difference between with git rebase is that rebase keep all commits history from your branch, and that is important if your partial commits have a lot of content that can be interesting to keep.</description>
+There are tons of tutorial of git. For those basic concepts, I am going to link to some good tutorial. This one is focusing on some real life use cases, what if you encounter these errors or what if I want to do this&amp;hellip;
+Basic Git commands git fetch The git fetch command downloads commits, files, and refs from a remote repository into your local repo. Fetching is what you do when you want to see what everybody else has been working on.</description>
     </item>
     
     <item>

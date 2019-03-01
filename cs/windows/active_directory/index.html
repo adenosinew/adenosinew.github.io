@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>Raspberry Pi 3 :: Documentation for Hugo Learn Theme</title>
+    <title>Active_directory :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1551407863" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/cs/tools/raspberry_pi_3_nas/">
+  <body class="" data-url="/cs/windows/active_directory/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -306,7 +306,7 @@
   
     
     <li data-nav-id="/cs/windows/" title="Windows" class="dd-item 
-        
+        parent
         
         
         ">
@@ -332,7 +332,7 @@
  
   
     
-      <li data-nav-id="/cs/windows/active_directory/" title="Active_directory" class="dd-item ">
+      <li data-nav-id="/cs/windows/active_directory/" title="Active_directory" class="dd-item active">
         <a href="/cs/windows/active_directory/">
         Active_directory
         <i class="fas fa-check read-icon"></i>
@@ -361,7 +361,7 @@
   
     
     <li data-nav-id="/cs/tools/" title="Tools" class="dd-item 
-        parent
+        
         
         
         ">
@@ -425,7 +425,7 @@
  
   
     
-      <li data-nav-id="/cs/tools/raspberry_pi_3_nas/" title="Raspberry Pi 3" class="dd-item active">
+      <li data-nav-id="/cs/tools/raspberry_pi_3_nas/" title="Raspberry Pi 3" class="dd-item ">
         <a href="/cs/tools/raspberry_pi_3_nas/">
         Raspberry Pi 3
         <i class="fas fa-check read-icon"></i>
@@ -842,7 +842,7 @@
             
           
           
-            <a href='/'>adenosinew</a> > <a href='/cs/'>Cs</a> > <a href='/cs/tools/'>Tools</a> > Raspberry Pi 3
+            <a href='/'>adenosinew</a> > <a href='/cs/'>Cs</a> > <a href='/cs/windows/'>Windows</a> > Active_directory
           
          
           
@@ -859,11 +859,19 @@
     <div class="wrapper">
 <nav id="TableOfContents">
 <ul>
-<li><a href="#raspberry-pi-3-nas">Raspberry Pi 3 NAS</a>
+<li>
 <ul>
-<li><a href="#mount-hard-driver">Mount hard driver</a></li>
-<li><a href="#create-nas">Create NAS</a></li>
-<li><a href="#enable-time-machine">Enable Time machine</a></li>
+<li><a href="#windows-active-directory">Windows Active Directory</a>
+<ul>
+<li><a href="#what-is-active-directory">What is Active Directory</a></li>
+<li><a href="#domain-controller-dc">Domain Controller (DC)</a>
+<ul>
+<li><a href="#user-account">User Account</a></li>
+<li><a href="#computer-account">Computer Account</a></li>
+</ul></li>
+<li><a href="#groups">Groups</a></li>
+<li><a href="#ou-organization-unit">OU (Organization Unit)</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -878,7 +886,7 @@
         
         <div id="body-inner">
           
-            <h1>Raspberry Pi 3</h1>
+            <h1>Active_directory</h1>
           
 
         
@@ -887,15 +895,45 @@
 
 
 
-<h1 id="raspberry-pi-3-nas">Raspberry Pi 3 NAS</h1>
+<h2 id="windows-active-directory">Windows Active Directory</h2>
 
-<p>[TOC]</p>
+<h3 id="what-is-active-directory">What is Active Directory</h3>
 
-<h2 id="mount-hard-driver">Mount hard driver</h2>
+<h3 id="domain-controller-dc">Domain Controller (DC)</h3>
 
-<h2 id="create-nas">Create NAS</h2>
+<p>A server of Active Directory service</p>
 
-<h2 id="enable-time-machine">Enable Time machine</h2>
+<p>Schema (database)</p>
+
+<ul>
+<li>User account</li>
+<li>Computer account</li>
+</ul>
+
+<p>Schema extentable</p>
+
+<h4 id="user-account">User Account</h4>
+
+<p>Contains</p>
+
+<ul>
+<li>username</li>
+<li>password</li>
+<li>Email and etc.</li>
+</ul>
+
+<h4 id="computer-account">Computer Account</h4>
+
+<p>Contains</p>
+
+<ul>
+<li>computer name</li>
+<li>UID and etc.</li>
+</ul>
+
+<h3 id="groups">Groups</h3>
+
+<h3 id="ou-organization-unit">OU (Organization Unit)</h3>
 
 
 <footer class=" footline" >
@@ -1083,6 +1121,40 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                         
                         
                     
@@ -1110,30 +1182,10 @@
             
         
                     
-            
-        
-                    
                         
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -1166,26 +1218,6 @@
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -1407,10 +1439,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/cs/tools/ssh_useful/" title="SSH Bestpractice"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/cs/windows/" title="Windows"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/cs/tools/common_commands_useful/" title="Most-used Linux CLI" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cs/tools/" title="Tools" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

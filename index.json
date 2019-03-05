@@ -119,6 +119,13 @@
 	"content": " 1. uptime uptime 20:25:38 up 7 min, 3 users, load average: 0.24, 0.45, 0.27 #该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。  2. dmesg | tail dmesg | tail [ 51.424401] wlp5s0: RX AssocResp from 38:4c:90:8f:8c:85 (capab=0x831 status=0 aid=3) [ 51.426461] wlp5s0: associated [ 51.429463] ath: EEPROM regdomain: 0x8348 [ 51.429463] ath: EEPROM indicates we should expect a country code [ 51.429464] ath: doing EEPROM country-\u0026gt;regdmn map search [ 51.429465] ath: country maps to regdmn code: 0x3a [ 51.429465] ath: Country alpha2 being used: US [ 51.429466] ath: Regpair used: 0x3a [ 51.429466] ath: regdomain 0x8348 dynamically updated by country IE [ 51.679984] IPv6: ADDRCONF(NETDEV_CHANGE): wlp5s0: link becomes ready # 打印内核环形缓存区中的内容，可以用来查看一些错误；  3. vmstat 1 vmstat 1  4. mpstat -P ALL 1 "
 },
 {
+	"uri": "/collections/snippets/python_platform/",
+	"title": "Python Platform module",
+	"tags": [],
+	"description": "",
+	"content": " platform Access to underlying platform’s identifying data # Get Architecture, The function relies on the system’s file command to do the actual work. print(platform.architecture()) # \u0026gt;\u0026gt; ('64bit', '') # More reliable way to get the architecture of current interpreter is_64bits = sys.maxsize \u0026gt; 2**32 # \u0026gt;\u0026gt; True # Returns the machine type, e.g. 'i386'. An empty string is returned if the value cannot be determined. print(platform.machine()) # \u0026gt;\u0026gt; x86_64 # Returns the computer’s network name (may not be fully qualified!). An empty string is returned if the value cannot be determined. print(platform.node()) # \u0026gt;\u0026gt; Adenosine-MacBook-Pro.local # print(platform.platform()) # \u0026gt;\u0026gt; Darwin-18.2.0-x86_64-i386-64bit # Returns a single string identifying the underlying platform with as much useful information as possible. print(platform.processor()) # \u0026gt;\u0026gt; i386  "
+},
+{
 	"uri": "/cs/tools/setup_mysql/",
 	"title": "Install MySQL server on CentOS",
 	"tags": [],

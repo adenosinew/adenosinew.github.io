@@ -11,5 +11,14 @@
 	<atom:link href="/collections/snippets/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Python Platform module</title>
+      <link>/collections/snippets/python_platform/</link>
+      <pubDate>Tue, 05 Mar 2019 10:06:08 -0500</pubDate>
+      
+      <guid>/collections/snippets/python_platform/</guid>
+      <description>platform Access to underlying platform’s identifying data # Get Architecture, The function relies on the system’s file command to do the actual work. print(platform.architecture()) # &amp;gt;&amp;gt; (&#39;64bit&#39;, &#39;&#39;) # More reliable way to get the architecture of current interpreter is_64bits = sys.maxsize &amp;gt; 2**32 # &amp;gt;&amp;gt; True # Returns the machine type, e.g. &#39;i386&#39;. An empty string is returned if the value cannot be determined. print(platform.machine()) # &amp;gt;&amp;gt; x86_64 # Returns the computer’s network name (may not be fully qualified!</description>
+    </item>
+    
   </channel>
 </rss>

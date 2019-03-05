@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>Cs :: Documentation for Hugo Learn Theme</title>
+    <title>Install MySQL server on CentOS :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1551761467" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/cs/">
+  <body class="" data-url="/cs/tools/setup_mysql/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -278,7 +278,7 @@
     
     <li data-nav-id="/cs/" title="Cs" class="dd-item 
         parent
-        active
+        
         
         ">
       <a href="/cs/">
@@ -361,7 +361,7 @@
   
     
     <li data-nav-id="/cs/tools/" title="Tools" class="dd-item 
-        
+        parent
         
         
         ">
@@ -520,7 +520,7 @@
  
   
     
-      <li data-nav-id="/cs/tools/setup_mysql/" title="Install MySQL server on CentOS" class="dd-item ">
+      <li data-nav-id="/cs/tools/setup_mysql/" title="Install MySQL server on CentOS" class="dd-item active">
         <a href="/cs/tools/setup_mysql/">
         Install MySQL server on CentOS
         <i class="fas fa-check read-icon"></i>
@@ -841,6 +841,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -851,7 +853,19 @@
             
           
           
-            <a href='/'>adenosinew</a> > Cs
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>adenosinew</a> > <a href='/cs/'>Cs</a> > <a href='/cs/tools/'>Tools</a> > Install MySQL server on CentOS
+          
+         
+          
+         
           
          
           
@@ -860,28 +874,200 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#install-the-mysql-server">Install the MySQL server</a></li>
+<li><a href="#optimize-mysql-server">Optimize MySQL server</a></li>
+<li><a href="#create-user-and-database">Create User and database</a></li>
+<li><a href="#basic-user-interaction">Basic User interaction</a>
+<ul>
+<li><a href="#list-all-users">List all users</a></li>
+<li><a href="#list-all-databases-and-tables">List all databases and tables</a></li>
+</ul></li>
+<li><a href="#using-mysql">Using MySQL</a>
+<ul>
+<li><a href="#from-localhost">From localhost</a>
+<ul>
+<li><a href="#root-login">Root Login</a></li>
+<li><a href="#create-new-database-and-user">Create new database and user</a></li>
+</ul></li>
+<li><a href="#remote-access">Remote access</a>
+<ul>
+<li><a href="#add-permission-to-public-access">Add permission to public access</a></li>
+<li><a href="#connect-to-the-database-from-cli">Connect to the database from CLI</a>
+<ul>
+<li><a href="#mysql-better-cli">MySQL Better CLI</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#reference">Reference</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>Install MySQL server on CentOS</h1>
           
 
         
 
 
-<p>Placeholder for Computer Science Chapter</p>
+
+
+
+<p>My laptop is running out of storage, since I have a VPS running as VPN server. I found it would be a good practice to setup a MySQL server in remote.</p>
+
+<p>BTW, if you still have AWS free tier, AWS RDS service is super easy and stable.</p>
+
+<h2 id="install-the-mysql-server">Install the MySQL server</h2>
+
+<p>I am not a big fan of ubuntu, on my local, I am using Manjaro. And for remote server, my first choice is always CentOS.</p>
+
+<p>MySQL must be installed from the <a href="https://dev.mysql.com/downloads/repo/yum/">community repository</a>.</p>
+
+<ol>
+<li>Download and add the repository, then update.</li>
+</ol>
+
+<pre><code class="language-shell">wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm
+yum update
+</code></pre>
+
+<ol>
+<li>Install MySQL as usual and start the service. During installation, you will be asked if you want to accept the results from the .rpm file’s GPG verification. If no error or mismatch occurs, enter <code>y</code>.</li>
+</ol>
+
+<pre><code class="language-shell">sudo yum install mysql-server
+sudo systemctl start mysqld
+</code></pre>
+
+<h2 id="optimize-mysql-server">Optimize MySQL server</h2>
+
+<p>You will be given the choice to change the MySQL root password, remove anonymous user accounts, disable root logins outside of localhost, and remove test databases. It is recommended that you answer <code>yes</code> to these options. You can read more about the script in the <a href="https://dev.mysql.com/doc/refman/5.6/en/mysql-secure-installation.html">MySQL Reference Manual</a>.</p>
+
+<pre><code class="language-shell">sudo mysql_secure_installation
+</code></pre>
+
+<p><a href="https://github.com/major/MySQLTuner-perl">MySQL Tuner</a> is a Perl script that connects to a running instance of MySQL and provides configuration recommendations based on workload.</p>
+
+<pre><code class="language-shell">wget https://raw.githubusercontent.com/major/MySQLTuner-perl/master/mysqltuner.pl
+perl ./mysqltuner.pl
+</code></pre>
+
+<h2 id="create-user-and-database">Create User and database</h2>
+
+<h2 id="basic-user-interaction">Basic User interaction</h2>
+
+<h3 id="list-all-users">List all users</h3>
+
+<pre><code class="language-sql">SELECT User, Host FROM mysql.user;
+
++------------------+-----------+
+| User             | Host      |
++------------------+-----------+
+| root             | localhost |
+| root             | demohost  |
+| root             | 127.0.0.1 |
+| debian-sys-maint | localhost |
+|                  | %         |
++------------------+-----------+
+</code></pre>
+
+<h3 id="list-all-databases-and-tables">List all databases and tables</h3>
+
+<pre><code class="language-sql">SHOW databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+</code></pre>
+
+<p>Choose one database and list all tables</p>
+
+<pre><code class="language-sql">use mysql;
+show tables;
++---------------------------+
+| Tables_in_mysql           |
++---------------------------+
+| columns_priv              |
+| db                        |
+...        
+| time_zone_name            |
+| time_zone_transition      |
+| time_zone_transition_type |
+| user                      |
++---------------------------+
+32 rows in set (0.00 sec)
+</code></pre>
+
+<h2 id="using-mysql">Using MySQL</h2>
+
+<h3 id="from-localhost">From localhost</h3>
+
+<h4 id="root-login">Root Login</h4>
+
+<pre><code class="language-shell">mysql -u root -p
+</code></pre>
+
+<h4 id="create-new-database-and-user">Create new database and user</h4>
+
+<h3 id="remote-access">Remote access</h3>
+
+<h4 id="add-permission-to-public-access">Add permission to public access</h4>
+
+<pre><code class="language-shell"> GRANT ALL PRIVILEGES ON *.* TO 'username'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
+ FLUSH PRIVILEGES;
+</code></pre>
+
+<h4 id="connect-to-the-database-from-cli">Connect to the database from CLI</h4>
+
+<pre><code class="language-shell">mysql -u {username} -h {remote server ip or name} -P {port} -D {DB name} -p{password}
+</code></pre>
+
+<p><strong>Notes</strong> No space between <code>-p</code> and <code>{password}</code> , better leave the <code>password</code> for blank and enter the password from the prompt.</p>
+
+<h5 id="mysql-better-cli">MySQL Better CLI</h5>
+
+<p><a href="https://www.mycli.net/">mycli</a> is a command line interface for MySQL, MariaDB, and Percona with auto-completion and syntax highlighting.</p>
+
+<pre><code class="language-shell">brew install mycli
+mycli mysql://my_user@my_host.com:3306/my_database
+</code></pre>
+
+<h2 id="reference">Reference</h2>
+
+<p><a href="https://www.linode.com/docs/databases/mysql/how-to-install-mysql-on-centos-7/#tune-mysql">Install mysql on centos Linode</a></p>
+
+<p><a href="https://stackoverflow.com/questions/14779104/how-to-allow-remote-connection-to-mysql">Allow remote connection to mysql</a></p>
+
+<p><a href="https://www.liquidweb.com/kb/create-a-mysql-user-on-linux-via-command-line/">Basic User interaction</a></p>
+
+<p><a href="https://howchoo.com/g/mtm3zdq2nzv/how-to-add-a-mysql-user-and-grant-privileges">Add user and grant privileges</a></p>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -1097,6 +1283,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1109,6 +1296,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1222,6 +1412,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1237,6 +1428,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1394,10 +1588,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/datascience/commands_for_data_scientist/" title="Command line tricks for data scientist"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/cs/tools/10_basic_commands_for_linux_performance_detection/" title="Check Linux Performance CLI"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/cs/windows/" title="Windows" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cs/tools/git_useful/" title="Useful Git commands" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1428,3 +1622,4 @@
 
   </body>
 </html>
+

@@ -87,6 +87,11 @@
   </url>
   
   <url>
+    <loc>/cs/tools/terraform_useful/</loc>
+    <lastmod>2019-03-06T11:35:48-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/collections/snippets/python_platform/</loc>
     <lastmod>2019-03-05T10:06:08-05:00</lastmod>
   </url>
@@ -99,6 +104,16 @@
   <url>
     <loc>/cs/windows/active_directory/</loc>
     <lastmod>2019-02-28T11:11:39-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/me/track_my_work/</loc>
+    <lastmod>2019-02-20T14:15:25-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/me/skill_tree/</loc>
+    <lastmod>2019-02-20T14:13:30-05:00</lastmod>
   </url>
   
   <url>

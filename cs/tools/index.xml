@@ -86,6 +86,18 @@ yaourt -S bat  prettyping &amp;gt; ping fzf &amp;gt; ctrl + r In addition to sea
     </item>
     
     <item>
+      <title>Terraform Best Practice</title>
+      <link>/cs/tools/terraform_useful/</link>
+      <pubDate>Wed, 06 Mar 2019 11:35:48 -0500</pubDate>
+      
+      <guid>/cs/tools/terraform_useful/</guid>
+      <description>What is Terraform Terraform official site
+Terraform is a super useful tool developed by HashiCorp, the main idea of terraform is &amp;ldquo;INFRASTRUCTURE AS CODE&amp;rdquo;.
+To me, the most attracting feature Cloud Computing is scalability. Infrastructure in Cloud is inifinite. But there are some downsides of traditional cloud library.
+For AWS, I&amp;rsquo;ve tried awscli, boto3 and go sdk. For a small test, they are easy to use. But for a big test, there are too many logics and dependencies inside.</description>
+    </item>
+    
+    <item>
       <title>Install MySQL server on CentOS</title>
       <link>/cs/tools/setup_mysql/</link>
       <pubDate>Mon, 04 Mar 2019 21:38:50 -0500</pubDate>

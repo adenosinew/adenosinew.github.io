@@ -119,6 +119,13 @@
 	"content": " 1. uptime uptime 20:25:38 up 7 min, 3 users, load average: 0.24, 0.45, 0.27 #该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。  2. dmesg | tail dmesg | tail [ 51.424401] wlp5s0: RX AssocResp from 38:4c:90:8f:8c:85 (capab=0x831 status=0 aid=3) [ 51.426461] wlp5s0: associated [ 51.429463] ath: EEPROM regdomain: 0x8348 [ 51.429463] ath: EEPROM indicates we should expect a country code [ 51.429464] ath: doing EEPROM country-\u0026gt;regdmn map search [ 51.429465] ath: country maps to regdmn code: 0x3a [ 51.429465] ath: Country alpha2 being used: US [ 51.429466] ath: Regpair used: 0x3a [ 51.429466] ath: regdomain 0x8348 dynamically updated by country IE [ 51.679984] IPv6: ADDRCONF(NETDEV_CHANGE): wlp5s0: link becomes ready # 打印内核环形缓存区中的内容，可以用来查看一些错误；  3. vmstat 1 vmstat 1  4. mpstat -P ALL 1 "
 },
 {
+	"uri": "/cs/tools/terraform_useful/",
+	"title": "Terraform Best Practice",
+	"tags": [],
+	"description": "",
+	"content": " What is Terraform Terraform official site\nTerraform is a super useful tool developed by HashiCorp, the main idea of terraform is \u0026ldquo;INFRASTRUCTURE AS CODE\u0026rdquo;.\nTo me, the most attracting feature Cloud Computing is scalability. Infrastructure in Cloud is inifinite. But there are some downsides of traditional cloud library.\nFor AWS, I\u0026rsquo;ve tried awscli, boto3 and go sdk. For a small test, they are easy to use. But for a big test, there are too many logics and dependencies inside. Not to mention, there are a lot cloud vendors, such as Azure, GCP and more.\n*.tf files *.tfvars files and variable Reference Terraform Variables\n"
+},
+{
 	"uri": "/collections/snippets/python_platform/",
 	"title": "Python Platform module",
 	"tags": [],
@@ -138,6 +145,20 @@
 	"tags": [],
 	"description": "",
 	"content": " Windows Active Directory What is Active Directory Domain Controller (DC) A server of Active Directory service\nSchema (database)\n User account Computer account  Schema extentable\nUser Account Contains\n username password Email and etc.  Computer Account Contains\n computer name UID and etc.  Groups OU (Organization Unit) "
+},
+{
+	"uri": "/me/track_my_work/",
+	"title": "Best Practice Logs",
+	"tags": [],
+	"description": "",
+	"content": " Overview Hands on experience is one of the most valuable experience.\nThe rule is simple:\n If I didn\u0026rsquo;t go over the material for 7 days, strikethrough it. Calculate the complete rate every week Add useful snippet to gist  Best Practices March 6 2019 Ash Wesnday\nSQLAlchemy — Python Tutorial [ ] Git Best Practice\n [ ] 10 Common Software Architectural Patterns in a nutshell\n [ ]\n  "
+},
+{
+	"uri": "/me/skill_tree/",
+	"title": "My Skill Tree",
+	"tags": [],
+	"description": "",
+	"content": " Overview Automation Cloud Computing Terraform Packer Boto3 Go SDK Intelligence Data Science Computer Vision NLP "
 },
 {
 	"uri": "/datascience/numpy_fancy_indexing_and_viewing/",
@@ -179,7 +200,7 @@
 	"title": "Better Develpoer",
 	"tags": [],
 	"description": "",
-	"content": " Reference Use the full power of Your Brain to be a Better Developer \nUseful suggestions  The human brain is a complex machine and it\u0026rsquo;s a result of thousands of years of human evolution. Our world has evolved very fast. For the brain, being such an old machine, working in today\u0026rsquo;s complex and distracted world is very hard. But if we use our brain as our ancestors did, we can use most of it. The following steps will help you achieve that.\n challenges: - complex - distraction\n You have to be an action-based person to learn better.\n "
+	"content": " Useful suggestions  The human brain is a complex machine and it\u0026rsquo;s a result of thousands of years of human evolution. Our world has evolved very fast. For the brain, being such an old machine, working in today\u0026rsquo;s complex and distracted world is very hard. But if we use our brain as our ancestors did, we can use most of it. The following steps will help you achieve that.\n challenges: - complex - distraction\n You have to be an action-based person to learn better.\n My Workflow Reference Use the full power of Your Brain to be a Better Developer \n"
 },
 {
 	"uri": "/cs/tools/git_useful/",

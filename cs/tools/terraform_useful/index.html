@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>Build CLI Best practice :: Documentation for Hugo Learn Theme</title>
+    <title>Terraform Best Practice :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1551904187" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/cs/tools/cli_best_practice/">
+  <body class="" data-url="/cs/tools/terraform_useful/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -520,7 +520,7 @@
  
   
     
-      <li data-nav-id="/cs/tools/cli_best_practice/" title="Build CLI Best practice" class="dd-item active">
+      <li data-nav-id="/cs/tools/cli_best_practice/" title="Build CLI Best practice" class="dd-item ">
         <a href="/cs/tools/cli_best_practice/">
         Build CLI Best practice
         <i class="fas fa-check read-icon"></i>
@@ -558,7 +558,7 @@
  
   
     
-      <li data-nav-id="/cs/tools/terraform_useful/" title="Terraform Best Practice" class="dd-item ">
+      <li data-nav-id="/cs/tools/terraform_useful/" title="Terraform Best Practice" class="dd-item active">
         <a href="/cs/tools/terraform_useful/">
         Terraform Best Practice
         <i class="fas fa-check read-icon"></i>
@@ -947,7 +947,7 @@
             
           
           
-            <a href='/'>adenosinew</a> > <a href='/cs/'>Cs</a> > <a href='/cs/tools/'>Tools</a> > Build CLI Best practice
+            <a href='/'>adenosinew</a> > <a href='/cs/'>Cs</a> > <a href='/cs/tools/'>Tools</a> > Terraform Best Practice
           
          
           
@@ -964,9 +964,12 @@
     <div class="wrapper">
 <nav id="TableOfContents">
 <ul>
-<li><a href="#cli-best-practice">CLI best practice</a>
+<li>
 <ul>
-<li><a href="#12-factors">12 factors</a></li>
+<li><a href="#what-is-terraform">What is Terraform</a></li>
+<li><a href="#tf-files"><code>*.tf</code>  files</a></li>
+<li><a href="#tfvars-files-and-variable"><code>*.tfvars</code>  files and variable</a></li>
+<li><a href="#reference">Reference</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -981,7 +984,7 @@
         
         <div id="body-inner">
           
-            <h1>Build CLI Best practice</h1>
+            <h1>Terraform Best Practice</h1>
           
 
         
@@ -990,28 +993,23 @@
 
 
 
-<h1 id="cli-best-practice">CLI best practice</h1>
+<h2 id="what-is-terraform">What is Terraform</h2>
 
-<p><a href="https://medium.com/@jdxcode/12-factor-cli-apps-dd3c227a0e46">reference</a></p>
+<p><a href="https://www.terraform.io/">Terraform official site</a></p>
 
-<p>[TOC]</p>
+<p>Terraform is a super useful tool developed by HashiCorp, the main idea of terraform is <strong>&ldquo;INFRASTRUCTURE AS CODE&rdquo;</strong>.</p>
 
-<h2 id="12-factors">12 factors</h2>
+<p>To me, the most attracting feature Cloud Computing is <em>scalability</em>. Infrastructure in Cloud is inifinite. But there are some downsides of traditional cloud library.</p>
 
-<ol>
-<li>Great help is essential</li>
-<li>Prefer flags to args</li>
-<li>What version am I on?</li>
-<li>Mind the streams</li>
-<li>Handle things going wrong</li>
-<li>Be fancy!</li>
-<li>Prompt if you can</li>
-<li>Use tables</li>
-<li>Be speedy</li>
-<li>Encourage contributions</li>
-<li>Be clear about subcommands</li>
-<li>Follow XDG-spec</li>
-</ol>
+<p>For <strong>AWS</strong>, I&rsquo;ve tried <em>awscli</em>, <em>boto3</em> and <em>go sdk</em>. For a small test, they are easy to use. But for a big test, there are too many logics and dependencies inside. Not to mention, there are a lot cloud vendors, such as <strong>Azure</strong>, <strong>GCP</strong> and more.</p>
+
+<h2 id="tf-files"><code>*.tf</code>  files</h2>
+
+<h2 id="tfvars-files-and-variable"><code>*.tfvars</code>  files and variable</h2>
+
+<h2 id="reference">Reference</h2>
+
+<p><a href="https://learn.hashicorp.com/terraform/getting-started/variables.html">Terraform Variables</a></p>
 
 
 <footer class=" footline" >
@@ -1363,26 +1361,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -1414,6 +1392,26 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1603,10 +1601,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/cs/tools/cli_improved/" title="Better CLI tools"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/cs/tools/10_basic_commands_for_linux_performance_detection/" title="Check Linux Performance CLI"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/cs/tools/10_basic_commands_for_linux_performance_detection/" title="Check Linux Performance CLI" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cs/tools/setup_mysql/" title="Install MySQL server on CentOS" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

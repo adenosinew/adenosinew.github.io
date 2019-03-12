@@ -12,6 +12,18 @@
     
     
     <item>
+      <title>Bash Cheatsheet on macOS</title>
+      <link>/cs/linux/linux-cheatsheet/</link>
+      <pubDate>Mon, 11 Mar 2019 21:33:22 -0400</pubDate>
+      
+      <guid>/cs/linux/linux-cheatsheet/</guid>
+      <description>Overview Jure did a very impressive job on the Linux cheatsheet.1 It covered generic linux and some part of ubuntu and Debian distribution.
+Since I am a user of macOS, a lot of shortcuts and commands are not available on macOS&amp;rsquo;s platform, thus I am going to write my own cheatsheet.
+You can also see this one as a best practice of using terminal on macOS.
+Terminal shortcuts [macOS iTerm2] Package management Homebrew is a widely used package management tool on macOS platform.</description>
+    </item>
+    
+    <item>
       <title>Mount a filesystem</title>
       <link>/cs/linux/systemd_mount/</link>
       <pubDate>Thu, 14 Feb 2019 18:05:39 -0500</pubDate>

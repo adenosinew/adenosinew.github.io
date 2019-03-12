@@ -87,6 +87,16 @@
   </url>
   
   <url>
+    <loc>/cs/linux/linux-cheatsheet/</loc>
+    <lastmod>2019-03-11T21:33:22-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/datascience/sqlalchemy/</loc>
+    <lastmod>2019-03-09T23:13:21-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/cs/tools/terraform_useful/</loc>
     <lastmod>2019-03-06T11:35:48-05:00</lastmod>
   </url>

@@ -22,16 +22,16 @@ The rule is simple:
  If I didn&amp;rsquo;t go over the material for 7 days, strikethrough it. Calculate the complete rate every week Add useful snippet to gist  Best Practices March 6 2019 Ash Wesnday
 SQLAlchemy — Python Tutorial [ ] Git Best Practice
  [ ] 10 Common Software Architectural Patterns in a nutshell
- [ ]</description>
+ [ ] Numpy 100</description>
     </item>
     
     <item>
-      <title>My Skill Tree</title>
+      <title>My Skill Tree and Experience</title>
       <link>/me/skill_tree/</link>
       <pubDate>Wed, 20 Feb 2019 14:13:30 -0500</pubDate>
       
       <guid>/me/skill_tree/</guid>
-      <description> Overview Automation Cloud Computing Terraform Packer Boto3 Go SDK Intelligence Data Science Computer Vision NLP </description>
+      <description>Overview Automation Cloud Computing Terraform (familiar)  Use Terraform to provision large scale infrastructure in the Cloud (AWS and Azure). Developed a module to wrap up different architectures. Use cobra (go CLI package) to build a CLI tool to simplify my workflow.  Packer (familiar)  Use Packer to build, configure and publish system images. Resolved a lot of conflicts between softwares and system. Working closely with Centos and ubuntu distribution.</description>
     </item>
     
     <item>

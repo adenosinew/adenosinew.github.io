@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Sqlalchemy</title>
+      <link>/datascience/sqlalchemy/</link>
+      <pubDate>Sat, 09 Mar 2019 23:13:21 -0500</pubDate>
+      
+      <guid>/datascience/sqlalchemy/</guid>
+      <description> Sqlalchemy Reflection Metadata </description>
+    </item>
+    
+    <item>
       <title>Fancy indexing, view and copy</title>
       <link>/datascience/numpy_fancy_indexing_and_viewing/</link>
       <pubDate>Wed, 20 Feb 2019 10:14:37 -0500</pubDate>

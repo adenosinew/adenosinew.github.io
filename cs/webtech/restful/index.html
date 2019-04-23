@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>Build CLI Best practice :: Documentation for Hugo Learn Theme</title>
+    <title>RESTful :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1556052744" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/cs/tools/cli_best_practice/">
+  <body class="" data-url="/cs/webtech/restful/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -418,7 +418,7 @@
   
     
     <li data-nav-id="/cs/tools/" title="Tools" class="dd-item 
-        parent
+        
         
         
         ">
@@ -539,7 +539,7 @@
  
   
     
-      <li data-nav-id="/cs/tools/cli_best_practice/" title="Build CLI Best practice" class="dd-item active">
+      <li data-nav-id="/cs/tools/cli_best_practice/" title="Build CLI Best practice" class="dd-item ">
         <a href="/cs/tools/cli_best_practice/">
         Build CLI Best practice
         <i class="fas fa-check read-icon"></i>
@@ -708,7 +708,7 @@
   
     
     <li data-nav-id="/cs/webtech/" title="Webtech" class="dd-item 
-        
+        parent
         
         
         ">
@@ -734,7 +734,7 @@
  
   
     
-      <li data-nav-id="/cs/webtech/restful/" title="RESTful" class="dd-item ">
+      <li data-nav-id="/cs/webtech/restful/" title="RESTful" class="dd-item active">
         <a href="/cs/webtech/restful/">
         RESTful
         <i class="fas fa-check read-icon"></i>
@@ -1095,7 +1095,7 @@
             
           
           
-            <a href='/'>adenosinew</a> > <a href='/cs/'>Cs</a> > <a href='/cs/tools/'>Tools</a> > Build CLI Best practice
+            <a href='/'>adenosinew</a> > <a href='/cs/'>Cs</a> > <a href='/cs/webtech/'>Webtech</a> > RESTful
           
          
           
@@ -1112,9 +1112,11 @@
     <div class="wrapper">
 <nav id="TableOfContents">
 <ul>
-<li><a href="#cli-best-practice">CLI best practice</a>
+<li>
 <ul>
-<li><a href="#12-factors">12 factors</a></li>
+<li><a href="#what-is-rest">What is REST</a></li>
+<li><a href="#benefits-of-rest">Benefits of REST</a></li>
+<li><a href="#reference">Reference</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1129,7 +1131,7 @@
         
         <div id="body-inner">
           
-            <h1>Build CLI Best practice</h1>
+            <h1>RESTful</h1>
           
 
         
@@ -1138,28 +1140,24 @@
 
 
 
-<h1 id="cli-best-practice">CLI best practice</h1>
+<h2 id="what-is-rest">What is REST</h2>
 
-<p><a href="https://medium.com/@jdxcode/12-factor-cli-apps-dd3c227a0e46">reference</a></p>
+<p>REST, or Representational State Transfer is another way of implementing a Web Service.
+It is the ideology that everything is a resource.
+Every resource is identified by a unique uniform resource indicator (URI).
+An important point to note with REST is that it is stateless. This means that when you access the REST web service to retrieve data, you receive the most current state of the resource (ie. most recent data available). You might go for a quick walk, come back, send another request to the web service, and now you have different data. REST APIs usually take advantage of HTTP, however it’s also possible to use it with other protocols.</p>
 
-<p>[TOC]</p>
+<h2 id="benefits-of-rest">Benefits of REST</h2>
 
-<h2 id="12-factors">12 factors</h2>
+<ul>
+<li>Lightweight</li>
+<li>Scalable - Supports large numbers of requests</li>
+<li>Reliable - No single point of failure</li>
+</ul>
 
-<ol>
-<li>Great help is essential</li>
-<li>Prefer flags to args</li>
-<li>What version am I on?</li>
-<li>Mind the streams</li>
-<li>Handle things going wrong</li>
-<li>Be fancy!</li>
-<li>Prompt if you can</li>
-<li>Use tables</li>
-<li>Be speedy</li>
-<li>Encourage contributions</li>
-<li>Be clear about subcommands</li>
-<li>Follow XDG-spec</li>
-</ol>
+<h2 id="reference">Reference</h2>
+
+<p><a href="https://zeroequalsfalse.press/posts/build-rest-api-in-5-minutes/">Build rest api in 5 mins</a></p>
 
 
 <footer class=" footline" >
@@ -1430,7 +1428,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1438,25 +1435,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1478,74 +1456,6 @@
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -1638,6 +1548,35 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -1670,6 +1609,9 @@
                     
 
                     
+            
+        
+                    
                         
             
             
@@ -1693,6 +1635,59 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1863,10 +1858,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/cs/tools/cli_improved/" title="Better CLI tools"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/cs/webtech/" title="Webtech"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/cs/tools/10_basic_commands_for_linux_performance_detection/" title="Check Linux Performance CLI" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cs/linux/" title="Linux" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

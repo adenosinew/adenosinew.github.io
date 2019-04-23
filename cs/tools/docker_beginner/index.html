@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>Build CLI Best practice :: Documentation for Hugo Learn Theme</title>
+    <title>Docker: From Zero to Hero :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1556052744" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/cs/tools/cli_best_practice/">
+  <body class="" data-url="/cs/tools/docker_beginner/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -539,7 +539,7 @@
  
   
     
-      <li data-nav-id="/cs/tools/cli_best_practice/" title="Build CLI Best practice" class="dd-item active">
+      <li data-nav-id="/cs/tools/cli_best_practice/" title="Build CLI Best practice" class="dd-item ">
         <a href="/cs/tools/cli_best_practice/">
         Build CLI Best practice
         <i class="fas fa-check read-icon"></i>
@@ -577,7 +577,7 @@
  
   
     
-      <li data-nav-id="/cs/tools/docker_beginner/" title="Docker: From Zero to Hero" class="dd-item ">
+      <li data-nav-id="/cs/tools/docker_beginner/" title="Docker: From Zero to Hero" class="dd-item active">
         <a href="/cs/tools/docker_beginner/">
         Docker beginner tutorial
         <i class="fas fa-check read-icon"></i>
@@ -1095,7 +1095,7 @@
             
           
           
-            <a href='/'>adenosinew</a> > <a href='/cs/'>Cs</a> > <a href='/cs/tools/'>Tools</a> > Build CLI Best practice
+            <a href='/'>adenosinew</a> > <a href='/cs/'>Cs</a> > <a href='/cs/tools/'>Tools</a> > Docker: From Zero to Hero
           
          
           
@@ -1112,9 +1112,10 @@
     <div class="wrapper">
 <nav id="TableOfContents">
 <ul>
-<li><a href="#cli-best-practice">CLI best practice</a>
+<li>
 <ul>
-<li><a href="#12-factors">12 factors</a></li>
+<li><a href="#dockerfile">Dockerfile</a></li>
+<li><a href="#reference">Reference</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1129,7 +1130,7 @@
         
         <div id="body-inner">
           
-            <h1>Build CLI Best practice</h1>
+            <h1>Docker: From Zero to Hero</h1>
           
 
         
@@ -1138,28 +1139,41 @@
 
 
 
-<h1 id="cli-best-practice">CLI best practice</h1>
+<h2 id="dockerfile">Dockerfile</h2>
 
-<p><a href="https://medium.com/@jdxcode/12-factor-cli-apps-dd3c227a0e46">reference</a></p>
+<pre><code># Dockerfile
 
-<p>[TOC]</p>
+FROM node:latest
 
-<h2 id="12-factors">12 factors</h2>
+WORKDIR /app
 
-<ol>
-<li>Great help is essential</li>
-<li>Prefer flags to args</li>
-<li>What version am I on?</li>
-<li>Mind the streams</li>
-<li>Handle things going wrong</li>
-<li>Be fancy!</li>
-<li>Prompt if you can</li>
-<li>Use tables</li>
-<li>Be speedy</li>
-<li>Encourage contributions</li>
-<li>Be clear about subcommands</li>
-<li>Follow XDG-spec</li>
-</ol>
+COPY . .
+
+RUN npm install
+
+EXPOSE 3000
+
+ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
+</code></pre>
+
+<ul>
+<li>FROM, this is us selecting an OS image from Docker Hub. Docker Hub is a global repository that contains images that we can pull down locally. In our case we are choosing an image based on Ubuntu that has Node.js installed, it’s called node. We also specify that we want the latest version of it, by using the following tag :latest</li>
+<li>WORKDIR, this simply means we set a working directory. This is a way to set up for what is to happen later, in the next command below</li>
+<li>COPY, here we copy the files from the directory we are standing into the directory specified by our WORKDIR command</li>
+<li>RUN, this runs a command in the terminal, in our case we are installing all the libraries we need to build our Node.js express application</li>
+<li>EXPOSE, this means we are opening up a port, it is through this port that we communicate with our container</li>
+<li>ENTRYPOINT, this is where we should state how we start up our application, the commands need to be specified as an array so the array [“node”, “app.js”] will be translated to the node app.js in the terminal</li>
+</ul>
+
+<p>First things first, let’s create our image with the following command:</p>
+
+<pre><code class="language-shell">docker build -t adenosinew/node:latest .
+</code></pre>
+
+<h2 id="reference">Reference</h2>
+
+<p><a href="https://dev.to/softchris/docker---from-the-beginning-part-i-28c6">Docker - from the beginning, part I</a>
+<a href="https://dev.to/softchris/docker-from-the-beginning---part-ii-5g8n">Docker - from the beginning, part II</a></p>
 
 
 <footer class=" footline" >
@@ -1527,26 +1541,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -1578,6 +1572,26 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1863,10 +1877,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/cs/tools/cli_improved/" title="Better CLI tools"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/cs/tools/10_basic_commands_for_linux_performance_detection/" title="Check Linux Performance CLI"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/cs/tools/10_basic_commands_for_linux_performance_detection/" title="Check Linux Performance CLI" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cs/tools/terraform_useful/" title="Terraform Best Practice" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

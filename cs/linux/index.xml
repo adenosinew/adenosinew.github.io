@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Shells</title>
+      <link>/cs/linux/shell_compatiability/</link>
+      <pubDate>Thu, 04 Apr 2019 15:20:52 -0400</pubDate>
+      
+      <guid>/cs/linux/shell_compatiability/</guid>
+      <description>Shell types  sh or Bourne Shell: the original shell still used on UNIX systems and in UNIX-related environments. This is the basic shell, a small program with few features. While this is not the standard shell, it is still available on every Linux system for compatibility with UNIX programs. bash or Bourne Again shell: the standard GNU shell, intuitive and flexible. Probably most advisable for beginning users while being at the same time a powerful tool for the advanced and professional user.</description>
+    </item>
+    
+    <item>
       <title>Bash Cheatsheet on macOS</title>
       <link>/cs/linux/linux-cheatsheet/</link>
       <pubDate>Mon, 11 Mar 2019 21:33:22 -0400</pubDate>
@@ -21,6 +30,17 @@
 Since I am a user of macOS, a lot of shortcuts and commands are not available on macOS&amp;rsquo;s platform, thus I am going to write my own cheatsheet.
 You can also see this one as a best practice of using terminal on macOS.
 Terminal shortcuts [macOS iTerm2] Package management Homebrew is a widely used package management tool on macOS platform.</description>
+    </item>
+    
+    <item>
+      <title>Work with Different Shells</title>
+      <link>/cs/linux/shells/</link>
+      <pubDate>Mon, 11 Mar 2019 21:33:22 -0400</pubDate>
+      
+      <guid>/cs/linux/shells/</guid>
+      <description>There are several shells such as bash, sh, ksh, zsh, fish and many other lesser known shells available on Linux.
+Bash (/bin/bash) is a popular shell on most if not all Linux systems, and it’s normally the default shell for user accounts.
+When creating user accounts with the useradd or adduser utilities, the --shell flag can be used to specify the name of a user’s login shell other than that specified in the respective configuration files.</description>
     </item>
     
     <item>

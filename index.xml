@@ -50,7 +50,9 @@ Mount hard driver Create NAS Enable Time machine </description>
       
       <guid>/cs/tools/common_commands_useful/</guid>
       <description>File operations Compare two directory diff --brief -r dir1/ dir2/
-If you want to see differences for files that may not exist in either directory diff --brief -Nr dir1/ dir2</description>
+If you want to see differences for files that may not exist in either directory diff --brief -Nr dir1/ dir2
+##Commands
+xargs Delete all files with a .backup extension. -print0 on find uses a null character to split the files, and -0 changes the delimiter to the null character (useful if there&amp;rsquo;s whitespace in filenames): find . -name &#39;*.backup&#39; -print0 | xargs -0 rm -v</description>
     </item>
     
     <item>
@@ -86,6 +88,33 @@ yaourt -S bat  prettyping &amp;gt; ping fzf &amp;gt; ctrl + r In addition to sea
     </item>
     
     <item>
+      <title>RESTful</title>
+      <link>/cs/webtech/restful/</link>
+      <pubDate>Tue, 23 Apr 2019 16:46:45 -0400</pubDate>
+      
+      <guid>/cs/webtech/restful/</guid>
+      <description>What is REST REST, or Representational State Transfer is another way of implementing a Web Service. It is the ideology that everything is a resource. Every resource is identified by a unique uniform resource indicator (URI). An important point to note with REST is that it is stateless. This means that when you access the REST web service to retrieve data, you receive the most current state of the resource (ie.</description>
+    </item>
+    
+    <item>
+      <title>Shells</title>
+      <link>/cs/linux/shell_compatiability/</link>
+      <pubDate>Thu, 04 Apr 2019 15:20:52 -0400</pubDate>
+      
+      <guid>/cs/linux/shell_compatiability/</guid>
+      <description>Shell types  sh or Bourne Shell: the original shell still used on UNIX systems and in UNIX-related environments. This is the basic shell, a small program with few features. While this is not the standard shell, it is still available on every Linux system for compatibility with UNIX programs. bash or Bourne Again shell: the standard GNU shell, intuitive and flexible. Probably most advisable for beginning users while being at the same time a powerful tool for the advanced and professional user.</description>
+    </item>
+    
+    <item>
+      <title>Docker: From Zero to Hero</title>
+      <link>/cs/tools/docker_beginner/</link>
+      <pubDate>Wed, 13 Mar 2019 18:02:14 -0400</pubDate>
+      
+      <guid>/cs/tools/docker_beginner/</guid>
+      <description>Dockerfile # Dockerfile FROM node:latest WORKDIR /app COPY . . RUN npm install EXPOSE 3000 ENTRYPOINT [&amp;quot;node&amp;quot;, &amp;quot;app.js&amp;quot;]   FROM, this is us selecting an OS image from Docker Hub. Docker Hub is a global repository that contains images that we can pull down locally. In our case we are choosing an image based on Ubuntu that has Node.js installed, it’s called node. We also specify that we want the latest version of it, by using the following tag :latest WORKDIR, this simply means we set a working directory.</description>
+    </item>
+    
+    <item>
       <title>Bash Cheatsheet on macOS</title>
       <link>/cs/linux/linux-cheatsheet/</link>
       <pubDate>Mon, 11 Mar 2019 21:33:22 -0400</pubDate>
@@ -95,6 +124,17 @@ yaourt -S bat  prettyping &amp;gt; ping fzf &amp;gt; ctrl + r In addition to sea
 Since I am a user of macOS, a lot of shortcuts and commands are not available on macOS&amp;rsquo;s platform, thus I am going to write my own cheatsheet.
 You can also see this one as a best practice of using terminal on macOS.
 Terminal shortcuts [macOS iTerm2] Package management Homebrew is a widely used package management tool on macOS platform.</description>
+    </item>
+    
+    <item>
+      <title>Work with Different Shells</title>
+      <link>/cs/linux/shells/</link>
+      <pubDate>Mon, 11 Mar 2019 21:33:22 -0400</pubDate>
+      
+      <guid>/cs/linux/shells/</guid>
+      <description>There are several shells such as bash, sh, ksh, zsh, fish and many other lesser known shells available on Linux.
+Bash (/bin/bash) is a popular shell on most if not all Linux systems, and it’s normally the default shell for user accounts.
+When creating user accounts with the useradd or adduser utilities, the --shell flag can be used to specify the name of a user’s login shell other than that specified in the respective configuration files.</description>
     </item>
     
     <item>
@@ -160,7 +200,7 @@ User Account Contains
       <guid>/me/track_my_work/</guid>
       <description>Overview Hands on experience is one of the most valuable experience.
 The rule is simple:
- If I didn&amp;rsquo;t go over the material for 7 days, strikethrough it. Calculate the complete rate every week Add useful snippet to gist  Best Practices March 6 2019 Ash Wesnday
+ If I didn&amp;rsquo;t go over the material for 7 days, strikethrough it. Calculate the complete rate every week Add useful snippet to gist  Best Practices March 6 2019 Ash Wednesday
 SQLAlchemy — Python Tutorial [ ] Git Best Practice
  [ ] 10 Common Software Architectural Patterns in a nutshell
  [ ] Numpy 100</description>

@@ -50,7 +50,9 @@ Mount hard driver Create NAS Enable Time machine </description>
       
       <guid>/cs/tools/common_commands_useful/</guid>
       <description>File operations Compare two directory diff --brief -r dir1/ dir2/
-If you want to see differences for files that may not exist in either directory diff --brief -Nr dir1/ dir2</description>
+If you want to see differences for files that may not exist in either directory diff --brief -Nr dir1/ dir2
+##Commands
+xargs Delete all files with a .backup extension. -print0 on find uses a null character to split the files, and -0 changes the delimiter to the null character (useful if there&amp;rsquo;s whitespace in filenames): find . -name &#39;*.backup&#39; -print0 | xargs -0 rm -v</description>
     </item>
     
     <item>
@@ -83,6 +85,15 @@ yaourt -S bat  prettyping &amp;gt; ping fzf &amp;gt; ctrl + r In addition to sea
       
       <guid>/cs/tools/10_basic_commands_for_linux_performance_detection/</guid>
       <description>1. uptime uptime 20:25:38 up 7 min, 3 users, load average: 0.24, 0.45, 0.27 #该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。  2. dmesg | tail dmesg | tail [ 51.424401] wlp5s0: RX AssocResp from 38:4c:90:8f:8c:85 (capab=0x831 status=0 aid=3) [ 51.426461] wlp5s0: associated [ 51.429463] ath: EEPROM regdomain: 0x8348 [ 51.429463] ath: EEPROM indicates we should expect a country code [ 51.429464] ath: doing EEPROM country-&amp;gt;regdmn map search [ 51.429465] ath: country maps to regdmn code: 0x3a [ 51.</description>
+    </item>
+    
+    <item>
+      <title>Docker: From Zero to Hero</title>
+      <link>/cs/tools/docker_beginner/</link>
+      <pubDate>Wed, 13 Mar 2019 18:02:14 -0400</pubDate>
+      
+      <guid>/cs/tools/docker_beginner/</guid>
+      <description>Dockerfile # Dockerfile FROM node:latest WORKDIR /app COPY . . RUN npm install EXPOSE 3000 ENTRYPOINT [&amp;quot;node&amp;quot;, &amp;quot;app.js&amp;quot;]   FROM, this is us selecting an OS image from Docker Hub. Docker Hub is a global repository that contains images that we can pull down locally. In our case we are choosing an image based on Ubuntu that has Node.js installed, it’s called node. We also specify that we want the latest version of it, by using the following tag :latest WORKDIR, this simply means we set a working directory.</description>
     </item>
     
     <item>

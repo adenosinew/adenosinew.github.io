@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>Build CLI Best practice :: Documentation for Hugo Learn Theme</title>
+    <title>Work with Different Shells :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1556052744" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/cs/tools/cli_best_practice/">
+  <body class="" data-url="/cs/linux/shells/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -418,7 +418,7 @@
   
     
     <li data-nav-id="/cs/tools/" title="Tools" class="dd-item 
-        parent
+        
         
         
         ">
@@ -539,7 +539,7 @@
  
   
     
-      <li data-nav-id="/cs/tools/cli_best_practice/" title="Build CLI Best practice" class="dd-item active">
+      <li data-nav-id="/cs/tools/cli_best_practice/" title="Build CLI Best practice" class="dd-item ">
         <a href="/cs/tools/cli_best_practice/">
         Build CLI Best practice
         <i class="fas fa-check read-icon"></i>
@@ -763,7 +763,7 @@
   
     
     <li data-nav-id="/cs/linux/" title="Linux" class="dd-item 
-        
+        parent
         
         
         ">
@@ -827,7 +827,7 @@
  
   
     
-      <li data-nav-id="/cs/linux/shells/" title="Work with Different Shells" class="dd-item ">
+      <li data-nav-id="/cs/linux/shells/" title="Work with Different Shells" class="dd-item active">
         <a href="/cs/linux/shells/">
         Work with Different Shells
         <i class="fas fa-check read-icon"></i>
@@ -1095,7 +1095,7 @@
             
           
           
-            <a href='/'>adenosinew</a> > <a href='/cs/'>Cs</a> > <a href='/cs/tools/'>Tools</a> > Build CLI Best practice
+            <a href='/'>adenosinew</a> > <a href='/cs/'>Cs</a> > <a href='/cs/linux/'>Linux</a> > Work with Different Shells
           
          
           
@@ -1112,9 +1112,13 @@
     <div class="wrapper">
 <nav id="TableOfContents">
 <ul>
-<li><a href="#cli-best-practice">CLI best practice</a>
+<li>
 <ul>
-<li><a href="#12-factors">12 factors</a></li>
+<li><a href="#list-all-shells">List All Shells</a></li>
+<li><a href="#method-1-usermod-utility">Method 1. <code>usermod</code> utility</a></li>
+<li><a href="#method-2-chsh">Method 2. <code>chsh</code></a></li>
+<li><a href="#method-3-edit-the-etc-passwd">Method 3. Edit the <code>/etc/passwd</code></a></li>
+<li><a href="#reference">Reference</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1129,7 +1133,7 @@
         
         <div id="body-inner">
           
-            <h1>Build CLI Best practice</h1>
+            <h1>Work with Different Shells</h1>
           
 
         
@@ -1138,28 +1142,51 @@
 
 
 
-<h1 id="cli-best-practice">CLI best practice</h1>
+<p>There are several shells such as bash, sh, ksh, zsh, fish and many other lesser known shells available on Linux.</p>
 
-<p><a href="https://medium.com/@jdxcode/12-factor-cli-apps-dd3c227a0e46">reference</a></p>
+<p><strong>Bash</strong> (<strong>/bin/bash</strong>) is a popular shell on most if not all Linux systems, and it’s normally the default shell for user accounts.</p>
 
-<p>[TOC]</p>
+<p>When creating user accounts with the <code>useradd</code> or <code>adduser</code> utilities, the <code>--shell</code> flag can be used to specify the name of a user’s login shell other than that specified in the respective configuration files.</p>
 
-<h2 id="12-factors">12 factors</h2>
+<h2 id="list-all-shells">List All Shells</h2>
 
-<ol>
-<li>Great help is essential</li>
-<li>Prefer flags to args</li>
-<li>What version am I on?</li>
-<li>Mind the streams</li>
-<li>Handle things going wrong</li>
-<li>Be fancy!</li>
-<li>Prompt if you can</li>
-<li>Use tables</li>
-<li>Be speedy</li>
-<li>Encourage contributions</li>
-<li>Be clear about subcommands</li>
-<li>Follow XDG-spec</li>
-</ol>
+<pre><code class="language-shell">cat /etc/shells
+# /etc/shells: valid login shells
+/bin/sh
+/bin/dash
+/bin/bash
+/bin/rbash
+/usr/bin/tmux
+/usr/bin/screen
+/bin/csh
+/bin/tcsh
+/usr/bin/tcsh
+</code></pre>
+
+<h2 id="method-1-usermod-utility">Method 1. <code>usermod</code> utility</h2>
+
+<p>User’s account details, stored in the <code>/etc/passwd</code> file.</p>
+
+<p>If I want to change the default shell of <em>ubuntu</em> from <em>bash</em> to <em>tcsh</em></p>
+
+<pre><code class="language-shell">usermod --shell /bin/tcsh ubuntu
+
+# Check the /etc/passwd to validate the change
+grep ubuntu /etc/passwd
+</code></pre>
+
+<h2 id="method-2-chsh">Method 2. <code>chsh</code></h2>
+
+<pre><code class="language-shell">chsh -s /bin/tcsh ubuntu
+</code></pre>
+
+<h2 id="method-3-edit-the-etc-passwd">Method 3. Edit the <code>/etc/passwd</code></h2>
+
+<p>Simply open the <strong>/etc/passwd</strong> file using any of your favorite command line text editors and change a specific users shell.</p>
+
+<h2 id="reference">Reference</h2>
+
+<p><a href="https://www.tecmint.com/change-a-users-default-shell-in-linux/">Change default shell</a></p>
 
 
 <footer class=" footline" >
@@ -1430,7 +1457,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1443,9 +1469,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1527,7 +1550,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1543,9 +1565,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1694,6 +1713,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1706,6 +1726,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1739,6 +1762,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1754,6 +1778,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1863,10 +1890,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/cs/tools/cli_improved/" title="Better CLI tools"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/cs/linux/linux-cheatsheet/" title="Bash Cheatsheet on macOS"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/cs/tools/10_basic_commands_for_linux_performance_detection/" title="Check Linux Performance CLI" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cs/linux/systemd_mount/" title="Mount a filesystem" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

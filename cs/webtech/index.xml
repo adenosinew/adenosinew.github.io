@@ -11,5 +11,14 @@
 	<atom:link href="/cs/webtech/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>RESTful</title>
+      <link>/cs/webtech/restful/</link>
+      <pubDate>Tue, 23 Apr 2019 16:46:45 -0400</pubDate>
+      
+      <guid>/cs/webtech/restful/</guid>
+      <description>What is REST REST, or Representational State Transfer is another way of implementing a Web Service. It is the ideology that everything is a resource. Every resource is identified by a unique uniform resource indicator (URI). An important point to note with REST is that it is stateless. This means that when you access the REST web service to retrieve data, you receive the most current state of the resource (ie.</description>
+    </item>
+    
   </channel>
 </rss>

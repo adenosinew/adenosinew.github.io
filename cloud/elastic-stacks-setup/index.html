@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>Datascience :: Documentation for Hugo Learn Theme</title>
+    <title>Elastic Stacks Setup :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1556672944" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/datascience/">
+  <body class="" data-url="/cloud/elastic-stacks-setup/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -189,8 +189,8 @@
   
     
     <li data-nav-id="/datascience/" title="Datascience" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/datascience/">
@@ -1018,7 +1018,7 @@
   
     
     <li data-nav-id="/cloud/" title="Cloud" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1044,7 +1044,7 @@
  
   
     
-      <li data-nav-id="/cloud/elastic-stacks-setup/" title="Elastic Stacks Setup" class="dd-item ">
+      <li data-nav-id="/cloud/elastic-stacks-setup/" title="Elastic Stacks Setup" class="dd-item active">
         <a href="/cloud/elastic-stacks-setup/">
         Elastic Stacks Setup
         <i class="fas fa-check read-icon"></i>
@@ -1123,6 +1123,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -1133,7 +1135,13 @@
             
           
           
-            <a href='/'>adenosinew</a> > Datascience
+            
+            
+          
+          
+            <a href='/'>adenosinew</a> > <a href='/cloud/'>Cloud</a> > Elastic Stacks Setup
+          
+         
           
          
           
@@ -1142,28 +1150,81 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#what-is-elastic-stacks">What is Elastic Stacks</a></li>
+<li><a href="#install-elastic-stacks">Install Elastic Stacks</a></li>
+<li><a href="#test-the-installation">Test the installation</a></li>
+<li><a href="#work-with-windows">Work with Windows</a>
+<ul>
+<li><a href="#installing-and-configuring-the-winlogbeat">Installing and configuring the winlogbeat</a></li>
+</ul></li>
+<li><a href="#reference">Reference</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>Elastic Stacks Setup</h1>
           
 
         
 
 
-<p>Record Data Science Learning</p>
+
+
+
+<h2 id="what-is-elastic-stacks">What is Elastic Stacks</h2>
+
+<p>The Elastic Stack — formerly known as the <em>ELK Stack</em> — is a collection of open-source software produced by <a href="https://www.elastic.co/">Elastic</a> which allows you to search, analyze, and visualize logs generated from any source in any format, a practice known as <em>centralized logging</em>. Centralized logging can be very useful when attempting to identify problems with your servers or applications, as it allows you to search through all of your logs in a single place. It&rsquo;s also useful because it allows you to identify issues that span multiple servers by correlating their logs during a specific time frame.</p>
+
+<p>The Elastic Stack has four main components:</p>
+
+<ul>
+<li><a href="https://www.elastic.co/products/elasticsearch"><strong>Elasticsearch</strong></a>: a distributed <a href="https://en.wikipedia.org/wiki/Representational_state_transfer"><em>RESTful</em></a> search engine which stores all of the collected data. <em>Use Memory</em></li>
+<li><a href="https://www.elastic.co/products/logstash"><strong>Logstash</strong></a>: the data processing component of the Elastic Stack which sends incoming data to Elasticsearch.</li>
+<li><a href="https://www.elastic.co/products/kibana"><strong>Kibana</strong></a>: a web interface for searching and visualizing logs.</li>
+<li><a href="https://www.elastic.co/products/beats"><strong>Beats</strong></a>: lightweight, single-purpose data shippers that can send data from hundreds or thousands of machines to either Logstash or Elasticsearch.</li>
+</ul>
+
+<h2 id="install-elastic-stacks">Install Elastic Stacks</h2>
+
+<p>TODO</p>
+
+<h2 id="test-the-installation">Test the installation</h2>
+
+<p>TODO</p>
+
+<h2 id="work-with-windows">Work with Windows</h2>
+
+<h3 id="installing-and-configuring-the-winlogbeat">Installing and configuring the winlogbeat</h3>
+
+<pre><code class="language-powershell">Test-NetConnection elastic-instance-ip -Port 5044
+</code></pre>
+
+<h2 id="reference">Reference</h2>
+
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elastic-stack-on-ubuntu-18-04">Install ELK on ubuntu 18.04</a></p>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -1278,7 +1339,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1293,9 +1353,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1848,6 +1905,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1860,6 +1918,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1884,10 +1943,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/me/collections/" title="Collections"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/cloud/" title="Cloud"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/datascience/ml/" title="Ml" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/me/" title="me" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1918,3 +1977,4 @@
 
   </body>
 </html>
+

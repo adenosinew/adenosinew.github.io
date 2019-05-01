@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Time Command Explaination</title>
+      <link>/cs/linux/time-explain/</link>
+      <pubDate>Tue, 23 Apr 2019 17:17:38 -0400</pubDate>
+      
+      <guid>/cs/linux/time-explain/</guid>
+      <description>Use time # interactive time command # Results # Use it in file \time -o time.log command # Results  Reference Linux time command</description>
+    </item>
+    
+    <item>
       <title>Shells</title>
       <link>/cs/linux/shell_compatiability/</link>
       <pubDate>Thu, 04 Apr 2019 15:20:52 -0400</pubDate>

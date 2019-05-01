@@ -88,6 +88,24 @@ yaourt -S bat  prettyping &amp;gt; ping fzf &amp;gt; ctrl + r In addition to sea
     </item>
     
     <item>
+      <title>Elastic Stacks Setup</title>
+      <link>/cloud/elastic-stacks-setup/</link>
+      <pubDate>Mon, 29 Apr 2019 16:54:32 -0400</pubDate>
+      
+      <guid>/cloud/elastic-stacks-setup/</guid>
+      <description>What is Elastic Stacks The Elastic Stack — formerly known as the ELK Stack — is a collection of open-source software produced by Elastic which allows you to search, analyze, and visualize logs generated from any source in any format, a practice known as centralized logging. Centralized logging can be very useful when attempting to identify problems with your servers or applications, as it allows you to search through all of your logs in a single place.</description>
+    </item>
+    
+    <item>
+      <title>Time Command Explaination</title>
+      <link>/cs/linux/time-explain/</link>
+      <pubDate>Tue, 23 Apr 2019 17:17:38 -0400</pubDate>
+      
+      <guid>/cs/linux/time-explain/</guid>
+      <description>Use time # interactive time command # Results # Use it in file \time -o time.log command # Results  Reference Linux time command</description>
+    </item>
+    
+    <item>
       <title>RESTful</title>
       <link>/cs/webtech/restful/</link>
       <pubDate>Tue, 23 Apr 2019 16:46:45 -0400</pubDate>

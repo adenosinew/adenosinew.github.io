@@ -12,12 +12,34 @@
     
     
     <item>
+      <title>Elasticsearch Query Intro</title>
+      <link>/cloud/elasticsearch-query-intro/</link>
+      <pubDate>Mon, 06 May 2019 14:27:01 -0400</pubDate>
+      
+      <guid>/cloud/elasticsearch-query-intro/</guid>
+      <description>Elasticsearch Communicate with Elasticsearch: this is done by issuing HTTP requests against the REST API. Elastic is started by default in port 9200.
+Elasticsearch Query DSL The query DSL is a flexible, expressive search language that Elasticsearch uses to expose most of the power of Lucene through a simple JSON interface. It is what you should be using to write your queries in production. It makes your queries more flexible, more precise, easier to read, and easier to debug.</description>
+    </item>
+    
+    <item>
       <title>Elastic Stacks Setup</title>
       <link>/cloud/elastic-stacks-setup/</link>
       <pubDate>Mon, 29 Apr 2019 16:54:32 -0400</pubDate>
       
       <guid>/cloud/elastic-stacks-setup/</guid>
       <description>What is Elastic Stacks The Elastic Stack — formerly known as the ELK Stack — is a collection of open-source software produced by Elastic which allows you to search, analyze, and visualize logs generated from any source in any format, a practice known as centralized logging. Centralized logging can be very useful when attempting to identify problems with your servers or applications, as it allows you to search through all of your logs in a single place.</description>
+    </item>
+    
+    <item>
+      <title>Intro to logstash</title>
+      <link>/cloud/logstash-101/</link>
+      <pubDate>Mon, 29 Apr 2019 16:54:32 -0400</pubDate>
+      
+      <guid>/cloud/logstash-101/</guid>
+      <description>Manage the Logstash plugin Logstash has a rich collection of input, filter, codec and output plugins.
+Plugins are available as self-contained packages called gems and hosted on RubyGems.org.
+The plugin manager accessed via bin/logstash-plugin script is used to manage the lifecycle of plugins in your Logstash deployment. You can install, remove and upgrade plugins using the Command Line Interface (CLI) invocations described below.
+# on ubuntu 18.04, you can find the logstash installation in /usr/share/logstash # list all installed plugins bin/logstash-plugin list  Reference Logstash plugin</description>
     </item>
     
   </channel>

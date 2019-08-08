@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>me :: Documentation for Hugo Learn Theme</title>
+    <title>Intro to logstash :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1565289908" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/me/">
+  <body class="" data-url="/cloud/logstash-101/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -79,8 +79,8 @@
   
     
     <li data-nav-id="/me/" title="me" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/me/">
@@ -1018,7 +1018,7 @@
   
     
     <li data-nav-id="/cloud/" title="Cloud" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1082,7 +1082,7 @@
  
   
     
-      <li data-nav-id="/cloud/logstash-101/" title="Intro to logstash" class="dd-item ">
+      <li data-nav-id="/cloud/logstash-101/" title="Intro to logstash" class="dd-item active">
         <a href="/cloud/logstash-101/">
         Intro to logstash
         <i class="fas fa-check read-icon"></i>
@@ -1161,6 +1161,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -1171,7 +1173,13 @@
             
           
           
-            <a href='/'>adenosinew</a> > me
+            
+            
+          
+          
+            <a href='/'>adenosinew</a> > <a href='/cloud/'>Cloud</a> > Intro to logstash
+          
+         
           
          
           
@@ -1180,14 +1188,29 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#manage-the-logstash-plugin">Manage the Logstash plugin</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>Intro to logstash</h1>
           
 
         
@@ -1195,43 +1218,32 @@
 
 
 
-<h2 id="goal-for-2019">Goal for 2019</h2>
 
-<p>I am here -&gt; semi-automation -&gt; full automation -&gt; Intelligence</p>
+<h2 id="manage-the-logstash-plugin">Manage the Logstash plugin</h2>
 
-<h3 id="jpg-javascript-python-go-developer">JPG (Javascript, Python, Go) developer.</h3>
+<p>Logstash has a rich collection of input, filter, codec and output plugins.</p>
 
-<ul>
-<li>Javascript : Learning how to build a website and other web knowleage.</li>
-<li>Python : My main language. Data Science + Machine Learning</li>
-<li>Go : For dev-ops and some tasks which require high performance.</li>
-</ul>
+<p>Plugins are available as self-contained packages called gems and hosted on RubyGems.org.</p>
 
-<h3 id="machine-learning-practioner">Machine Learning practioner.</h3>
+<p>The plugin manager accessed via <code>bin/logstash-plugin</code> script is used to manage the lifecycle of plugins in your Logstash deployment. You can install, remove and upgrade plugins using the Command Line Interface (CLI) invocations described below.</p>
 
-<ul>
-<li>General Data Science: numpy, pandas, scipy</li>
-<li>Machine Learning : scikit-learn</li>
-<li>Deep Learning : Tensorflow, Pytorch</li>
-<li>Reinforcement Learning :</li>
-</ul>
+<pre><code class="language-shell"># on ubuntu 18.04, you can find the logstash installation in 
+/usr/share/logstash
 
-<h3 id="dev-ops">Dev-ops.</h3>
+# list all installed plugins
+bin/logstash-plugin list
+</code></pre>
 
-<ul>
-<li>Linux</li>
-<li>Docker</li>
-<li>K8s</li>
-<li>Vim</li>
-</ul>
+<h2 id="reference">Reference</h2>
+
+<p><a href="https://www.elastic.co/guide/en/logstash/current/working-with-plugins.html">Logstash plugin</a></p>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -1263,20 +1275,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -1287,91 +1285,6 @@
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1468,51 +1381,6 @@
                     
 
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -1563,6 +1431,85 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
                         
             
@@ -1692,86 +1639,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -1839,6 +1706,150 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
             
         
                     
@@ -1913,6 +1924,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1925,6 +1937,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1957,6 +1972,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1981,10 +1997,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/" title="adenosinew"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/cloud/elastic-stacks-setup/" title="Elastic Stacks Setup"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/me/track_my_work/" title="Best Practice Logs" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cloud/elasticsearch-query-intro/" title="Elasticsearch Query Intro" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2015,3 +2031,4 @@
 
   </body>
 </html>
+

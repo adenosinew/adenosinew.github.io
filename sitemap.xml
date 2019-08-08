@@ -92,7 +92,17 @@
   </url>
   
   <url>
+    <loc>/cloud/elasticsearch-query-intro/</loc>
+    <lastmod>2019-05-06T14:27:01-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/cloud/elastic-stacks-setup/</loc>
+    <lastmod>2019-04-29T16:54:32-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cloud/logstash-101/</loc>
     <lastmod>2019-04-29T16:54:32-04:00</lastmod>
   </url>
   

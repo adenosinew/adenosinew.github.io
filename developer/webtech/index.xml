@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webtech on Documentation for Hugo Learn Theme</title>
+    <link>/developer/webtech/</link>
+    <description>Recent content in Webtech on Documentation for Hugo Learn Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 13 Feb 2019 12:23:19 -0500</lastBuildDate>
+    
+	<atom:link href="/developer/webtech/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RESTful</title>
+      <link>/developer/webtech/restful/</link>
+      <pubDate>Tue, 23 Apr 2019 16:46:45 -0400</pubDate>
+      
+      <guid>/developer/webtech/restful/</guid>
+      <description>What is REST REST, or Representational State Transfer is another way of implementing a Web Service. It is the ideology that everything is a resource. Every resource is identified by a unique uniform resource indicator (URI). An important point to note with REST is that it is stateless. This means that when you access the REST web service to retrieve data, you receive the most current state of the resource (ie.</description>
+    </item>
+    
+  </channel>
+</rss>

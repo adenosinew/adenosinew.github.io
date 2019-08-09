@@ -1,0 +1,3352 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.56.3" />
+    <meta name="description" content="Learn, Practice and Make difference">
+<meta name="author" content="Adenosine">
+
+    <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
+<link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
+    <title>Shells :: Documentation for Hugo Learn Theme</title>
+
+    
+    <link href="/css/nucleus.css?1565383728" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1565383728" rel="stylesheet">
+    <link href="/css/hybrid.css?1565383728" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1565383728" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1565383728" rel="stylesheet">
+    <link href="/css/auto-complete.css?1565383728" rel="stylesheet">
+    <link href="/css/theme.css?1565383728" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1565383728" rel="stylesheet">
+    
+      <link href="/css/theme-mine.css?1565383728" rel="stylesheet">
+    
+
+    <script src="/js/jquery-2.x.min.js?1565383728"></script>
+
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/developer/linux/shell_compatiability/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+
+  <img src="/images/site_elements/star_logo.png" alt="">
+  
+  </a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1565383728"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1565383728"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1565383728"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/me/" title="me" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/me/">
+          Me, Myself and I
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/me/track_my_work/" title="Best Practice Logs" class="dd-item ">
+        <a href="/me/track_my_work/">
+        Best Practice Logs
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/me/skill_tree/" title="My Skill Tree and Experience" class="dd-item ">
+        <a href="/me/skill_tree/">
+        My Skill Tree and Experience
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/me/better_develpoer/" title="Better Develpoer" class="dd-item ">
+        <a href="/me/better_develpoer/">
+        Better Develpoer
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/me/collections/" title="Collections" class="dd-item ">
+        <a href="/me/collections/">
+        Collections
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/datascience/" title="Datascience" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/datascience/">
+          Data Science
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/datascience/ml/" title="Ml" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/datascience/ml/">
+          Ml
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/datascience/sqlalchemy/" title="Sqlalchemy" class="dd-item ">
+        <a href="/datascience/sqlalchemy/">
+        Sqlalchemy
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/datascience/numpy_fancy_indexing_and_viewing/" title="Fancy indexing, view and copy" class="dd-item ">
+        <a href="/datascience/numpy_fancy_indexing_and_viewing/">
+        Fancy indexing and view in numpy
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/datascience/pytorch/" title="Pytorch Learning" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/datascience/pytorch/">
+          Pytorch Learning
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/datascience/commands_for_data_scientist/" title="Command line tricks for data scientist" class="dd-item ">
+        <a href="/datascience/commands_for_data_scientist/">
+        Data Science CLI
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/cs/" title="Cs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/cs/">
+          Computer Science
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cs/windows/" title="Windows" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/cs/windows/">
+          Windows
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cs/windows/active_directory/" title="Active_directory" class="dd-item ">
+        <a href="/cs/windows/active_directory/">
+        Active_directory
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cs/tools/" title="Tools" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/cs/tools/">
+          Tools
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cs/tools/vim_useful/" title="Vim Cheatsheet" class="dd-item ">
+        <a href="/cs/tools/vim_useful/">
+        Vim cheatsheet
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cs/tools/ssh_useful/" title="SSH Bestpractice" class="dd-item ">
+        <a href="/cs/tools/ssh_useful/">
+        SSH Bestpractice
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cs/tools/raspberry_pi_3_nas/" title="Raspberry Pi 3" class="dd-item ">
+        <a href="/cs/tools/raspberry_pi_3_nas/">
+        Raspberry Pi 3
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cs/tools/common_commands_useful/" title="Most-used Linux CLI" class="dd-item ">
+        <a href="/cs/tools/common_commands_useful/">
+        Most-used Linux CLI
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cs/tools/cli_improved/" title="Better CLI tools" class="dd-item ">
+        <a href="/cs/tools/cli_improved/">
+        Better CLI tools
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cs/tools/cli_best_practice/" title="Build CLI Best practice" class="dd-item ">
+        <a href="/cs/tools/cli_best_practice/">
+        Build CLI Best practice
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cs/tools/10_basic_commands_for_linux_performance_detection/" title="Check Linux Performance CLI" class="dd-item ">
+        <a href="/cs/tools/10_basic_commands_for_linux_performance_detection/">
+        Check Linux Performance CLI
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cs/tools/docker_beginner/" title="Docker: From Zero to Hero" class="dd-item ">
+        <a href="/cs/tools/docker_beginner/">
+        Docker beginner tutorial
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cs/tools/terraform_useful/" title="Terraform Best Practice" class="dd-item ">
+        <a href="/cs/tools/terraform_useful/">
+        Terraform Best Practice
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cs/tools/setup_mysql/" title="Install MySQL server on CentOS" class="dd-item ">
+        <a href="/cs/tools/setup_mysql/">
+        Install MySQL server on CentOS
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cs/tools/git_useful/" title="Useful Git commands" class="dd-item ">
+        <a href="/cs/tools/git_useful/">
+        Useful Git commands
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cs/tools/docker_useful/" title="Useful commands for docker" class="dd-item ">
+        <a href="/cs/tools/docker_useful/">
+        Useful commands for docker
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cs/algorithm/" title="Algorithm" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/cs/algorithm/">
+          Algorithm
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cs/webtech/" title="Webtech" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/cs/webtech/">
+          Webtech
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cs/webtech/restful/" title="RESTful" class="dd-item ">
+        <a href="/cs/webtech/restful/">
+        RESTful
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/cs/linux/" title="Linux" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/cs/linux/">
+          Linux
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cs/linux/time-explain/" title="Time Command Explaination" class="dd-item ">
+        <a href="/cs/linux/time-explain/">
+        Time Command Explaination
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cs/linux/shell_compatiability/" title="Shells" class="dd-item ">
+        <a href="/cs/linux/shell_compatiability/">
+        Shells
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cs/linux/linux-cheatsheet/" title="Bash Cheatsheet on macOS" class="dd-item ">
+        <a href="/cs/linux/linux-cheatsheet/">
+        Bash Cheatsheet on macOS
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cs/linux/shells/" title="Work with Different Shells" class="dd-item ">
+        <a href="/cs/linux/shells/">
+        Work with Different Shells
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cs/linux/systemd_mount/" title="Mount a filesystem" class="dd-item ">
+        <a href="/cs/linux/systemd_mount/">
+        Mount a filesystem
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/developer/" title="Cs" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/developer/">
+          Computer Science
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/developer/windows/" title="Windows" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/developer/windows/">
+          Windows
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developer/windows/active_directory/" title="Active_directory" class="dd-item ">
+        <a href="/developer/windows/active_directory/">
+        Active_directory
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/developer/tools/" title="Tools" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/developer/tools/">
+          Tools
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developer/tools/vim_useful/" title="Vim Cheatsheet" class="dd-item ">
+        <a href="/developer/tools/vim_useful/">
+        Vim cheatsheet
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developer/tools/ssh_useful/" title="SSH Bestpractice" class="dd-item ">
+        <a href="/developer/tools/ssh_useful/">
+        SSH Bestpractice
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developer/tools/raspberry_pi_3_nas/" title="Raspberry Pi 3" class="dd-item ">
+        <a href="/developer/tools/raspberry_pi_3_nas/">
+        Raspberry Pi 3
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developer/tools/common_commands_useful/" title="Most-used Linux CLI" class="dd-item ">
+        <a href="/developer/tools/common_commands_useful/">
+        Most-used Linux CLI
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developer/tools/cli_improved/" title="Better CLI tools" class="dd-item ">
+        <a href="/developer/tools/cli_improved/">
+        Better CLI tools
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developer/tools/cli_best_practice/" title="Build CLI Best practice" class="dd-item ">
+        <a href="/developer/tools/cli_best_practice/">
+        Build CLI Best practice
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developer/tools/10_basic_commands_for_linux_performance_detection/" title="Check Linux Performance CLI" class="dd-item ">
+        <a href="/developer/tools/10_basic_commands_for_linux_performance_detection/">
+        Check Linux Performance CLI
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developer/tools/docker_beginner/" title="Docker: From Zero to Hero" class="dd-item ">
+        <a href="/developer/tools/docker_beginner/">
+        Docker beginner tutorial
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developer/tools/terraform_useful/" title="Terraform Best Practice" class="dd-item ">
+        <a href="/developer/tools/terraform_useful/">
+        Terraform Best Practice
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developer/tools/setup_mysql/" title="Install MySQL server on CentOS" class="dd-item ">
+        <a href="/developer/tools/setup_mysql/">
+        Install MySQL server on CentOS
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developer/tools/git_useful/" title="Useful Git commands" class="dd-item ">
+        <a href="/developer/tools/git_useful/">
+        Useful Git commands
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developer/tools/docker_useful/" title="Useful commands for docker" class="dd-item ">
+        <a href="/developer/tools/docker_useful/">
+        Useful commands for docker
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/developer/algorithm/" title="Algorithm" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/developer/algorithm/">
+          Algorithm
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/developer/webtech/" title="Webtech" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/developer/webtech/">
+          Webtech
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developer/webtech/restful/" title="RESTful" class="dd-item ">
+        <a href="/developer/webtech/restful/">
+        RESTful
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/developer/linux/" title="Linux" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/developer/linux/">
+          Linux
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developer/linux/time-explain/" title="Time Command Explaination" class="dd-item ">
+        <a href="/developer/linux/time-explain/">
+        Time Command Explaination
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developer/linux/shell_compatiability/" title="Shells" class="dd-item active">
+        <a href="/developer/linux/shell_compatiability/">
+        Shells
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developer/linux/linux-cheatsheet/" title="Bash Cheatsheet on macOS" class="dd-item ">
+        <a href="/developer/linux/linux-cheatsheet/">
+        Bash Cheatsheet on macOS
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developer/linux/shells/" title="Work with Different Shells" class="dd-item ">
+        <a href="/developer/linux/shells/">
+        Work with Different Shells
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developer/linux/systemd_mount/" title="Mount a filesystem" class="dd-item ">
+        <a href="/developer/linux/systemd_mount/">
+        Mount a filesystem
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/collections/" title="Collections" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/collections/">
+          Collections
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/collections/bestpractice/" title="Bestpractice" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/collections/bestpractice/">
+          Bestpractice
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/collections/snippets/" title="Snippets" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/collections/snippets/">
+          Snippets
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/collections/snippets/python_platform/" title="Python Platform module" class="dd-item ">
+        <a href="/collections/snippets/python_platform/">
+        Python Platform module
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/cloud/" title="Cloud" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/cloud/">
+          Cloud
+          
+            <i class="fas read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cloud/elasticsearch-query-intro/" title="Elasticsearch Query Intro" class="dd-item ">
+        <a href="/cloud/elasticsearch-query-intro/">
+        Elasticsearch Query Intro
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cloud/elastic-stacks-setup/" title="Elastic Stacks Setup" class="dd-item ">
+        <a href="/cloud/elastic-stacks-setup/">
+        Elastic Stacks Setup
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/cloud/logstash-101/" title="Intro to logstash" class="dd-item ">
+        <a href="/cloud/logstash-101/">
+        Intro to logstash
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/adenosinew"><i class='fab fa-fw fa-github'></i> My Github repo</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/adenosinew"><i class='fab fa-linkedin'></i> LinkedIn</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p><i class="fas fa-heart"></i> Stand Proud <i class="fas fa-heart"></i></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>adenosinew</a> > <a href='/developer/'>Cs</a> > <a href='/developer/linux/'>Linux</a> > Shells
+          
+         
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#shell-types">Shell types</a></li>
+<li><a href="#differing-features">Differing features</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+
+        
+        <div id="body-inner">
+          
+            <h1>Shells</h1>
+          
+
+        
+
+
+
+
+
+<h2 id="shell-types">Shell types</h2>
+
+<ul>
+<li><strong>sh</strong> or Bourne Shell: the original shell still used on UNIX systems and in UNIX-related environments. This is the basic shell, a small program with few features. While this is not the standard shell, it is still available on every Linux system for compatibility with UNIX programs.</li>
+<li><strong>bash</strong> or Bourne Again shell: the standard GNU shell, intuitive and flexible. Probably most advisable for beginning users while being at the same time a powerful tool for the advanced and professional user. On Linux, <strong>bash</strong> is the standard shell for common users. This shell is a so-called <em>superset</em> of the Bourne shell, a set of add-ons and plug-ins. This means that the Bourne Again shell is compatible with the Bourne shell: commands that work in <strong>sh</strong>, also work in <strong>bash</strong>. However, the reverse is not always the case. All examples and exercises in this book use <strong>bash</strong>.</li>
+<li><strong>csh</strong> or C shell: the syntax of this shell resembles that of the C programming language. Sometimes asked for by programmers.</li>
+<li><strong>tcsh</strong> or TENEX C shell: a superset of the common C shell, enhancing user-friendliness and speed. That is why some also call it the Turbo C shell.</li>
+<li><strong>ksh</strong> or the Korn shell: sometimes appreciated by people with a UNIX background. A superset of the Bourne shell; with standard configuration a nightmare for beginning users.</li>
+</ul>
+
+<h2 id="differing-features">Differing features</h2>
+
+<p>The table below shows major differences between the standard shell (sh), Bourne Again SHell (bash), Korn shell (ksh) and the C shell (csh)</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>sh</strong></th>
+<th><strong>bash</strong></th>
+<th><strong>ksh</strong></th>
+<th><strong>csh</strong></th>
+<th>Meaning/Action</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>$</td>
+<td>$</td>
+<td>$</td>
+<td>%</td>
+<td>Default user prompt</td>
+</tr>
+
+<tr>
+<td></td>
+<td><strong>&gt;|</strong></td>
+<td><strong>&gt;|</strong></td>
+<td><strong>&gt;!</strong></td>
+<td>Force redirection</td>
+</tr>
+
+<tr>
+<td><strong>&gt; file 2&gt;&amp;1</strong></td>
+<td><strong>&amp;&gt; file</strong> or <strong>&gt; file 2&gt;&amp;1</strong></td>
+<td><strong>&gt; file 2&gt;&amp;1</strong></td>
+<td><strong>&gt;&amp; file</strong></td>
+<td>Redirect stdout and stderr to <code>file</code></td>
+</tr>
+
+<tr>
+<td></td>
+<td><strong>{ }</strong></td>
+<td></td>
+<td><strong>{ }</strong></td>
+<td>Expand elements in list</td>
+</tr>
+
+<tr>
+<td><strong><code>command</code></strong></td>
+<td><strong><code>command</code></strong> or <strong>$(command)</strong></td>
+<td><strong>$(command)</strong></td>
+<td><strong><code>command</code></strong></td>
+<td>Substitute output of enclosed <strong>command</strong></td>
+</tr>
+
+<tr>
+<td><code>$HOME</code></td>
+<td><code>$HOME</code></td>
+<td><code>$HOME</code></td>
+<td><code>$home</code></td>
+<td>Home directory</td>
+</tr>
+
+<tr>
+<td></td>
+<td>~</td>
+<td>~</td>
+<td>~</td>
+<td>Home directory symbol</td>
+</tr>
+
+<tr>
+<td></td>
+<td><code>~+</code>, <code>~-</code>, <strong>dirs</strong></td>
+<td><code>~+</code>, <code>~-</code></td>
+<td><code>=-</code>, <code>=N</code></td>
+<td>Access directory stack</td>
+</tr>
+
+<tr>
+<td><strong>var=value</strong></td>
+<td><strong>VAR=value</strong></td>
+<td><strong>var=value</strong></td>
+<td><strong>set var=value</strong></td>
+<td>Variable assignment</td>
+</tr>
+
+<tr>
+<td><strong>export var</strong></td>
+<td><strong>export VAR=value</strong></td>
+<td><strong>export var=val</strong></td>
+<td><strong>setenv var val</strong></td>
+<td>Set environment variable</td>
+</tr>
+
+<tr>
+<td></td>
+<td><code>${nnnn}</code></td>
+<td><code>${nn}</code></td>
+<td></td>
+<td>More than 9 arguments can be referenced</td>
+</tr>
+
+<tr>
+<td>&ldquo;<code>$@</code>&ldquo;</td>
+<td>&ldquo;<code>$@</code>&ldquo;</td>
+<td>&ldquo;<code>$@</code>&ldquo;</td>
+<td></td>
+<td>All arguments as separate words</td>
+</tr>
+
+<tr>
+<td><code>$#</code></td>
+<td><code>$#</code></td>
+<td><code>$#</code></td>
+<td><code>$#argv</code></td>
+<td>Number of arguments</td>
+</tr>
+
+<tr>
+<td><code>$?</code></td>
+<td><code>$?</code></td>
+<td><code>$?</code></td>
+<td><code>$status</code></td>
+<td>Exit status of the most recently executed command</td>
+</tr>
+
+<tr>
+<td><code>$!</code></td>
+<td><code>$!</code></td>
+<td><code>$!</code></td>
+<td></td>
+<td>PID of most recently backgrounded process</td>
+</tr>
+
+<tr>
+<td><code>$-</code></td>
+<td><code>$-</code></td>
+<td><code>$-</code></td>
+<td></td>
+<td>Current options</td>
+</tr>
+
+<tr>
+<td><strong>. file</strong></td>
+<td><strong>source file</strong> or <strong>. file</strong></td>
+<td><strong>. file</strong></td>
+<td><strong>source file</strong></td>
+<td>Read commands in file</td>
+</tr>
+
+<tr>
+<td></td>
+<td><strong>alias x=&lsquo;y&rsquo;</strong></td>
+<td><strong>alias x=y</strong></td>
+<td><strong>alias x y</strong></td>
+<td>Name <strong>x</strong> stands for command <strong>y</strong></td>
+</tr>
+
+<tr>
+<td><strong>case</strong></td>
+<td><strong>case</strong></td>
+<td><strong>case</strong></td>
+<td><strong>switch</strong> or <strong>case</strong></td>
+<td>Choose alternatives</td>
+</tr>
+
+<tr>
+<td><strong>done</strong></td>
+<td><strong>done</strong></td>
+<td><strong>done</strong></td>
+<td><strong>end</strong></td>
+<td>End a loop statement</td>
+</tr>
+
+<tr>
+<td><strong>esac</strong></td>
+<td><strong>esac</strong></td>
+<td><strong>esac</strong></td>
+<td><strong>endsw</strong></td>
+<td>End <strong>case</strong> or <strong>switch</strong></td>
+</tr>
+
+<tr>
+<td><strong>exit n</strong></td>
+<td><strong>exit n</strong></td>
+<td><strong>exit n</strong></td>
+<td><strong>exit (expr)</strong></td>
+<td>Exit with a status</td>
+</tr>
+
+<tr>
+<td><strong>for</strong>/<strong>do</strong></td>
+<td><strong>for</strong>/<strong>do</strong></td>
+<td><strong>for</strong>/<strong>do</strong></td>
+<td><strong>foreach</strong></td>
+<td>Loop through variables</td>
+</tr>
+
+<tr>
+<td></td>
+<td><strong>set -f</strong>, <strong>set -o nullglob|dotglob|nocaseglob|noglob</strong></td>
+<td></td>
+<td><strong>noglob</strong></td>
+<td>Ignore substitution characters for filename generation</td>
+</tr>
+
+<tr>
+<td><strong>hash</strong></td>
+<td><strong>hash</strong></td>
+<td><strong>alias -t</strong></td>
+<td><strong>hashstat</strong></td>
+<td>Display hashed commands (tracked aliases)</td>
+</tr>
+
+<tr>
+<td><strong>hash cmds</strong></td>
+<td><strong>hash cmds</strong></td>
+<td><strong>alias -t cmds</strong></td>
+<td><strong>rehash</strong></td>
+<td>Remember command locations</td>
+</tr>
+
+<tr>
+<td><strong>hash -r</strong></td>
+<td><strong>hash -r</strong></td>
+<td></td>
+<td><strong>unhash</strong></td>
+<td>Forget command locations</td>
+</tr>
+
+<tr>
+<td></td>
+<td><strong>history</strong></td>
+<td><strong>history</strong></td>
+<td><strong>history</strong></td>
+<td>List previous commands</td>
+</tr>
+
+<tr>
+<td></td>
+<td><strong>ArrowUp</strong>+<strong>Enter</strong> or <strong>!!</strong></td>
+<td><strong>r</strong></td>
+<td><strong>!!</strong></td>
+<td>Redo previous command</td>
+</tr>
+
+<tr>
+<td></td>
+<td><strong>!str</strong></td>
+<td><strong>r str</strong></td>
+<td><strong>!str</strong></td>
+<td>Redo last command that starts with &ldquo;str&rdquo;</td>
+</tr>
+
+<tr>
+<td></td>
+<td><strong>!cmd:s/x/y/</strong></td>
+<td><strong>r x=y cmd</strong></td>
+<td><strong>!cmd:s/x/y/</strong></td>
+<td>Replace &ldquo;x&rdquo; with &ldquo;y&rdquo; in most recent command starting with &ldquo;cmd&rdquo;, then execute.</td>
+</tr>
+
+<tr>
+<td><strong>if [ $i -eq 5 ]</strong></td>
+<td><strong>if [ $i -eq 5 ]</strong></td>
+<td><strong>if ((i==5))</strong></td>
+<td><strong>if ($i==5)</strong></td>
+<td>Sample condition test</td>
+</tr>
+
+<tr>
+<td><strong>fi</strong></td>
+<td><strong>fi</strong></td>
+<td><strong>fi</strong></td>
+<td><strong>endif</strong></td>
+<td>End <strong>if</strong> statement</td>
+</tr>
+
+<tr>
+<td><strong>ulimit</strong></td>
+<td><strong>ulimit</strong></td>
+<td><strong>ulimit</strong></td>
+<td><strong>limit</strong></td>
+<td>Set resource limits</td>
+</tr>
+
+<tr>
+<td><strong>pwd</strong></td>
+<td><strong>pwd</strong></td>
+<td><strong>pwd</strong></td>
+<td><strong>dirs</strong></td>
+<td>Print working directory</td>
+</tr>
+
+<tr>
+<td><strong>read</strong></td>
+<td><strong>read</strong></td>
+<td><strong>read</strong></td>
+<td><strong>$&lt;</strong></td>
+<td>Read from terminal</td>
+</tr>
+
+<tr>
+<td><strong>trap 2</strong></td>
+<td><strong>trap 2</strong></td>
+<td><strong>trap 2</strong></td>
+<td><strong>onintr</strong></td>
+<td>Ignore interrupts</td>
+</tr>
+
+<tr>
+<td></td>
+<td><strong>unalias</strong></td>
+<td><strong>unalias</strong></td>
+<td><strong>unalias</strong></td>
+<td>Remove aliases</td>
+</tr>
+
+<tr>
+<td><strong>until</strong></td>
+<td><strong>until</strong></td>
+<td><strong>until</strong></td>
+<td></td>
+<td>Begin <strong>until</strong> loop</td>
+</tr>
+
+<tr>
+<td><strong>while</strong>/<strong>do</strong></td>
+<td><strong>while</strong>/<strong>do</strong></td>
+<td><strong>while</strong>/<strong>do</strong></td>
+<td><strong>while</strong></td>
+<td>Begin <strong>while</strong> loop</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="reference">Reference</h2>
+
+<p><a href="http://tldp.org/LDP/Bash-Beginners-Guide/html/x7369.html">Differing features</a></p>
+
+<p><a href="http://tldp.org/LDP/Bash-Beginners-Guide/html/index.html">Bash guide for beginners</a></p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/developer/linux/time-explain/" title="Time Command Explaination"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/developer/linux/linux-cheatsheet/" title="Bash Cheatsheet on macOS" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1565383728"></script>
+    <script src="/js/perfect-scrollbar.min.js?1565383728"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1565383728"></script>
+    <script src="/js/jquery.sticky.js?1565383728"></script>
+    <script src="/js/featherlight.min.js?1565383728"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1565383728"></script>
+    <script src="/js/highlight.pack.js?1565383728"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom.71422.js?1565383728"></script>
+    <script src="/js/learn.js?1565383728"></script>
+    <script src="/js/hugo-learn.js?1565383728"></script>
+
+    <link href="/mermaid/mermaid.css?1565383728" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1565383728"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

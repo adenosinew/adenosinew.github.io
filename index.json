@@ -7,6 +7,13 @@
 	"content": "Placeholder for windows server\n"
 },
 {
+	"uri": "/developer/windows/",
+	"title": "Windows",
+	"tags": [],
+	"description": "",
+	"content": "Placeholder for windows server\n"
+},
+{
 	"uri": "/collections/bestpractice/",
 	"title": "Bestpractice",
 	"tags": [],
@@ -28,7 +35,21 @@
 	"content": "Best practice of useful tools\n"
 },
 {
+	"uri": "/developer/tools/",
+	"title": "Tools",
+	"tags": [],
+	"description": "",
+	"content": "Best practice of useful tools\n"
+},
+{
 	"uri": "/cs/tools/vim_useful/",
+	"title": "Vim Cheatsheet",
+	"tags": [],
+	"description": "",
+	"content": " Vim cheatsheet Move Faster Move to previous word (b) Move to end of line ($) Move to end of word (e) Move to beginning of line (0) Move down one line (j) Move left one character (h) Move to last line of screen (L) Move up one line (k) Move to middle line of screen (M) Move to first line of screen (H) Move right one character (l) Move to beginning of word (b) Move to next word (w)\n"
+},
+{
+	"uri": "/developer/tools/vim_useful/",
 	"title": "Vim Cheatsheet",
 	"tags": [],
 	"description": "",
@@ -49,7 +70,21 @@
 	"content": " SSH reference1\nreference2\nGenerate a key ssh-keygen -t rsa -b 4096 -C \u0026quot;your_email@gmail.com\u0026quot;  Give a proper name for the key, or else, it would overwrite the id_rsa file\nAdd a key ssh-add -K ~/.ssh/id_rsa_my_key  For Mac, you need to add -k\n# Use the following command to check the result ssh-add -l  Config "
 },
 {
+	"uri": "/developer/tools/ssh_useful/",
+	"title": "SSH Bestpractice",
+	"tags": [],
+	"description": "",
+	"content": " SSH reference1\nreference2\nGenerate a key ssh-keygen -t rsa -b 4096 -C \u0026quot;your_email@gmail.com\u0026quot;  Give a proper name for the key, or else, it would overwrite the id_rsa file\nAdd a key ssh-add -K ~/.ssh/id_rsa_my_key  For Mac, you need to add -k\n# Use the following command to check the result ssh-add -l  Config "
+},
+{
 	"uri": "/cs/algorithm/",
+	"title": "Algorithm",
+	"tags": [],
+	"description": "",
+	"content": "Algorithm placeholder\n"
+},
+{
+	"uri": "/developer/algorithm/",
 	"title": "Algorithm",
 	"tags": [],
 	"description": "",
@@ -70,7 +105,21 @@
 	"content": "Placeholder for web tech learning chapter\n javascript react html + css  "
 },
 {
+	"uri": "/developer/webtech/",
+	"title": "Webtech",
+	"tags": [],
+	"description": "",
+	"content": "Placeholder for web tech learning chapter\n javascript react html + css  "
+},
+{
 	"uri": "/cs/",
+	"title": "Cs",
+	"tags": [],
+	"description": "",
+	"content": "Placeholder for Computer Science Chapter\n"
+},
+{
+	"uri": "/developer/",
 	"title": "Cs",
 	"tags": [],
 	"description": "",
@@ -84,7 +133,21 @@
 	"content": " Raspberry Pi 3 NAS [TOC]\nMount hard driver Create NAS Enable Time machine "
 },
 {
+	"uri": "/developer/tools/raspberry_pi_3_nas/",
+	"title": "Raspberry Pi 3",
+	"tags": [],
+	"description": "",
+	"content": " Raspberry Pi 3 NAS [TOC]\nMount hard driver Create NAS Enable Time machine "
+},
+{
 	"uri": "/cs/tools/common_commands_useful/",
+	"title": "Most-used Linux CLI",
+	"tags": [],
+	"description": "",
+	"content": " File operations Compare two directory diff --brief -r dir1/ dir2/\nIf you want to see differences for files that may not exist in either directory diff --brief -Nr dir1/ dir2\n##Commands\nxargs Delete all files with a .backup extension. -print0 on find uses a null character to split the files, and -0 changes the delimiter to the null character (useful if there\u0026rsquo;s whitespace in filenames): find . -name '*.backup' -print0 | xargs -0 rm -v\nDevops Find the top 20 high memory usage processes # Mem is the 4th field of \u0026quot;ps aux\u0026quot; ps -aux | sort -rnk 4 | head -20  If I want to the the top 20 high CPU usgae processes, I can run the following:\n# CPU is the 3rd field of \u0026quot;ps aux\u0026quot; ps -aux | sort -rnk 3 | head -20  "
+},
+{
+	"uri": "/developer/tools/common_commands_useful/",
 	"title": "Most-used Linux CLI",
 	"tags": [],
 	"description": "",
@@ -112,6 +175,13 @@
 	"content": " Better cli tools Ignore alias \\cat # ignore aliases named \u0026quot;cat\u0026quot; - explanation: https://stackoverflow.com/a/16506263/22617 command cat # ignore functions and aliases  bat \u0026gt; cat bat\nComparing with cat, bat also offers highlighting, paging, line numbers and git integration.\nInstallation command:\nyaourt -S bat  prettyping \u0026gt; ping fzf \u0026gt; ctrl + r In addition to searching through the history, fzf can also preview and open files, which is what I\u0026rsquo;ve done in the video below:\nalias preview=\u0026quot;fzf --preview 'bat --color \\\u0026quot;always\\\u0026quot; {}'\u0026quot; # add support for ctrl+o to open selected file in VS Code export FZF_DEFAULT_OPTS=\u0026quot;--bind='ctrl-o:execute(code {})+abort'\u0026quot;  htop \u0026gt; top  P sort by CPU - M sort by memory usage - F4 filter processes by string (to narrow to just \u0026ldquo;node\u0026rdquo; for instance) - space mark a single process so I can watch if the process is spiking ## diff-so-fancy \u0026gt; diff ## fd \u0026gt; find ## tldr \u0026gt; man ## ack || ag \u0026gt; grep  "
 },
 {
+	"uri": "/developer/tools/cli_improved/",
+	"title": "Better CLI tools",
+	"tags": [],
+	"description": "",
+	"content": " Better cli tools Ignore alias \\cat # ignore aliases named \u0026quot;cat\u0026quot; - explanation: https://stackoverflow.com/a/16506263/22617 command cat # ignore functions and aliases  bat \u0026gt; cat bat\nComparing with cat, bat also offers highlighting, paging, line numbers and git integration.\nInstallation command:\nyaourt -S bat  prettyping \u0026gt; ping fzf \u0026gt; ctrl + r In addition to searching through the history, fzf can also preview and open files, which is what I\u0026rsquo;ve done in the video below:\nalias preview=\u0026quot;fzf --preview 'bat --color \\\u0026quot;always\\\u0026quot; {}'\u0026quot; # add support for ctrl+o to open selected file in VS Code export FZF_DEFAULT_OPTS=\u0026quot;--bind='ctrl-o:execute(code {})+abort'\u0026quot;  htop \u0026gt; top  P sort by CPU - M sort by memory usage - F4 filter processes by string (to narrow to just \u0026ldquo;node\u0026rdquo; for instance) - space mark a single process so I can watch if the process is spiking ## diff-so-fancy \u0026gt; diff ## fd \u0026gt; find ## tldr \u0026gt; man ## ack || ag \u0026gt; grep  "
+},
+{
 	"uri": "/cs/tools/cli_best_practice/",
 	"title": "Build CLI Best practice",
 	"tags": [],
@@ -119,7 +189,21 @@
 	"content": " CLI best practice reference\n[TOC]\n12 factors  Great help is essential Prefer flags to args What version am I on? Mind the streams Handle things going wrong Be fancy! Prompt if you can Use tables Be speedy Encourage contributions Be clear about subcommands Follow XDG-spec  "
 },
 {
+	"uri": "/developer/tools/cli_best_practice/",
+	"title": "Build CLI Best practice",
+	"tags": [],
+	"description": "",
+	"content": " CLI best practice reference\n[TOC]\n12 factors  Great help is essential Prefer flags to args What version am I on? Mind the streams Handle things going wrong Be fancy! Prompt if you can Use tables Be speedy Encourage contributions Be clear about subcommands Follow XDG-spec  "
+},
+{
 	"uri": "/cs/tools/10_basic_commands_for_linux_performance_detection/",
+	"title": "Check Linux Performance CLI",
+	"tags": [],
+	"description": "",
+	"content": " 1. uptime uptime 20:25:38 up 7 min, 3 users, load average: 0.24, 0.45, 0.27 #该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。  2. dmesg | tail dmesg | tail [ 51.424401] wlp5s0: RX AssocResp from 38:4c:90:8f:8c:85 (capab=0x831 status=0 aid=3) [ 51.426461] wlp5s0: associated [ 51.429463] ath: EEPROM regdomain: 0x8348 [ 51.429463] ath: EEPROM indicates we should expect a country code [ 51.429464] ath: doing EEPROM country-\u0026gt;regdmn map search [ 51.429465] ath: country maps to regdmn code: 0x3a [ 51.429465] ath: Country alpha2 being used: US [ 51.429466] ath: Regpair used: 0x3a [ 51.429466] ath: regdomain 0x8348 dynamically updated by country IE [ 51.679984] IPv6: ADDRCONF(NETDEV_CHANGE): wlp5s0: link becomes ready # 打印内核环形缓存区中的内容，可以用来查看一些错误；  3. vmstat 1 vmstat 1  4. mpstat -P ALL 1 "
+},
+{
+	"uri": "/developer/tools/10_basic_commands_for_linux_performance_detection/",
 	"title": "Check Linux Performance CLI",
 	"tags": [],
 	"description": "",
@@ -154,7 +238,21 @@
 	"content": " Use time # interactive time command # Results # Use it in file \\time -o time.log command # Results  Reference Linux time command\n"
 },
 {
+	"uri": "/developer/linux/time-explain/",
+	"title": "Time Command Explaination",
+	"tags": [],
+	"description": "",
+	"content": " Use time # interactive time command # Results # Use it in file \\time -o time.log command # Results  Reference Linux time command\n"
+},
+{
 	"uri": "/cs/webtech/restful/",
+	"title": "RESTful",
+	"tags": [],
+	"description": "",
+	"content": " What is REST REST, or Representational State Transfer is another way of implementing a Web Service. It is the ideology that everything is a resource. Every resource is identified by a unique uniform resource indicator (URI). An important point to note with REST is that it is stateless. This means that when you access the REST web service to retrieve data, you receive the most current state of the resource (ie. most recent data available). You might go for a quick walk, come back, send another request to the web service, and now you have different data. REST APIs usually take advantage of HTTP, however it’s also possible to use it with other protocols.\nBenefits of REST  Lightweight Scalable - Supports large numbers of requests Reliable - No single point of failure  Reference Build rest api in 5 mins\n"
+},
+{
+	"uri": "/developer/webtech/restful/",
 	"title": "RESTful",
 	"tags": [],
 	"description": "",
@@ -168,7 +266,21 @@
 	"content": " Shell types  sh or Bourne Shell: the original shell still used on UNIX systems and in UNIX-related environments. This is the basic shell, a small program with few features. While this is not the standard shell, it is still available on every Linux system for compatibility with UNIX programs. bash or Bourne Again shell: the standard GNU shell, intuitive and flexible. Probably most advisable for beginning users while being at the same time a powerful tool for the advanced and professional user. On Linux, bash is the standard shell for common users. This shell is a so-called superset of the Bourne shell, a set of add-ons and plug-ins. This means that the Bourne Again shell is compatible with the Bourne shell: commands that work in sh, also work in bash. However, the reverse is not always the case. All examples and exercises in this book use bash. csh or C shell: the syntax of this shell resembles that of the C programming language. Sometimes asked for by programmers. tcsh or TENEX C shell: a superset of the common C shell, enhancing user-friendliness and speed. That is why some also call it the Turbo C shell. ksh or the Korn shell: sometimes appreciated by people with a UNIX background. A superset of the Bourne shell; with standard configuration a nightmare for beginning users.  Differing features The table below shows major differences between the standard shell (sh), Bourne Again SHell (bash), Korn shell (ksh) and the C shell (csh)\n   sh bash ksh csh Meaning/Action     $ $ $ % Default user prompt    \u0026gt;| \u0026gt;| \u0026gt;! Force redirection   \u0026gt; file 2\u0026gt;\u0026amp;1 \u0026amp;\u0026gt; file or \u0026gt; file 2\u0026gt;\u0026amp;1 \u0026gt; file 2\u0026gt;\u0026amp;1 \u0026gt;\u0026amp; file Redirect stdout and stderr to file    { }  { } Expand elements in list   command command or $(command) $(command) command Substitute output of enclosed command   $HOME $HOME $HOME $home Home directory    ~ ~ ~ Home directory symbol    ~+, ~-, dirs ~+, ~- =-, =N Access directory stack   var=value VAR=value var=value set var=value Variable assignment   export var export VAR=value export var=val setenv var val Set environment variable    ${nnnn} ${nn}  More than 9 arguments can be referenced   \u0026ldquo;$@\u0026ldquo; \u0026ldquo;$@\u0026ldquo; \u0026ldquo;$@\u0026ldquo;  All arguments as separate words   $# $# $# $#argv Number of arguments   $? $? $? $status Exit status of the most recently executed command   $! $! $!  PID of most recently backgrounded process   $- $- $-  Current options   . file source file or . file . file source file Read commands in file    alias x=\u0026lsquo;y\u0026rsquo; alias x=y alias x y Name x stands for command y   case case case switch or case Choose alternatives   done done done end End a loop statement   esac esac esac endsw End case or switch   exit n exit n exit n exit (expr) Exit with a status   for/do for/do for/do foreach Loop through variables    set -f, set -o nullglob|dotglob|nocaseglob|noglob  noglob Ignore substitution characters for filename generation   hash hash alias -t hashstat Display hashed commands (tracked aliases)   hash cmds hash cmds alias -t cmds rehash Remember command locations   hash -r hash -r  unhash Forget command locations    history history history List previous commands    ArrowUp+Enter or !! r !! Redo previous command    !str r str !str Redo last command that starts with \u0026ldquo;str\u0026rdquo;    !cmd:s/x/y/ r x=y cmd !cmd:s/x/y/ Replace \u0026ldquo;x\u0026rdquo; with \u0026ldquo;y\u0026rdquo; in most recent command starting with \u0026ldquo;cmd\u0026rdquo;, then execute.   if [ $i -eq 5 ] if [ $i -eq 5 ] if ((i==5)) if ($i==5) Sample condition test   fi fi fi endif End if statement   ulimit ulimit ulimit limit Set resource limits   pwd pwd pwd dirs Print working directory   read read read $\u0026lt; Read from terminal   trap 2 trap 2 trap 2 onintr Ignore interrupts    unalias unalias unalias Remove aliases   until until until  Begin until loop   while/do while/do while/do while Begin while loop    Reference Differing features\nBash guide for beginners\n"
 },
 {
+	"uri": "/developer/linux/shell_compatiability/",
+	"title": "Shells",
+	"tags": [],
+	"description": "",
+	"content": " Shell types  sh or Bourne Shell: the original shell still used on UNIX systems and in UNIX-related environments. This is the basic shell, a small program with few features. While this is not the standard shell, it is still available on every Linux system for compatibility with UNIX programs. bash or Bourne Again shell: the standard GNU shell, intuitive and flexible. Probably most advisable for beginning users while being at the same time a powerful tool for the advanced and professional user. On Linux, bash is the standard shell for common users. This shell is a so-called superset of the Bourne shell, a set of add-ons and plug-ins. This means that the Bourne Again shell is compatible with the Bourne shell: commands that work in sh, also work in bash. However, the reverse is not always the case. All examples and exercises in this book use bash. csh or C shell: the syntax of this shell resembles that of the C programming language. Sometimes asked for by programmers. tcsh or TENEX C shell: a superset of the common C shell, enhancing user-friendliness and speed. That is why some also call it the Turbo C shell. ksh or the Korn shell: sometimes appreciated by people with a UNIX background. A superset of the Bourne shell; with standard configuration a nightmare for beginning users.  Differing features The table below shows major differences between the standard shell (sh), Bourne Again SHell (bash), Korn shell (ksh) and the C shell (csh)\n   sh bash ksh csh Meaning/Action     $ $ $ % Default user prompt    \u0026gt;| \u0026gt;| \u0026gt;! Force redirection   \u0026gt; file 2\u0026gt;\u0026amp;1 \u0026amp;\u0026gt; file or \u0026gt; file 2\u0026gt;\u0026amp;1 \u0026gt; file 2\u0026gt;\u0026amp;1 \u0026gt;\u0026amp; file Redirect stdout and stderr to file    { }  { } Expand elements in list   command command or $(command) $(command) command Substitute output of enclosed command   $HOME $HOME $HOME $home Home directory    ~ ~ ~ Home directory symbol    ~+, ~-, dirs ~+, ~- =-, =N Access directory stack   var=value VAR=value var=value set var=value Variable assignment   export var export VAR=value export var=val setenv var val Set environment variable    ${nnnn} ${nn}  More than 9 arguments can be referenced   \u0026ldquo;$@\u0026ldquo; \u0026ldquo;$@\u0026ldquo; \u0026ldquo;$@\u0026ldquo;  All arguments as separate words   $# $# $# $#argv Number of arguments   $? $? $? $status Exit status of the most recently executed command   $! $! $!  PID of most recently backgrounded process   $- $- $-  Current options   . file source file or . file . file source file Read commands in file    alias x=\u0026lsquo;y\u0026rsquo; alias x=y alias x y Name x stands for command y   case case case switch or case Choose alternatives   done done done end End a loop statement   esac esac esac endsw End case or switch   exit n exit n exit n exit (expr) Exit with a status   for/do for/do for/do foreach Loop through variables    set -f, set -o nullglob|dotglob|nocaseglob|noglob  noglob Ignore substitution characters for filename generation   hash hash alias -t hashstat Display hashed commands (tracked aliases)   hash cmds hash cmds alias -t cmds rehash Remember command locations   hash -r hash -r  unhash Forget command locations    history history history List previous commands    ArrowUp+Enter or !! r !! Redo previous command    !str r str !str Redo last command that starts with \u0026ldquo;str\u0026rdquo;    !cmd:s/x/y/ r x=y cmd !cmd:s/x/y/ Replace \u0026ldquo;x\u0026rdquo; with \u0026ldquo;y\u0026rdquo; in most recent command starting with \u0026ldquo;cmd\u0026rdquo;, then execute.   if [ $i -eq 5 ] if [ $i -eq 5 ] if ((i==5)) if ($i==5) Sample condition test   fi fi fi endif End if statement   ulimit ulimit ulimit limit Set resource limits   pwd pwd pwd dirs Print working directory   read read read $\u0026lt; Read from terminal   trap 2 trap 2 trap 2 onintr Ignore interrupts    unalias unalias unalias Remove aliases   until until until  Begin until loop   while/do while/do while/do while Begin while loop    Reference Differing features\nBash guide for beginners\n"
+},
+{
 	"uri": "/cs/tools/docker_beginner/",
+	"title": "Docker: From Zero to Hero",
+	"tags": [],
+	"description": "",
+	"content": " Dockerfile # Dockerfile FROM node:latest WORKDIR /app COPY . . RUN npm install EXPOSE 3000 ENTRYPOINT [\u0026quot;node\u0026quot;, \u0026quot;app.js\u0026quot;]   FROM, this is us selecting an OS image from Docker Hub. Docker Hub is a global repository that contains images that we can pull down locally. In our case we are choosing an image based on Ubuntu that has Node.js installed, it’s called node. We also specify that we want the latest version of it, by using the following tag :latest WORKDIR, this simply means we set a working directory. This is a way to set up for what is to happen later, in the next command below COPY, here we copy the files from the directory we are standing into the directory specified by our WORKDIR command RUN, this runs a command in the terminal, in our case we are installing all the libraries we need to build our Node.js express application EXPOSE, this means we are opening up a port, it is through this port that we communicate with our container ENTRYPOINT, this is where we should state how we start up our application, the commands need to be specified as an array so the array [“node”, “app.js”] will be translated to the node app.js in the terminal  First things first, let’s create our image with the following command:\ndocker build -t adenosinew/node:latest .  Reference Docker - from the beginning, part I Docker - from the beginning, part II\n"
+},
+{
+	"uri": "/developer/tools/docker_beginner/",
 	"title": "Docker: From Zero to Hero",
 	"tags": [],
 	"description": "",
@@ -182,7 +294,21 @@
 	"content": " Overview Jure did a very impressive job on the Linux cheatsheet.1 It covered generic linux and some part of ubuntu and Debian distribution.\nSince I am a user of macOS, a lot of shortcuts and commands are not available on macOS\u0026rsquo;s platform, thus I am going to write my own cheatsheet.\nYou can also see this one as a best practice of using terminal on macOS.\nTerminal shortcuts [macOS iTerm2] Package management Homebrew is a widely used package management tool on macOS platform.\nReference  Comprehensive Linux Cheatsheet [return]   "
 },
 {
+	"uri": "/developer/linux/linux-cheatsheet/",
+	"title": "Bash Cheatsheet on macOS",
+	"tags": [],
+	"description": "",
+	"content": " Overview Jure did a very impressive job on the Linux cheatsheet.1 It covered generic linux and some part of ubuntu and Debian distribution.\nSince I am a user of macOS, a lot of shortcuts and commands are not available on macOS\u0026rsquo;s platform, thus I am going to write my own cheatsheet.\nYou can also see this one as a best practice of using terminal on macOS.\nTerminal shortcuts [macOS iTerm2] Package management Homebrew is a widely used package management tool on macOS platform.\nReference  Comprehensive Linux Cheatsheet [return]   "
+},
+{
 	"uri": "/cs/linux/shells/",
+	"title": "Work with Different Shells",
+	"tags": [],
+	"description": "",
+	"content": " There are several shells such as bash, sh, ksh, zsh, fish and many other lesser known shells available on Linux.\nBash (/bin/bash) is a popular shell on most if not all Linux systems, and it’s normally the default shell for user accounts.\nWhen creating user accounts with the useradd or adduser utilities, the --shell flag can be used to specify the name of a user’s login shell other than that specified in the respective configuration files.\nList All Shells cat /etc/shells # /etc/shells: valid login shells /bin/sh /bin/dash /bin/bash /bin/rbash /usr/bin/tmux /usr/bin/screen /bin/csh /bin/tcsh /usr/bin/tcsh  Method 1. usermod utility User’s account details, stored in the /etc/passwd file.\nIf I want to change the default shell of ubuntu from bash to tcsh\nusermod --shell /bin/tcsh ubuntu # Check the /etc/passwd to validate the change grep ubuntu /etc/passwd  Method 2. chsh chsh -s /bin/tcsh ubuntu  Method 3. Edit the /etc/passwd Simply open the /etc/passwd file using any of your favorite command line text editors and change a specific users shell.\nReference Change default shell\n"
+},
+{
+	"uri": "/developer/linux/shells/",
 	"title": "Work with Different Shells",
 	"tags": [],
 	"description": "",
@@ -203,6 +329,13 @@
 	"content": " What is Terraform Terraform official site\nTerraform is a super useful tool developed by HashiCorp, the main idea of terraform is \u0026ldquo;INFRASTRUCTURE AS CODE\u0026rdquo;.\nTo me, the most attracting feature Cloud Computing is scalability. Infrastructure in Cloud is inifinite. But there are some downsides of traditional cloud library.\nFor AWS, I\u0026rsquo;ve tried awscli, boto3 and go sdk. For a small test, they are easy to use. But for a big test, there are too many logics and dependencies inside. Not to mention, there are a lot cloud vendors, such as Azure, GCP and more.\nInstall and configure Terraform Terraform is a single binary, the installation of Terraform is easy. All you need to do is download the binary and export the path to $PATH.\nFor Mac user, simply run: (I\u0026rsquo;ve notice the brew version of terraform is slower than HashiCorp\u0026rsquo;s binary)\nbrew install terraform # Add autocomplete terraform -install-autocomplete  *.tf files *.tfvars files and variable Reference Terraform Variables\n"
 },
 {
+	"uri": "/developer/tools/terraform_useful/",
+	"title": "Terraform Best Practice",
+	"tags": [],
+	"description": "",
+	"content": " What is Terraform Terraform official site\nTerraform is a super useful tool developed by HashiCorp, the main idea of terraform is \u0026ldquo;INFRASTRUCTURE AS CODE\u0026rdquo;.\nTo me, the most attracting feature Cloud Computing is scalability. Infrastructure in Cloud is inifinite. But there are some downsides of traditional cloud library.\nFor AWS, I\u0026rsquo;ve tried awscli, boto3 and go sdk. For a small test, they are easy to use. But for a big test, there are too many logics and dependencies inside. Not to mention, there are a lot cloud vendors, such as Azure, GCP and more.\nInstall and configure Terraform Terraform is a single binary, the installation of Terraform is easy. All you need to do is download the binary and export the path to $PATH.\nFor Mac user, simply run: (I\u0026rsquo;ve notice the brew version of terraform is slower than HashiCorp\u0026rsquo;s binary)\nbrew install terraform # Add autocomplete terraform -install-autocomplete  *.tf files *.tfvars files and variable Reference Terraform Variables\n"
+},
+{
 	"uri": "/collections/snippets/python_platform/",
 	"title": "Python Platform module",
 	"tags": [],
@@ -217,7 +350,21 @@
 	"content": " My laptop is running out of storage, since I have a VPS running as VPN server. I found it would be a good practice to setup a MySQL server in remote.\nBTW, if you still have AWS free tier, AWS RDS service is super easy and stable.\nInstall the MySQL server I am not a big fan of ubuntu, on my local, I am using Manjaro. And for remote server, my first choice is always CentOS.\nMySQL must be installed from the community repository.\n Download and add the repository, then update.\nwget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm yum update  Install MySQL as usual and start the service. During installation, you will be asked if you want to accept the results from the .rpm file’s GPG verification. If no error or mismatch occurs, enter y.\nsudo yum install mysql-server sudo systemctl start mysqld   Optimize MySQL server You will be given the choice to change the MySQL root password, remove anonymous user accounts, disable root logins outside of localhost, and remove test databases. It is recommended that you answer yes to these options. You can read more about the script in the MySQL Reference Manual.\nsudo mysql_secure_installation  MySQL Tuner is a Perl script that connects to a running instance of MySQL and provides configuration recommendations based on workload.\nwget https://raw.githubusercontent.com/major/MySQLTuner-perl/master/mysqltuner.pl perl ./mysqltuner.pl  Create User and database Basic User interaction List all users SELECT User, Host FROM mysql.user; +------------------+-----------+ | User | Host | +------------------+-----------+ | root | localhost | | root | demohost | | root | 127.0.0.1 | | debian-sys-maint | localhost | | | % | +------------------+-----------+  List all databases and tables SHOW databases; +--------------------+ | Database | +--------------------+ | information_schema | | mysql | | performance_schema | | sys | +--------------------+  Choose one database and list all tables\nuse mysql; show tables; +---------------------------+ | Tables_in_mysql | +---------------------------+ | columns_priv | | db | ... | time_zone_name | | time_zone_transition | | time_zone_transition_type | | user | +---------------------------+ 32 rows in set (0.00 sec)  Using MySQL From localhost Root Login mysql -u root -p  Create new database and user Remote access Add permission to public access GRANT ALL PRIVILEGES ON *.* TO 'username'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION; FLUSH PRIVILEGES;  Connect to the database from CLI mysql -u {username} -h {remote server ip or name} -P {port} -D {DB name} -p{password}  Notes No space between -p and {password} , better leave the password for blank and enter the password from the prompt.\nMySQL Better CLI mycli is a command line interface for MySQL, MariaDB, and Percona with auto-completion and syntax highlighting.\nbrew install mycli mycli mysql://my_user@my_host.com:3306/my_database  Reference Install mysql on centos Linode\nAllow remote connection to mysql\nBasic User interaction\nAdd user and grant privileges\n"
 },
 {
+	"uri": "/developer/tools/setup_mysql/",
+	"title": "Install MySQL server on CentOS",
+	"tags": [],
+	"description": "",
+	"content": " My laptop is running out of storage, since I have a VPS running as VPN server. I found it would be a good practice to setup a MySQL server in remote.\nBTW, if you still have AWS free tier, AWS RDS service is super easy and stable.\nInstall the MySQL server I am not a big fan of ubuntu, on my local, I am using Manjaro. And for remote server, my first choice is always CentOS.\nMySQL must be installed from the community repository.\n Download and add the repository, then update.\nwget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm yum update  Install MySQL as usual and start the service. During installation, you will be asked if you want to accept the results from the .rpm file’s GPG verification. If no error or mismatch occurs, enter y.\nsudo yum install mysql-server sudo systemctl start mysqld   Optimize MySQL server You will be given the choice to change the MySQL root password, remove anonymous user accounts, disable root logins outside of localhost, and remove test databases. It is recommended that you answer yes to these options. You can read more about the script in the MySQL Reference Manual.\nsudo mysql_secure_installation  MySQL Tuner is a Perl script that connects to a running instance of MySQL and provides configuration recommendations based on workload.\nwget https://raw.githubusercontent.com/major/MySQLTuner-perl/master/mysqltuner.pl perl ./mysqltuner.pl  Create User and database Basic User interaction List all users SELECT User, Host FROM mysql.user; +------------------+-----------+ | User | Host | +------------------+-----------+ | root | localhost | | root | demohost | | root | 127.0.0.1 | | debian-sys-maint | localhost | | | % | +------------------+-----------+  List all databases and tables SHOW databases; +--------------------+ | Database | +--------------------+ | information_schema | | mysql | | performance_schema | | sys | +--------------------+  Choose one database and list all tables\nuse mysql; show tables; +---------------------------+ | Tables_in_mysql | +---------------------------+ | columns_priv | | db | ... | time_zone_name | | time_zone_transition | | time_zone_transition_type | | user | +---------------------------+ 32 rows in set (0.00 sec)  Using MySQL From localhost Root Login mysql -u root -p  Create new database and user Remote access Add permission to public access GRANT ALL PRIVILEGES ON *.* TO 'username'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION; FLUSH PRIVILEGES;  Connect to the database from CLI mysql -u {username} -h {remote server ip or name} -P {port} -D {DB name} -p{password}  Notes No space between -p and {password} , better leave the password for blank and enter the password from the prompt.\nMySQL Better CLI mycli is a command line interface for MySQL, MariaDB, and Percona with auto-completion and syntax highlighting.\nbrew install mycli mycli mysql://my_user@my_host.com:3306/my_database  Reference Install mysql on centos Linode\nAllow remote connection to mysql\nBasic User interaction\nAdd user and grant privileges\n"
+},
+{
 	"uri": "/cs/windows/active_directory/",
+	"title": "Active_directory",
+	"tags": [],
+	"description": "",
+	"content": " Windows Active Directory What is Active Directory Domain Controller (DC) A server of Active Directory service\nSchema (database)\n User account Computer account  Schema extentable\nUser Account Contains\n username password Email and etc.  Computer Account Contains\n computer name UID and etc.  Groups OU (Organization Unit) "
+},
+{
+	"uri": "/developer/windows/active_directory/",
 	"title": "Active_directory",
 	"tags": [],
 	"description": "",
@@ -266,7 +413,21 @@
 	"content": " tldr description of mount tldr mount mount Provides access to an entire filesystem in one directory. - Show all mounted filesystems: mount - Mount a device to a directory: mount -t filesystem_type path/to/device_file path/to/target_directory - Mount a CD-ROM device (with the filetype ISO9660) to /cdrom (readonly): mount -t iso9660 -o ro /dev/cdrom /cdrom - Mount all the filesystem defined in /etc/fstab: mount -a - Mount a specific filesystem described in /etc/fstab (e.g. \u0026quot;/dev/sda1 /my_drive ext2 defaults 0 2\u0026quot;): mount /my_drive  Use CLI to mount a filesystem For instance, mount a AWS EFS filesystem to your EC2 instance /files folder\nmount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-XXXXXX.efs.us-west-2.amazonaws.com:/ /files  Use systemd to mount a filesystem Requirement: the filename of the mount file should be the same as the Where field.\n# files.mount [Unit] Description=Mount The File System After=network.target [Mount] What=fs-XXXXX.efs.us-west-2.amazonaws.com:/ Where=/files Type=nfs Options=auto [Install] WantedBy=multi-user.target  Start the service\n# In ubuntu, move it to /etc/systemd/system/ cp files.mount /etc/systemd/system/ systemctl daemon-reload systemctl start files.mount  Mount as a specific user If I want to mount the filesystem as the ubuntu user, specify it in the Options field.\n[Unit] Description=Mount The File System After=network.target [Mount] What=fs-XXXXXX.efs.us-east-2.amazonaws.com:/ Where=/files Type=nfs Options=nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,uid=$(id -u ubuntu),gid=$(id -g ubuntu) [Install] WantedBy=multi-user.target  Mount as a normal user In above section, uid and gid is not available for sudo user. Reason unknown.\nTODO: Find out why uid and gid are invalid options for sudo and ubuntu user.\nFound this option can be used for sudo user:\nnosuid\nDisables the set-user-identifier and set-group-identifier bits. This prevents remote users from gaining higher privileges by running a setuid program.\n[Unit] Description=Mount The File System After=network.target [Mount] What=fs-XXXXXX.efs.us-east-2.amazonaws.com:/ Where=/files Type=nfs Options=nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,nosuid [Install] WantedBy=multi-user.target  Using /etc/fstab We can mount the remote NFS shares automatically at boot by adding them to /etc/fstab file on the client.\n# /etc/fstab entry . . . 203.0.113.0:/var/nfs/general /nfs/general nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0 203.0.113.0:/home /nfs/home nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0  Reference Redhat NFS client reference\nRedhat NFS Mount reference\nHow to setup a nfs mount\n"
 },
 {
+	"uri": "/developer/linux/systemd_mount/",
+	"title": "Mount a filesystem",
+	"tags": [],
+	"description": "",
+	"content": " tldr description of mount tldr mount mount Provides access to an entire filesystem in one directory. - Show all mounted filesystems: mount - Mount a device to a directory: mount -t filesystem_type path/to/device_file path/to/target_directory - Mount a CD-ROM device (with the filetype ISO9660) to /cdrom (readonly): mount -t iso9660 -o ro /dev/cdrom /cdrom - Mount all the filesystem defined in /etc/fstab: mount -a - Mount a specific filesystem described in /etc/fstab (e.g. \u0026quot;/dev/sda1 /my_drive ext2 defaults 0 2\u0026quot;): mount /my_drive  Use CLI to mount a filesystem For instance, mount a AWS EFS filesystem to your EC2 instance /files folder\nmount -t nfs -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 fs-XXXXXX.efs.us-west-2.amazonaws.com:/ /files  Use systemd to mount a filesystem Requirement: the filename of the mount file should be the same as the Where field.\n# files.mount [Unit] Description=Mount The File System After=network.target [Mount] What=fs-XXXXX.efs.us-west-2.amazonaws.com:/ Where=/files Type=nfs Options=auto [Install] WantedBy=multi-user.target  Start the service\n# In ubuntu, move it to /etc/systemd/system/ cp files.mount /etc/systemd/system/ systemctl daemon-reload systemctl start files.mount  Mount as a specific user If I want to mount the filesystem as the ubuntu user, specify it in the Options field.\n[Unit] Description=Mount The File System After=network.target [Mount] What=fs-XXXXXX.efs.us-east-2.amazonaws.com:/ Where=/files Type=nfs Options=nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,uid=$(id -u ubuntu),gid=$(id -g ubuntu) [Install] WantedBy=multi-user.target  Mount as a normal user In above section, uid and gid is not available for sudo user. Reason unknown.\nTODO: Find out why uid and gid are invalid options for sudo and ubuntu user.\nFound this option can be used for sudo user:\nnosuid\nDisables the set-user-identifier and set-group-identifier bits. This prevents remote users from gaining higher privileges by running a setuid program.\n[Unit] Description=Mount The File System After=network.target [Mount] What=fs-XXXXXX.efs.us-east-2.amazonaws.com:/ Where=/files Type=nfs Options=nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,nosuid [Install] WantedBy=multi-user.target  Using /etc/fstab We can mount the remote NFS shares automatically at boot by adding them to /etc/fstab file on the client.\n# /etc/fstab entry . . . 203.0.113.0:/var/nfs/general /nfs/general nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0 203.0.113.0:/home /nfs/home nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0  Reference Redhat NFS client reference\nRedhat NFS Mount reference\nHow to setup a nfs mount\n"
+},
+{
 	"uri": "/cs/linux/",
+	"title": "Linux",
+	"tags": [],
+	"description": "",
+	"content": "Placeholder for linux Chapter\n"
+},
+{
+	"uri": "/developer/linux/",
 	"title": "Linux",
 	"tags": [],
 	"description": "",
@@ -287,7 +448,21 @@
 	"content": " Overview:\nThere are tons of tutorial of git. For those basic concepts, I am going to link to some good tutorial. This one is focusing on some real life use cases, what if you encounter these errors or what if I want to do this\u0026hellip;\nBasic Git commands git fetch The git fetch command downloads commits, files, and refs from a remote repository into your local repo. Fetching is what you do when you want to see what everybody else has been working on.\ngit merge TODO\ngit log TODO\nGit use case (snippets) Create a new branch based on a arbitrary branch TODO\nCreate a new branch based on a commit git log # Get a commit id git checkout -b \u0026lt;new_branch_name\u0026gt; \u0026lt;commit_id\u0026gt;  Update a branch (feature) with different branch (develop) git checkout develop git pull git checkout feature git merge develop # or git rebase develop  The difference between with git rebase is that rebase keep all commits history from your branch, and that is important if your partial commits have a lot of content that can be interesting to keep. This option is obligatory in some teams.\nRemove grey submodule git rm --cached \u0026lt;folder_name\u0026gt; git add . git commit -m \u0026quot;\u0026lt;your_message\u0026gt;\u0026quot; git push --all  Fix conflicts TODO\nReference Atlassian git fetch\n"
 },
 {
+	"uri": "/developer/tools/git_useful/",
+	"title": "Useful Git commands",
+	"tags": [],
+	"description": "",
+	"content": " Overview:\nThere are tons of tutorial of git. For those basic concepts, I am going to link to some good tutorial. This one is focusing on some real life use cases, what if you encounter these errors or what if I want to do this\u0026hellip;\nBasic Git commands git fetch The git fetch command downloads commits, files, and refs from a remote repository into your local repo. Fetching is what you do when you want to see what everybody else has been working on.\ngit merge TODO\ngit log TODO\nGit use case (snippets) Create a new branch based on a arbitrary branch TODO\nCreate a new branch based on a commit git log # Get a commit id git checkout -b \u0026lt;new_branch_name\u0026gt; \u0026lt;commit_id\u0026gt;  Update a branch (feature) with different branch (develop) git checkout develop git pull git checkout feature git merge develop # or git rebase develop  The difference between with git rebase is that rebase keep all commits history from your branch, and that is important if your partial commits have a lot of content that can be interesting to keep. This option is obligatory in some teams.\nRemove grey submodule git rm --cached \u0026lt;folder_name\u0026gt; git add . git commit -m \u0026quot;\u0026lt;your_message\u0026gt;\u0026quot; git push --all  Fix conflicts TODO\nReference Atlassian git fetch\n"
+},
+{
 	"uri": "/cs/tools/docker_useful/",
+	"title": "Useful commands for docker",
+	"tags": [],
+	"description": "",
+	"content": " References Top 10 Docker CLI commands you can\u0026rsquo;t live without\nLists running containers # show all containers docker ps -a # only list ids docker ps -q  Get base image from Docker Hub docker pull  Build docker images from a Dockerfile and a \u0026ldquo;context\u0026rdquo; docker build -t container_label .  Run a docker container based on an image Top 10 options for docker run\ndocker run my_image -it bash   --detach, -d --entrypoint --env, -e or --env-file --ip --name --publish, -p | --publish-all, -P --rm --tty, -t Command use with the option --interactive, -i --volume, -v --workdir, -w  Display the logs of a container docker logs --follow my_container  List the volumes, which are the preferred mechanism for persisting data generated by and used by Docker containers docker volume ls  Removes one or more containers docker rm my_container  Removes one or more images docker rmi my_image  Stops one or more containers docker stop my_container # docker kill my_container  Kill all running containers docker kill $(docker ps -q)  Delete all stopped containers docker rm $(docker ps -a -q)  Delete all images docker rmi $(docker images -q)  Update all images docker images |grep -v REPOSITORY|awk '{print $1}'|xargs -L1 docker pull  Enter a running docker container docker exec -it [container-id] bash  Copy file from docker container to host docker cp \u0026lt;containerId\u0026gt;:/file/path/within/container /host/path/target  List ports defined on a container docker port CONTAINER [Private_port[/protocol]] # Example $ docker port proxy 80/tcp -\u0026gt; 0.0.0.0:80 $ docker port proxy 80 0.0.0.0:80  A vs B Dokerfile EXPOSE vs publish EXPOSE:\nWhen writing your dockerfiles, the instruction EXPOSE tells Docker the running container listens on specific network ports.\nEXPOSE \u0026lt;port\u0026gt; [\u0026lt;port\u0026gt;/\u0026lt;protocol\u0026gt;...]  Or within docker run command:\ndocker run --expose=1234 my_container  Publish ports and map them to the host\nThere are several flags you can use when using the docker run command to publish a container\u0026rsquo;s ports outside of the container\u0026rsquo;s network and map them to the host machine\u0026rsquo;s ports.\ndocker run -p 80:80/tcp -p 80:80/udp my_app # To publish all the ports you define in your Dockerfile with EXPOSE and bind them to the host machine, you can use -P flag docker run -P my_app  "
+},
+{
+	"uri": "/developer/tools/docker_useful/",
 	"title": "Useful commands for docker",
 	"tags": [],
 	"description": "",

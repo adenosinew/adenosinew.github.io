@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on Documentation for Hugo Learn Theme</title>
+    <link>/developer/windows/</link>
+    <description>Recent content in Windows on Documentation for Hugo Learn Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 28 Feb 2019 11:10:54 -0500</lastBuildDate>
+    
+	<atom:link href="/developer/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Active_directory</title>
+      <link>/developer/windows/active_directory/</link>
+      <pubDate>Thu, 28 Feb 2019 11:11:39 -0500</pubDate>
+      
+      <guid>/developer/windows/active_directory/</guid>
+      <description> Windows Active Directory What is Active Directory Domain Controller (DC) A server of Active Directory service
+Schema (database)
+ User account Computer account  Schema extentable
+User Account Contains
+ username password Email and etc.  Computer Account Contains
+ computer name UID and etc.  Groups OU (Organization Unit) </description>
+    </item>
+    
+  </channel>
+</rss>

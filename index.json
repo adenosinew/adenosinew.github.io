@@ -71,10 +71,10 @@
 },
 {
 	"uri": "/developer/",
-	"title": "Cs",
+	"title": "developer",
 	"tags": [],
 	"description": "",
-	"content": "Placeholder for Computer Science Chapter\n"
+	"content": "Placeholder for developer Chapter\n"
 },
 {
 	"uri": "/developer/tools/raspberry_pi_3_nas/",

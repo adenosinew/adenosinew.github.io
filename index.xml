@@ -13,33 +13,11 @@
     
     <item>
       <title>Vim Cheatsheet</title>
-      <link>/cs/tools/vim_useful/</link>
-      <pubDate>Wed, 13 Feb 2019 12:23:19 -0500</pubDate>
-      
-      <guid>/cs/tools/vim_useful/</guid>
-      <description>Vim cheatsheet Move Faster Move to previous word (b) Move to end of line ($) Move to end of word (e) Move to beginning of line (0) Move down one line (j) Move left one character (h) Move to last line of screen (L) Move up one line (k) Move to middle line of screen (M) Move to first line of screen (H) Move right one character (l) Move to beginning of word (b) Move to next word (w)</description>
-    </item>
-    
-    <item>
-      <title>Vim Cheatsheet</title>
       <link>/developer/tools/vim_useful/</link>
       <pubDate>Wed, 13 Feb 2019 12:23:19 -0500</pubDate>
       
       <guid>/developer/tools/vim_useful/</guid>
       <description>Vim cheatsheet Move Faster Move to previous word (b) Move to end of line ($) Move to end of word (e) Move to beginning of line (0) Move down one line (j) Move left one character (h) Move to last line of screen (L) Move up one line (k) Move to middle line of screen (M) Move to first line of screen (H) Move right one character (l) Move to beginning of word (b) Move to next word (w)</description>
-    </item>
-    
-    <item>
-      <title>SSH Bestpractice</title>
-      <link>/cs/tools/ssh_useful/</link>
-      <pubDate>Wed, 13 Feb 2019 12:23:19 -0500</pubDate>
-      
-      <guid>/cs/tools/ssh_useful/</guid>
-      <description> SSH reference1
-reference2
-Generate a key ssh-keygen -t rsa -b 4096 -C &amp;quot;your_email@gmail.com&amp;quot;  Give a proper name for the key, or else, it would overwrite the id_rsa file
-Add a key ssh-add -K ~/.ssh/id_rsa_my_key  For Mac, you need to add -k
-# Use the following command to check the result ssh-add -l  Config </description>
     </item>
     
     <item>
@@ -57,34 +35,12 @@ Add a key ssh-add -K ~/.ssh/id_rsa_my_key  For Mac, you need to add -k
     
     <item>
       <title>Raspberry Pi 3</title>
-      <link>/cs/tools/raspberry_pi_3_nas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/cs/tools/raspberry_pi_3_nas/</guid>
-      <description> Raspberry Pi 3 NAS [TOC]
-Mount hard driver Create NAS Enable Time machine </description>
-    </item>
-    
-    <item>
-      <title>Raspberry Pi 3</title>
       <link>/developer/tools/raspberry_pi_3_nas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/developer/tools/raspberry_pi_3_nas/</guid>
       <description> Raspberry Pi 3 NAS [TOC]
 Mount hard driver Create NAS Enable Time machine </description>
-    </item>
-    
-    <item>
-      <title>Most-used Linux CLI</title>
-      <link>/cs/tools/common_commands_useful/</link>
-      <pubDate>Wed, 13 Feb 2019 12:23:19 -0500</pubDate>
-      
-      <guid>/cs/tools/common_commands_useful/</guid>
-      <description>File operations Compare two directory diff --brief -r dir1/ dir2/
-If you want to see differences for files that may not exist in either directory diff --brief -Nr dir1/ dir2
-##Commands
-xargs Delete all files with a .backup extension. -print0 on find uses a null character to split the files, and -0 changes the delimiter to the null character (useful if there&amp;rsquo;s whitespace in filenames): find . -name &#39;*.backup&#39; -print0 | xargs -0 rm -v</description>
     </item>
     
     <item>
@@ -101,18 +57,6 @@ xargs Delete all files with a .backup extension. -print0 on find uses a null cha
     
     <item>
       <title>Better CLI tools</title>
-      <link>/cs/tools/cli_improved/</link>
-      <pubDate>Wed, 13 Feb 2019 12:23:19 -0500</pubDate>
-      
-      <guid>/cs/tools/cli_improved/</guid>
-      <description>Better cli tools Ignore alias \cat # ignore aliases named &amp;quot;cat&amp;quot; - explanation: https://stackoverflow.com/a/16506263/22617 command cat # ignore functions and aliases  bat &amp;gt; cat bat
-Comparing with cat, bat also offers highlighting, paging, line numbers and git integration.
-Installation command:
-yaourt -S bat  prettyping &amp;gt; ping fzf &amp;gt; ctrl + r In addition to searching through the history, fzf can also preview and open files, which is what I&amp;rsquo;ve done in the video below:</description>
-    </item>
-    
-    <item>
-      <title>Better CLI tools</title>
       <link>/developer/tools/cli_improved/</link>
       <pubDate>Wed, 13 Feb 2019 12:23:19 -0500</pubDate>
       
@@ -121,17 +65,6 @@ yaourt -S bat  prettyping &amp;gt; ping fzf &amp;gt; ctrl + r In addition to sea
 Comparing with cat, bat also offers highlighting, paging, line numbers and git integration.
 Installation command:
 yaourt -S bat  prettyping &amp;gt; ping fzf &amp;gt; ctrl + r In addition to searching through the history, fzf can also preview and open files, which is what I&amp;rsquo;ve done in the video below:</description>
-    </item>
-    
-    <item>
-      <title>Build CLI Best practice</title>
-      <link>/cs/tools/cli_best_practice/</link>
-      <pubDate>Wed, 13 Feb 2019 12:23:19 -0500</pubDate>
-      
-      <guid>/cs/tools/cli_best_practice/</guid>
-      <description> CLI best practice reference
-[TOC]
-12 factors  Great help is essential Prefer flags to args What version am I on? Mind the streams Handle things going wrong Be fancy! Prompt if you can Use tables Be speedy Encourage contributions Be clear about subcommands Follow XDG-spec  </description>
     </item>
     
     <item>
@@ -147,20 +80,29 @@ yaourt -S bat  prettyping &amp;gt; ping fzf &amp;gt; ctrl + r In addition to sea
     
     <item>
       <title>Check Linux Performance CLI</title>
-      <link>/cs/tools/10_basic_commands_for_linux_performance_detection/</link>
-      <pubDate>Wed, 13 Feb 2019 12:23:19 -0500</pubDate>
-      
-      <guid>/cs/tools/10_basic_commands_for_linux_performance_detection/</guid>
-      <description>1. uptime uptime 20:25:38 up 7 min, 3 users, load average: 0.24, 0.45, 0.27 #该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。  2. dmesg | tail dmesg | tail [ 51.424401] wlp5s0: RX AssocResp from 38:4c:90:8f:8c:85 (capab=0x831 status=0 aid=3) [ 51.426461] wlp5s0: associated [ 51.429463] ath: EEPROM regdomain: 0x8348 [ 51.429463] ath: EEPROM indicates we should expect a country code [ 51.429464] ath: doing EEPROM country-&amp;gt;regdmn map search [ 51.429465] ath: country maps to regdmn code: 0x3a [ 51.</description>
-    </item>
-    
-    <item>
-      <title>Check Linux Performance CLI</title>
       <link>/developer/tools/10_basic_commands_for_linux_performance_detection/</link>
       <pubDate>Wed, 13 Feb 2019 12:23:19 -0500</pubDate>
       
       <guid>/developer/tools/10_basic_commands_for_linux_performance_detection/</guid>
       <description>1. uptime uptime 20:25:38 up 7 min, 3 users, load average: 0.24, 0.45, 0.27 #该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。  2. dmesg | tail dmesg | tail [ 51.424401] wlp5s0: RX AssocResp from 38:4c:90:8f:8c:85 (capab=0x831 status=0 aid=3) [ 51.426461] wlp5s0: associated [ 51.429463] ath: EEPROM regdomain: 0x8348 [ 51.429463] ath: EEPROM indicates we should expect a country code [ 51.429464] ath: doing EEPROM country-&amp;gt;regdmn map search [ 51.429465] ath: country maps to regdmn code: 0x3a [ 51.</description>
+    </item>
+    
+    <item>
+      <title>Dockerfile_intro</title>
+      <link>/developer/tools/dockerfile_intro/</link>
+      <pubDate>Mon, 12 Aug 2019 16:36:15 -0400</pubDate>
+      
+      <guid>/developer/tools/dockerfile_intro/</guid>
+      <description>01 关于Dockerfile 在Docker中创建镜像最常用的方式，就是使用Dockerfile。Dockerfile是一个Docker镜像的描述文件，我们可以理解成火箭发射的A、B、C、D…的步骤。Dockerfile其内部包含了一条条的指令，每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建。
+一个Dockerfile的示例如下所示：
+#基于centos镜像 FROM centos #维护人的信息 MAINTAINER The CentOS Project #安装httpd软件包 RUN yum -y update RUN yum -y install httpd #开启80端口 EXPOSE 80 #复制网站首页文件至镜像中web站点下 ADD index.html /var/www/html/index.html #复制该脚本至镜像中，并修改其权限 ADD run.sh /run.sh RUN chmod 775 /run.sh #当启动容器时执行的脚本文件 CMD [&amp;quot;/run.sh&amp;quot;]  由上可知，Dockerfile结构大致分为四个部分：
+ 基础镜像信息 维护者信息 镜像操作指令 容器启动时执行指令。  Dockerfile每行支持一条指令，每条指令可带多个参数，支持使用以#号开头的注释。下面会对上面使用到的一些常用指令做一些介绍。
+02 Dockerfile常用指令 2.1 FROM 指明构建的新镜像是来自于哪个基础镜像，例如：
+FROM centos:6
+2.2 MAINTAINER 指明镜像维护着及其联系方式（一般是邮箱地址），例如：
+MAINTAINER example example@gmail.com
+2.3 RUN 构建镜像时运行的Shell命令，例如：
+RUN [&amp;quot;yum&amp;quot;, &amp;quot;install&amp;quot;, &amp;quot;httpd&amp;quot;] RUN yum install httpd  又如，我们在使用微软官方ASP.</description>
     </item>
     
     <item>
@@ -196,29 +138,11 @@ The plugin manager accessed via bin/logstash-plugin script is used to manage the
     
     <item>
       <title>Time Command Explaination</title>
-      <link>/cs/linux/time-explain/</link>
-      <pubDate>Tue, 23 Apr 2019 17:17:38 -0400</pubDate>
-      
-      <guid>/cs/linux/time-explain/</guid>
-      <description>Use time # interactive time command # Results # Use it in file \time -o time.log command # Results  Reference Linux time command</description>
-    </item>
-    
-    <item>
-      <title>Time Command Explaination</title>
       <link>/developer/linux/time-explain/</link>
       <pubDate>Tue, 23 Apr 2019 17:17:38 -0400</pubDate>
       
       <guid>/developer/linux/time-explain/</guid>
       <description>Use time # interactive time command # Results # Use it in file \time -o time.log command # Results  Reference Linux time command</description>
-    </item>
-    
-    <item>
-      <title>RESTful</title>
-      <link>/cs/webtech/restful/</link>
-      <pubDate>Tue, 23 Apr 2019 16:46:45 -0400</pubDate>
-      
-      <guid>/cs/webtech/restful/</guid>
-      <description>What is REST REST, or Representational State Transfer is another way of implementing a Web Service. It is the ideology that everything is a resource. Every resource is identified by a unique uniform resource indicator (URI). An important point to note with REST is that it is stateless. This means that when you access the REST web service to retrieve data, you receive the most current state of the resource (ie.</description>
     </item>
     
     <item>
@@ -232,29 +156,11 @@ The plugin manager accessed via bin/logstash-plugin script is used to manage the
     
     <item>
       <title>Shells</title>
-      <link>/cs/linux/shell_compatiability/</link>
-      <pubDate>Thu, 04 Apr 2019 15:20:52 -0400</pubDate>
-      
-      <guid>/cs/linux/shell_compatiability/</guid>
-      <description>Shell types  sh or Bourne Shell: the original shell still used on UNIX systems and in UNIX-related environments. This is the basic shell, a small program with few features. While this is not the standard shell, it is still available on every Linux system for compatibility with UNIX programs. bash or Bourne Again shell: the standard GNU shell, intuitive and flexible. Probably most advisable for beginning users while being at the same time a powerful tool for the advanced and professional user.</description>
-    </item>
-    
-    <item>
-      <title>Shells</title>
       <link>/developer/linux/shell_compatiability/</link>
       <pubDate>Thu, 04 Apr 2019 15:20:52 -0400</pubDate>
       
       <guid>/developer/linux/shell_compatiability/</guid>
       <description>Shell types  sh or Bourne Shell: the original shell still used on UNIX systems and in UNIX-related environments. This is the basic shell, a small program with few features. While this is not the standard shell, it is still available on every Linux system for compatibility with UNIX programs. bash or Bourne Again shell: the standard GNU shell, intuitive and flexible. Probably most advisable for beginning users while being at the same time a powerful tool for the advanced and professional user.</description>
-    </item>
-    
-    <item>
-      <title>Docker: From Zero to Hero</title>
-      <link>/cs/tools/docker_beginner/</link>
-      <pubDate>Wed, 13 Mar 2019 18:02:14 -0400</pubDate>
-      
-      <guid>/cs/tools/docker_beginner/</guid>
-      <description>Dockerfile # Dockerfile FROM node:latest WORKDIR /app COPY . . RUN npm install EXPOSE 3000 ENTRYPOINT [&amp;quot;node&amp;quot;, &amp;quot;app.js&amp;quot;]   FROM, this is us selecting an OS image from Docker Hub. Docker Hub is a global repository that contains images that we can pull down locally. In our case we are choosing an image based on Ubuntu that has Node.js installed, it’s called node. We also specify that we want the latest version of it, by using the following tag :latest WORKDIR, this simply means we set a working directory.</description>
     </item>
     
     <item>
@@ -268,18 +174,6 @@ The plugin manager accessed via bin/logstash-plugin script is used to manage the
     
     <item>
       <title>Bash Cheatsheet on macOS</title>
-      <link>/cs/linux/linux-cheatsheet/</link>
-      <pubDate>Mon, 11 Mar 2019 21:33:22 -0400</pubDate>
-      
-      <guid>/cs/linux/linux-cheatsheet/</guid>
-      <description>Overview Jure did a very impressive job on the Linux cheatsheet.1 It covered generic linux and some part of ubuntu and Debian distribution.
-Since I am a user of macOS, a lot of shortcuts and commands are not available on macOS&amp;rsquo;s platform, thus I am going to write my own cheatsheet.
-You can also see this one as a best practice of using terminal on macOS.
-Terminal shortcuts [macOS iTerm2] Package management Homebrew is a widely used package management tool on macOS platform.</description>
-    </item>
-    
-    <item>
-      <title>Bash Cheatsheet on macOS</title>
       <link>/developer/linux/linux-cheatsheet/</link>
       <pubDate>Mon, 11 Mar 2019 21:33:22 -0400</pubDate>
       
@@ -288,17 +182,6 @@ Terminal shortcuts [macOS iTerm2] Package management Homebrew is a widely used p
 Since I am a user of macOS, a lot of shortcuts and commands are not available on macOS&amp;rsquo;s platform, thus I am going to write my own cheatsheet.
 You can also see this one as a best practice of using terminal on macOS.
 Terminal shortcuts [macOS iTerm2] Package management Homebrew is a widely used package management tool on macOS platform.</description>
-    </item>
-    
-    <item>
-      <title>Work with Different Shells</title>
-      <link>/cs/linux/shells/</link>
-      <pubDate>Mon, 11 Mar 2019 21:33:22 -0400</pubDate>
-      
-      <guid>/cs/linux/shells/</guid>
-      <description>There are several shells such as bash, sh, ksh, zsh, fish and many other lesser known shells available on Linux.
-Bash (/bin/bash) is a popular shell on most if not all Linux systems, and it’s normally the default shell for user accounts.
-When creating user accounts with the useradd or adduser utilities, the --shell flag can be used to specify the name of a user’s login shell other than that specified in the respective configuration files.</description>
     </item>
     
     <item>
@@ -319,18 +202,6 @@ When creating user accounts with the useradd or adduser utilities, the --shell f
       
       <guid>/datascience/sqlalchemy/</guid>
       <description> Sqlalchemy Reflection Metadata </description>
-    </item>
-    
-    <item>
-      <title>Terraform Best Practice</title>
-      <link>/cs/tools/terraform_useful/</link>
-      <pubDate>Wed, 06 Mar 2019 11:35:48 -0500</pubDate>
-      
-      <guid>/cs/tools/terraform_useful/</guid>
-      <description>What is Terraform Terraform official site
-Terraform is a super useful tool developed by HashiCorp, the main idea of terraform is &amp;ldquo;INFRASTRUCTURE AS CODE&amp;rdquo;.
-To me, the most attracting feature Cloud Computing is scalability. Infrastructure in Cloud is inifinite. But there are some downsides of traditional cloud library.
-For AWS, I&amp;rsquo;ve tried awscli, boto3 and go sdk. For a small test, they are easy to use. But for a big test, there are too many logics and dependencies inside.</description>
     </item>
     
     <item>
@@ -356,17 +227,6 @@ For AWS, I&amp;rsquo;ve tried awscli, boto3 and go sdk. For a small test, they a
     
     <item>
       <title>Install MySQL server on CentOS</title>
-      <link>/cs/tools/setup_mysql/</link>
-      <pubDate>Mon, 04 Mar 2019 21:38:50 -0500</pubDate>
-      
-      <guid>/cs/tools/setup_mysql/</guid>
-      <description>My laptop is running out of storage, since I have a VPS running as VPN server. I found it would be a good practice to setup a MySQL server in remote.
-BTW, if you still have AWS free tier, AWS RDS service is super easy and stable.
-Install the MySQL server I am not a big fan of ubuntu, on my local, I am using Manjaro. And for remote server, my first choice is always CentOS.</description>
-    </item>
-    
-    <item>
-      <title>Install MySQL server on CentOS</title>
       <link>/developer/tools/setup_mysql/</link>
       <pubDate>Mon, 04 Mar 2019 21:38:50 -0500</pubDate>
       
@@ -374,20 +234,6 @@ Install the MySQL server I am not a big fan of ubuntu, on my local, I am using M
       <description>My laptop is running out of storage, since I have a VPS running as VPN server. I found it would be a good practice to setup a MySQL server in remote.
 BTW, if you still have AWS free tier, AWS RDS service is super easy and stable.
 Install the MySQL server I am not a big fan of ubuntu, on my local, I am using Manjaro. And for remote server, my first choice is always CentOS.</description>
-    </item>
-    
-    <item>
-      <title>Active_directory</title>
-      <link>/cs/windows/active_directory/</link>
-      <pubDate>Thu, 28 Feb 2019 11:11:39 -0500</pubDate>
-      
-      <guid>/cs/windows/active_directory/</guid>
-      <description> Windows Active Directory What is Active Directory Domain Controller (DC) A server of Active Directory service
-Schema (database)
- User account Computer account  Schema extentable
-User Account Contains
- username password Email and etc.  Computer Account Contains
- computer name UID and etc.  Groups OU (Organization Unit) </description>
     </item>
     
     <item>
@@ -440,15 +286,6 @@ import numpy as np rand = np.random.RandomState(42) x = rand.randint(100, size=1
     
     <item>
       <title>Mount a filesystem</title>
-      <link>/cs/linux/systemd_mount/</link>
-      <pubDate>Thu, 14 Feb 2019 18:05:39 -0500</pubDate>
-      
-      <guid>/cs/linux/systemd_mount/</guid>
-      <description>tldr description of mount tldr mount mount Provides access to an entire filesystem in one directory. - Show all mounted filesystems: mount - Mount a device to a directory: mount -t filesystem_type path/to/device_file path/to/target_directory - Mount a CD-ROM device (with the filetype ISO9660) to /cdrom (readonly): mount -t iso9660 -o ro /dev/cdrom /cdrom - Mount all the filesystem defined in /etc/fstab: mount -a - Mount a specific filesystem described in /etc/fstab (e.</description>
-    </item>
-    
-    <item>
-      <title>Mount a filesystem</title>
       <link>/developer/linux/systemd_mount/</link>
       <pubDate>Thu, 14 Feb 2019 18:05:39 -0500</pubDate>
       
@@ -467,17 +304,6 @@ import numpy as np rand = np.random.RandomState(42) x = rand.randint(100, size=1
     
     <item>
       <title>Useful Git commands</title>
-      <link>/cs/tools/git_useful/</link>
-      <pubDate>Mon, 11 Feb 2019 22:00:25 -0500</pubDate>
-      
-      <guid>/cs/tools/git_useful/</guid>
-      <description>Overview:
-There are tons of tutorial of git. For those basic concepts, I am going to link to some good tutorial. This one is focusing on some real life use cases, what if you encounter these errors or what if I want to do this&amp;hellip;
-Basic Git commands git fetch The git fetch command downloads commits, files, and refs from a remote repository into your local repo. Fetching is what you do when you want to see what everybody else has been working on.</description>
-    </item>
-    
-    <item>
-      <title>Useful Git commands</title>
       <link>/developer/tools/git_useful/</link>
       <pubDate>Mon, 11 Feb 2019 22:00:25 -0500</pubDate>
       
@@ -485,17 +311,6 @@ Basic Git commands git fetch The git fetch command downloads commits, files, and
       <description>Overview:
 There are tons of tutorial of git. For those basic concepts, I am going to link to some good tutorial. This one is focusing on some real life use cases, what if you encounter these errors or what if I want to do this&amp;hellip;
 Basic Git commands git fetch The git fetch command downloads commits, files, and refs from a remote repository into your local repo. Fetching is what you do when you want to see what everybody else has been working on.</description>
-    </item>
-    
-    <item>
-      <title>Useful commands for docker</title>
-      <link>/cs/tools/docker_useful/</link>
-      <pubDate>Mon, 11 Feb 2019 22:00:25 -0500</pubDate>
-      
-      <guid>/cs/tools/docker_useful/</guid>
-      <description>References Top 10 Docker CLI commands you can&amp;rsquo;t live without
-Lists running containers # show all containers docker ps -a # only list ids docker ps -q  Get base image from Docker Hub docker pull  Build docker images from a Dockerfile and a &amp;ldquo;context&amp;rdquo; docker build -t container_label .  Run a docker container based on an image Top 10 options for docker run
-docker run my_image -it bash   --detach, -d --entrypoint --env, -e or --env-file --ip --name --publish, -p | --publish-all, -P --rm --tty, -t Command use with the option --interactive, -i --volume, -v --workdir, -w  Display the logs of a container docker logs --follow my_container  List the volumes, which are the preferred mechanism for persisting data generated by and used by Docker containers docker volume ls  Removes one or more containers docker rm my_container  Removes one or more images docker rmi my_image  Stops one or more containers docker stop my_container # docker kill my_container  Kill all running containers docker kill $(docker ps -q)  Delete all stopped containers docker rm $(docker ps -a -q)  Delete all images docker rmi $(docker images -q)  Update all images docker images |grep -v REPOSITORY|awk &#39;{print $1}&#39;|xargs -L1 docker pull  Enter a running docker container docker exec -it [container-id] bash  Copy file from docker container to host docker cp &amp;lt;containerId&amp;gt;:/file/path/within/container /host/path/target  List ports defined on a container docker port CONTAINER [Private_port[/protocol]] # Example $ docker port proxy 80/tcp -&amp;gt; 0.</description>
     </item>
     
     <item>

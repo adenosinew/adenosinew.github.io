@@ -88,6 +88,24 @@ yaourt -S bat  prettyping &amp;gt; ping fzf &amp;gt; ctrl + r In addition to sea
     </item>
     
     <item>
+      <title>Dockerfile_intro</title>
+      <link>/developer/tools/dockerfile_intro/</link>
+      <pubDate>Mon, 12 Aug 2019 16:36:15 -0400</pubDate>
+      
+      <guid>/developer/tools/dockerfile_intro/</guid>
+      <description>01 关于Dockerfile 在Docker中创建镜像最常用的方式，就是使用Dockerfile。Dockerfile是一个Docker镜像的描述文件，我们可以理解成火箭发射的A、B、C、D…的步骤。Dockerfile其内部包含了一条条的指令，每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建。
+一个Dockerfile的示例如下所示：
+#基于centos镜像 FROM centos #维护人的信息 MAINTAINER The CentOS Project #安装httpd软件包 RUN yum -y update RUN yum -y install httpd #开启80端口 EXPOSE 80 #复制网站首页文件至镜像中web站点下 ADD index.html /var/www/html/index.html #复制该脚本至镜像中，并修改其权限 ADD run.sh /run.sh RUN chmod 775 /run.sh #当启动容器时执行的脚本文件 CMD [&amp;quot;/run.sh&amp;quot;]  由上可知，Dockerfile结构大致分为四个部分：
+ 基础镜像信息 维护者信息 镜像操作指令 容器启动时执行指令。  Dockerfile每行支持一条指令，每条指令可带多个参数，支持使用以#号开头的注释。下面会对上面使用到的一些常用指令做一些介绍。
+02 Dockerfile常用指令 2.1 FROM 指明构建的新镜像是来自于哪个基础镜像，例如：
+FROM centos:6
+2.2 MAINTAINER 指明镜像维护着及其联系方式（一般是邮箱地址），例如：
+MAINTAINER example example@gmail.com
+2.3 RUN 构建镜像时运行的Shell命令，例如：
+RUN [&amp;quot;yum&amp;quot;, &amp;quot;install&amp;quot;, &amp;quot;httpd&amp;quot;] RUN yum install httpd  又如，我们在使用微软官方ASP.</description>
+    </item>
+    
+    <item>
       <title>Docker: From Zero to Hero</title>
       <link>/developer/tools/docker_beginner/</link>
       <pubDate>Wed, 13 Mar 2019 18:02:14 -0400</pubDate>

@@ -12,47 +12,13 @@
     
     
     <item>
-      <title>Best Practice Logs</title>
-      <link>/me/track_my_work/</link>
-      <pubDate>Wed, 20 Feb 2019 14:15:25 -0500</pubDate>
-      
-      <guid>/me/track_my_work/</guid>
-      <description>Overview Hands on experience is one of the most valuable experience.
-The rule is simple:
- If I didn&amp;rsquo;t go over the material for 7 days, strikethrough it. Calculate the complete rate every week Add useful snippet to gist  Best Practices March 6 2019 Ash Wednesday
-SQLAlchemy — Python Tutorial [ ] Git Best Practice
- [ ] 10 Common Software Architectural Patterns in a nutshell
- [ ] Numpy 100</description>
-    </item>
-    
-    <item>
-      <title>My Skill Tree and Experience</title>
-      <link>/me/skill_tree/</link>
-      <pubDate>Wed, 20 Feb 2019 14:13:30 -0500</pubDate>
-      
-      <guid>/me/skill_tree/</guid>
-      <description>Overview Automation Cloud Computing Terraform (familiar)  Use Terraform to provision large scale infrastructure in the Cloud (AWS and Azure). Developed a module to wrap up different architectures. Use cobra (go CLI package) to build a CLI tool to simplify my workflow.  Packer (familiar)  Use Packer to build, configure and publish system images. Resolved a lot of conflicts between softwares and system. Working closely with Centos and ubuntu distribution.</description>
-    </item>
-    
-    <item>
-      <title>Better Develpoer</title>
+      <title>10X Develpoer</title>
       <link>/me/better_develpoer/</link>
       <pubDate>Thu, 14 Feb 2019 14:08:33 -0500</pubDate>
       
       <guid>/me/better_develpoer/</guid>
-      <description>Useful suggestions  The human brain is a complex machine and it&amp;rsquo;s a result of thousands of years of human evolution. Our world has evolved very fast. For the brain, being such an old machine, working in today&amp;rsquo;s complex and distracted world is very hard. But if we use our brain as our ancestors did, we can use most of it. The following steps will help you achieve that.</description>
-    </item>
-    
-    <item>
-      <title>Collections</title>
-      <link>/me/collections/</link>
-      <pubDate>Sun, 10 Feb 2019 21:52:45 -0500</pubDate>
-      
-      <guid>/me/collections/</guid>
-      <description> Don&amp;rsquo;t do something you&amp;rsquo;ll lie to yourself later. Live in a matter you can bear to remember accurately.
-It is fruitless to wish you had started years ago. In the future you will wish you had started now. Don&amp;rsquo;t wish. Act.
-&amp;ldquo;Why did this happen to me?&amp;rdquo; Why not? Events will never conform perfectly to your desires. Move forward.
- </description>
+      <description>Goal for 2019 Update on Aug 13 2019
+ Golang  Get to know Golang Build APIs with Golang  Cloud certification  Get to know AWS certification Prepare for a middle level AWS test  Web development  HTTP basic HTML + CSS Get to know Javascript  Python  Leetcode Practice (~200) Data Science Recap (Numpy + Pandas)   Popular Topics for developer Database Web Development Automation APIs APP development Front End Web Scraper Machine Learning  Useful suggestions  The human brain is a complex machine and it&amp;rsquo;s a result of thousands of years of human evolution.</description>
     </item>
     
   </channel>

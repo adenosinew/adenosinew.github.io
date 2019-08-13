@@ -167,16 +167,6 @@
   </url>
   
   <url>
-    <loc>/me/track_my_work/</loc>
-    <lastmod>2019-02-20T14:15:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/me/skill_tree/</loc>
-    <lastmod>2019-02-20T14:13:30-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/datascience/numpy_fancy_indexing_and_viewing/</loc>
     <lastmod>2019-02-20T10:14:37-05:00</lastmod>
   </url>
@@ -214,11 +204,6 @@
   <url>
     <loc>/developer/tools/docker_useful/</loc>
     <lastmod>2019-02-11T22:00:25-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/me/collections/</loc>
-    <lastmod>2019-02-10T21:52:45-05:00</lastmod>
   </url>
   
   <url>

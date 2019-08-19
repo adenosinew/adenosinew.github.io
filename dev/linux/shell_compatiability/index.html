@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>10X Develpoer :: Documentation for Hugo Learn Theme</title>
+    <title>Shells :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1566224355" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/me/better_develpoer/">
+  <body class="" data-url="/dev/linux/shell_compatiability/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -79,7 +79,7 @@
   
     
     <li data-nav-id="/me/" title="me" class="dd-item 
-        parent
+        
         
         
         ">
@@ -105,7 +105,7 @@
  
   
     
-      <li data-nav-id="/me/better_develpoer/" title="10X Develpoer" class="dd-item active">
+      <li data-nav-id="/me/better_develpoer/" title="10X Develpoer" class="dd-item ">
         <a href="/me/better_develpoer/">
         10X Develpoer
         <i class="fas fa-check read-icon"></i>
@@ -277,7 +277,7 @@
   
     
     <li data-nav-id="/dev/" title="developer" class="dd-item 
-        
+        parent
         
         
         ">
@@ -708,7 +708,7 @@
   
     
     <li data-nav-id="/dev/linux/" title="Linux" class="dd-item 
-        
+        parent
         
         
         ">
@@ -753,7 +753,7 @@
  
   
     
-      <li data-nav-id="/dev/linux/shell_compatiability/" title="Shells" class="dd-item ">
+      <li data-nav-id="/dev/linux/shell_compatiability/" title="Shells" class="dd-item active">
         <a href="/dev/linux/shell_compatiability/">
         Shells
         <i class="fas fa-check read-icon"></i>
@@ -1005,7 +1005,13 @@
             
           
           
-            <a href='/'>adenosinew</a> > <a href='/me/'>me</a> > 10X Develpoer
+            
+            
+          
+          
+            <a href='/'>adenosinew</a> > <a href='/dev/'>developer</a> > <a href='/dev/linux/'>Linux</a> > Shells
+          
+         
           
          
           
@@ -1022,9 +1028,8 @@
 <ul>
 <li>
 <ul>
-<li><a href="#goal-for-2019">Goal for 2019</a></li>
-<li><a href="#popular-topics-for-developer">Popular Topics for developer</a></li>
-<li><a href="#useful-suggestions">Useful suggestions</a></li>
+<li><a href="#shell-types">Shell types</a></li>
+<li><a href="#differing-features">Differing features</a></li>
 <li><a href="#reference">Reference</a></li>
 </ul></li>
 </ul>
@@ -1040,7 +1045,7 @@
         
         <div id="body-inner">
           
-            <h1>10X Develpoer</h1>
+            <h1>Shells</h1>
           
 
         
@@ -1049,68 +1054,359 @@
 
 
 
-<h2 id="goal-for-2019">Goal for 2019</h2>
+<h2 id="shell-types">Shell types</h2>
 
-<p>Update on <strong>Aug 13 2019</strong></p>
-
-<ol>
-<li>Golang
-
-<ol>
-<li><del>Get to know Golang</del></li>
-<li>Build APIs with Golang</li>
-</ol></li>
-<li>Cloud certification
-
-<ol>
-<li><del>Get to know AWS certification</del></li>
-<li>Prepare for a middle level AWS test</li>
-</ol></li>
-<li>Web development
-
-<ol>
-<li>HTTP basic</li>
-<li>HTML + CSS</li>
-<li>Get to know Javascript</li>
-</ol></li>
-<li>Python
-
-<ol>
-<li>Leetcode Practice (~200)</li>
-<li>Data Science Recap (Numpy + Pandas)</li>
-</ol></li>
-</ol>
-
-<h2 id="popular-topics-for-developer">Popular Topics for developer</h2>
-
-<ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> Database</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Web Development</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Automation</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> APIs</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> APP development</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Front End</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Web Scraper</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Machine Learning</label></li>
+<ul>
+<li><strong>sh</strong> or Bourne Shell: the original shell still used on UNIX systems and in UNIX-related environments. This is the basic shell, a small program with few features. While this is not the standard shell, it is still available on every Linux system for compatibility with UNIX programs.</li>
+<li><strong>bash</strong> or Bourne Again shell: the standard GNU shell, intuitive and flexible. Probably most advisable for beginning users while being at the same time a powerful tool for the advanced and professional user. On Linux, <strong>bash</strong> is the standard shell for common users. This shell is a so-called <em>superset</em> of the Bourne shell, a set of add-ons and plug-ins. This means that the Bourne Again shell is compatible with the Bourne shell: commands that work in <strong>sh</strong>, also work in <strong>bash</strong>. However, the reverse is not always the case. All examples and exercises in this book use <strong>bash</strong>.</li>
+<li><strong>csh</strong> or C shell: the syntax of this shell resembles that of the C programming language. Sometimes asked for by programmers.</li>
+<li><strong>tcsh</strong> or TENEX C shell: a superset of the common C shell, enhancing user-friendliness and speed. That is why some also call it the Turbo C shell.</li>
+<li><strong>ksh</strong> or the Korn shell: sometimes appreciated by people with a UNIX background. A superset of the Bourne shell; with standard configuration a nightmare for beginning users.</li>
 </ul>
 
-<h2 id="useful-suggestions">Useful suggestions</h2>
+<h2 id="differing-features">Differing features</h2>
 
-<blockquote>
-<p>The human brain is a complex machine and it&rsquo;s a result of thousands of years of human evolution. Our world has evolved very fast. For the brain, being such an old machine, working in today&rsquo;s complex and distracted world is very hard. But if we use our brain as our ancestors did, we can use most of it. The following steps will help you achieve that.</p>
-</blockquote>
+<p>The table below shows major differences between the standard shell (sh), Bourne Again SHell (bash), Korn shell (ksh) and the C shell (csh)</p>
 
-<p><em>challenges</em>:
-- complex
-- distraction</p>
+<table>
+<thead>
+<tr>
+<th><strong>sh</strong></th>
+<th><strong>bash</strong></th>
+<th><strong>ksh</strong></th>
+<th><strong>csh</strong></th>
+<th>Meaning/Action</th>
+</tr>
+</thead>
 
-<blockquote>
-<p>You have to be an <strong>action-based</strong> person to learn better.</p>
-</blockquote>
+<tbody>
+<tr>
+<td>$</td>
+<td>$</td>
+<td>$</td>
+<td>%</td>
+<td>Default user prompt</td>
+</tr>
+
+<tr>
+<td></td>
+<td><strong>&gt;|</strong></td>
+<td><strong>&gt;|</strong></td>
+<td><strong>&gt;!</strong></td>
+<td>Force redirection</td>
+</tr>
+
+<tr>
+<td><strong>&gt; file 2&gt;&amp;1</strong></td>
+<td><strong>&amp;&gt; file</strong> or <strong>&gt; file 2&gt;&amp;1</strong></td>
+<td><strong>&gt; file 2&gt;&amp;1</strong></td>
+<td><strong>&gt;&amp; file</strong></td>
+<td>Redirect stdout and stderr to <code>file</code></td>
+</tr>
+
+<tr>
+<td></td>
+<td><strong>{ }</strong></td>
+<td></td>
+<td><strong>{ }</strong></td>
+<td>Expand elements in list</td>
+</tr>
+
+<tr>
+<td><strong><code>command</code></strong></td>
+<td><strong><code>command</code></strong> or <strong>$(command)</strong></td>
+<td><strong>$(command)</strong></td>
+<td><strong><code>command</code></strong></td>
+<td>Substitute output of enclosed <strong>command</strong></td>
+</tr>
+
+<tr>
+<td><code>$HOME</code></td>
+<td><code>$HOME</code></td>
+<td><code>$HOME</code></td>
+<td><code>$home</code></td>
+<td>Home directory</td>
+</tr>
+
+<tr>
+<td></td>
+<td>~</td>
+<td>~</td>
+<td>~</td>
+<td>Home directory symbol</td>
+</tr>
+
+<tr>
+<td></td>
+<td><code>~+</code>, <code>~-</code>, <strong>dirs</strong></td>
+<td><code>~+</code>, <code>~-</code></td>
+<td><code>=-</code>, <code>=N</code></td>
+<td>Access directory stack</td>
+</tr>
+
+<tr>
+<td><strong>var=value</strong></td>
+<td><strong>VAR=value</strong></td>
+<td><strong>var=value</strong></td>
+<td><strong>set var=value</strong></td>
+<td>Variable assignment</td>
+</tr>
+
+<tr>
+<td><strong>export var</strong></td>
+<td><strong>export VAR=value</strong></td>
+<td><strong>export var=val</strong></td>
+<td><strong>setenv var val</strong></td>
+<td>Set environment variable</td>
+</tr>
+
+<tr>
+<td></td>
+<td><code>${nnnn}</code></td>
+<td><code>${nn}</code></td>
+<td></td>
+<td>More than 9 arguments can be referenced</td>
+</tr>
+
+<tr>
+<td>&ldquo;<code>$@</code>&ldquo;</td>
+<td>&ldquo;<code>$@</code>&ldquo;</td>
+<td>&ldquo;<code>$@</code>&ldquo;</td>
+<td></td>
+<td>All arguments as separate words</td>
+</tr>
+
+<tr>
+<td><code>$#</code></td>
+<td><code>$#</code></td>
+<td><code>$#</code></td>
+<td><code>$#argv</code></td>
+<td>Number of arguments</td>
+</tr>
+
+<tr>
+<td><code>$?</code></td>
+<td><code>$?</code></td>
+<td><code>$?</code></td>
+<td><code>$status</code></td>
+<td>Exit status of the most recently executed command</td>
+</tr>
+
+<tr>
+<td><code>$!</code></td>
+<td><code>$!</code></td>
+<td><code>$!</code></td>
+<td></td>
+<td>PID of most recently backgrounded process</td>
+</tr>
+
+<tr>
+<td><code>$-</code></td>
+<td><code>$-</code></td>
+<td><code>$-</code></td>
+<td></td>
+<td>Current options</td>
+</tr>
+
+<tr>
+<td><strong>. file</strong></td>
+<td><strong>source file</strong> or <strong>. file</strong></td>
+<td><strong>. file</strong></td>
+<td><strong>source file</strong></td>
+<td>Read commands in file</td>
+</tr>
+
+<tr>
+<td></td>
+<td><strong>alias x=&lsquo;y&rsquo;</strong></td>
+<td><strong>alias x=y</strong></td>
+<td><strong>alias x y</strong></td>
+<td>Name <strong>x</strong> stands for command <strong>y</strong></td>
+</tr>
+
+<tr>
+<td><strong>case</strong></td>
+<td><strong>case</strong></td>
+<td><strong>case</strong></td>
+<td><strong>switch</strong> or <strong>case</strong></td>
+<td>Choose alternatives</td>
+</tr>
+
+<tr>
+<td><strong>done</strong></td>
+<td><strong>done</strong></td>
+<td><strong>done</strong></td>
+<td><strong>end</strong></td>
+<td>End a loop statement</td>
+</tr>
+
+<tr>
+<td><strong>esac</strong></td>
+<td><strong>esac</strong></td>
+<td><strong>esac</strong></td>
+<td><strong>endsw</strong></td>
+<td>End <strong>case</strong> or <strong>switch</strong></td>
+</tr>
+
+<tr>
+<td><strong>exit n</strong></td>
+<td><strong>exit n</strong></td>
+<td><strong>exit n</strong></td>
+<td><strong>exit (expr)</strong></td>
+<td>Exit with a status</td>
+</tr>
+
+<tr>
+<td><strong>for</strong>/<strong>do</strong></td>
+<td><strong>for</strong>/<strong>do</strong></td>
+<td><strong>for</strong>/<strong>do</strong></td>
+<td><strong>foreach</strong></td>
+<td>Loop through variables</td>
+</tr>
+
+<tr>
+<td></td>
+<td><strong>set -f</strong>, <strong>set -o nullglob|dotglob|nocaseglob|noglob</strong></td>
+<td></td>
+<td><strong>noglob</strong></td>
+<td>Ignore substitution characters for filename generation</td>
+</tr>
+
+<tr>
+<td><strong>hash</strong></td>
+<td><strong>hash</strong></td>
+<td><strong>alias -t</strong></td>
+<td><strong>hashstat</strong></td>
+<td>Display hashed commands (tracked aliases)</td>
+</tr>
+
+<tr>
+<td><strong>hash cmds</strong></td>
+<td><strong>hash cmds</strong></td>
+<td><strong>alias -t cmds</strong></td>
+<td><strong>rehash</strong></td>
+<td>Remember command locations</td>
+</tr>
+
+<tr>
+<td><strong>hash -r</strong></td>
+<td><strong>hash -r</strong></td>
+<td></td>
+<td><strong>unhash</strong></td>
+<td>Forget command locations</td>
+</tr>
+
+<tr>
+<td></td>
+<td><strong>history</strong></td>
+<td><strong>history</strong></td>
+<td><strong>history</strong></td>
+<td>List previous commands</td>
+</tr>
+
+<tr>
+<td></td>
+<td><strong>ArrowUp</strong>+<strong>Enter</strong> or <strong>!!</strong></td>
+<td><strong>r</strong></td>
+<td><strong>!!</strong></td>
+<td>Redo previous command</td>
+</tr>
+
+<tr>
+<td></td>
+<td><strong>!str</strong></td>
+<td><strong>r str</strong></td>
+<td><strong>!str</strong></td>
+<td>Redo last command that starts with &ldquo;str&rdquo;</td>
+</tr>
+
+<tr>
+<td></td>
+<td><strong>!cmd:s/x/y/</strong></td>
+<td><strong>r x=y cmd</strong></td>
+<td><strong>!cmd:s/x/y/</strong></td>
+<td>Replace &ldquo;x&rdquo; with &ldquo;y&rdquo; in most recent command starting with &ldquo;cmd&rdquo;, then execute.</td>
+</tr>
+
+<tr>
+<td><strong>if [ $i -eq 5 ]</strong></td>
+<td><strong>if [ $i -eq 5 ]</strong></td>
+<td><strong>if ((i==5))</strong></td>
+<td><strong>if ($i==5)</strong></td>
+<td>Sample condition test</td>
+</tr>
+
+<tr>
+<td><strong>fi</strong></td>
+<td><strong>fi</strong></td>
+<td><strong>fi</strong></td>
+<td><strong>endif</strong></td>
+<td>End <strong>if</strong> statement</td>
+</tr>
+
+<tr>
+<td><strong>ulimit</strong></td>
+<td><strong>ulimit</strong></td>
+<td><strong>ulimit</strong></td>
+<td><strong>limit</strong></td>
+<td>Set resource limits</td>
+</tr>
+
+<tr>
+<td><strong>pwd</strong></td>
+<td><strong>pwd</strong></td>
+<td><strong>pwd</strong></td>
+<td><strong>dirs</strong></td>
+<td>Print working directory</td>
+</tr>
+
+<tr>
+<td><strong>read</strong></td>
+<td><strong>read</strong></td>
+<td><strong>read</strong></td>
+<td><strong>$&lt;</strong></td>
+<td>Read from terminal</td>
+</tr>
+
+<tr>
+<td><strong>trap 2</strong></td>
+<td><strong>trap 2</strong></td>
+<td><strong>trap 2</strong></td>
+<td><strong>onintr</strong></td>
+<td>Ignore interrupts</td>
+</tr>
+
+<tr>
+<td></td>
+<td><strong>unalias</strong></td>
+<td><strong>unalias</strong></td>
+<td><strong>unalias</strong></td>
+<td>Remove aliases</td>
+</tr>
+
+<tr>
+<td><strong>until</strong></td>
+<td><strong>until</strong></td>
+<td><strong>until</strong></td>
+<td></td>
+<td>Begin <strong>until</strong> loop</td>
+</tr>
+
+<tr>
+<td><strong>while</strong>/<strong>do</strong></td>
+<td><strong>while</strong>/<strong>do</strong></td>
+<td><strong>while</strong>/<strong>do</strong></td>
+<td><strong>while</strong></td>
+<td>Begin <strong>while</strong> loop</td>
+</tr>
+</tbody>
+</table>
 
 <h2 id="reference">Reference</h2>
 
-<p><a href="https://dev.to/teamxenox/use-the-full-power-of-your-brain-to-be-a-better-developer--27pe">Use the full power of Your Brain to be a Better Developer </a></p>
+<p><a href="http://tldp.org/LDP/Bash-Beginners-Guide/html/x7369.html">Differing features</a></p>
+
+<p><a href="http://tldp.org/LDP/Bash-Beginners-Guide/html/index.html">Bash guide for beginners</a></p>
 
 
 <footer class=" footline" >
@@ -1149,40 +1445,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -1191,57 +1453,8 @@
 
                     
                     
-                        
-                    
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1276,41 +1489,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
                     
                         
             
@@ -1378,9 +1556,6 @@
             
         
                     
-            
-        
-                    
                         
             
             
@@ -1395,211 +1570,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1662,8 +1632,26 @@
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1684,10 +1672,14 @@
             
         
                     
+            
+        
+                    
                         
             
             
                 
+                    
                     
                 
                 
@@ -1703,6 +1695,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1997,8 +1992,55 @@
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -2080,12 +2122,6 @@
             
         
                     
-            
-        
-                    
-            
-        
-                    
                         
             
             
@@ -2098,6 +2134,9 @@
                     
                     
 
+                    
+            
+        
                     
                         
             
@@ -2135,6 +2174,281 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -2258,10 +2572,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/me/" title="me"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dev/linux/time-explain/" title="Time Command Explaination"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ds/" title="Datascience" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dev/linux/linux-cheatsheet/" title="Bash Cheatsheet on macOS" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

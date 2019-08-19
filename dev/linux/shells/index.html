@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>10X Develpoer :: Documentation for Hugo Learn Theme</title>
+    <title>Work with Different Shells :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1566224355" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/me/better_develpoer/">
+  <body class="" data-url="/dev/linux/shells/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -79,7 +79,7 @@
   
     
     <li data-nav-id="/me/" title="me" class="dd-item 
-        parent
+        
         
         
         ">
@@ -105,7 +105,7 @@
  
   
     
-      <li data-nav-id="/me/better_develpoer/" title="10X Develpoer" class="dd-item active">
+      <li data-nav-id="/me/better_develpoer/" title="10X Develpoer" class="dd-item ">
         <a href="/me/better_develpoer/">
         10X Develpoer
         <i class="fas fa-check read-icon"></i>
@@ -277,7 +277,7 @@
   
     
     <li data-nav-id="/dev/" title="developer" class="dd-item 
-        
+        parent
         
         
         ">
@@ -708,7 +708,7 @@
   
     
     <li data-nav-id="/dev/linux/" title="Linux" class="dd-item 
-        
+        parent
         
         
         ">
@@ -791,7 +791,7 @@
  
   
     
-      <li data-nav-id="/dev/linux/shells/" title="Work with Different Shells" class="dd-item ">
+      <li data-nav-id="/dev/linux/shells/" title="Work with Different Shells" class="dd-item active">
         <a href="/dev/linux/shells/">
         Work with Different Shells
         <i class="fas fa-check read-icon"></i>
@@ -1005,7 +1005,13 @@
             
           
           
-            <a href='/'>adenosinew</a> > <a href='/me/'>me</a> > 10X Develpoer
+            
+            
+          
+          
+            <a href='/'>adenosinew</a> > <a href='/dev/'>developer</a> > <a href='/dev/linux/'>Linux</a> > Work with Different Shells
+          
+         
           
          
           
@@ -1022,9 +1028,10 @@
 <ul>
 <li>
 <ul>
-<li><a href="#goal-for-2019">Goal for 2019</a></li>
-<li><a href="#popular-topics-for-developer">Popular Topics for developer</a></li>
-<li><a href="#useful-suggestions">Useful suggestions</a></li>
+<li><a href="#list-all-shells">List All Shells</a></li>
+<li><a href="#method-1-usermod-utility">Method 1. <code>usermod</code> utility</a></li>
+<li><a href="#method-2-chsh">Method 2. <code>chsh</code></a></li>
+<li><a href="#method-3-edit-the-etc-passwd">Method 3. Edit the <code>/etc/passwd</code></a></li>
 <li><a href="#reference">Reference</a></li>
 </ul></li>
 </ul>
@@ -1040,7 +1047,7 @@
         
         <div id="body-inner">
           
-            <h1>10X Develpoer</h1>
+            <h1>Work with Different Shells</h1>
           
 
         
@@ -1049,68 +1056,51 @@
 
 
 
-<h2 id="goal-for-2019">Goal for 2019</h2>
+<p>There are several shells such as bash, sh, ksh, zsh, fish and many other lesser known shells available on Linux.</p>
 
-<p>Update on <strong>Aug 13 2019</strong></p>
+<p><strong>Bash</strong> (<strong>/bin/bash</strong>) is a popular shell on most if not all Linux systems, and it’s normally the default shell for user accounts.</p>
 
-<ol>
-<li>Golang
+<p>When creating user accounts with the <code>useradd</code> or <code>adduser</code> utilities, the <code>--shell</code> flag can be used to specify the name of a user’s login shell other than that specified in the respective configuration files.</p>
 
-<ol>
-<li><del>Get to know Golang</del></li>
-<li>Build APIs with Golang</li>
-</ol></li>
-<li>Cloud certification
+<h2 id="list-all-shells">List All Shells</h2>
 
-<ol>
-<li><del>Get to know AWS certification</del></li>
-<li>Prepare for a middle level AWS test</li>
-</ol></li>
-<li>Web development
+<pre><code class="language-shell">cat /etc/shells
+# /etc/shells: valid login shells
+/bin/sh
+/bin/dash
+/bin/bash
+/bin/rbash
+/usr/bin/tmux
+/usr/bin/screen
+/bin/csh
+/bin/tcsh
+/usr/bin/tcsh
+</code></pre>
 
-<ol>
-<li>HTTP basic</li>
-<li>HTML + CSS</li>
-<li>Get to know Javascript</li>
-</ol></li>
-<li>Python
+<h2 id="method-1-usermod-utility">Method 1. <code>usermod</code> utility</h2>
 
-<ol>
-<li>Leetcode Practice (~200)</li>
-<li>Data Science Recap (Numpy + Pandas)</li>
-</ol></li>
-</ol>
+<p>User’s account details, stored in the <code>/etc/passwd</code> file.</p>
 
-<h2 id="popular-topics-for-developer">Popular Topics for developer</h2>
+<p>If I want to change the default shell of <em>ubuntu</em> from <em>bash</em> to <em>tcsh</em></p>
 
-<ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> Database</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Web Development</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Automation</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> APIs</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> APP development</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Front End</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Web Scraper</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Machine Learning</label></li>
-</ul>
+<pre><code class="language-shell">usermod --shell /bin/tcsh ubuntu
 
-<h2 id="useful-suggestions">Useful suggestions</h2>
+# Check the /etc/passwd to validate the change
+grep ubuntu /etc/passwd
+</code></pre>
 
-<blockquote>
-<p>The human brain is a complex machine and it&rsquo;s a result of thousands of years of human evolution. Our world has evolved very fast. For the brain, being such an old machine, working in today&rsquo;s complex and distracted world is very hard. But if we use our brain as our ancestors did, we can use most of it. The following steps will help you achieve that.</p>
-</blockquote>
+<h2 id="method-2-chsh">Method 2. <code>chsh</code></h2>
 
-<p><em>challenges</em>:
-- complex
-- distraction</p>
+<pre><code class="language-shell">chsh -s /bin/tcsh ubuntu
+</code></pre>
 
-<blockquote>
-<p>You have to be an <strong>action-based</strong> person to learn better.</p>
-</blockquote>
+<h2 id="method-3-edit-the-etc-passwd">Method 3. Edit the <code>/etc/passwd</code></h2>
+
+<p>Simply open the <strong>/etc/passwd</strong> file using any of your favorite command line text editors and change a specific users shell.</p>
 
 <h2 id="reference">Reference</h2>
 
-<p><a href="https://dev.to/teamxenox/use-the-full-power-of-your-brain-to-be-a-better-developer--27pe">Use the full power of Your Brain to be a Better Developer </a></p>
+<p><a href="https://www.tecmint.com/change-a-users-default-shell-in-linux/">Change default shell</a></p>
 
 
 <footer class=" footline" >
@@ -1149,40 +1139,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -1191,57 +1147,8 @@
 
                     
                     
-                        
-                    
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1276,41 +1183,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
                     
                         
             
@@ -1378,9 +1250,6 @@
             
         
                     
-            
-        
-                    
                         
             
             
@@ -1395,211 +1264,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1662,8 +1326,26 @@
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1684,10 +1366,14 @@
             
         
                     
+            
+        
+                    
                         
             
             
                 
+                    
                     
                 
                 
@@ -1703,6 +1389,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1997,8 +1686,167 @@
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -2083,22 +1931,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -2128,6 +1960,55 @@
                     
 
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -2167,6 +2048,133 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -2258,10 +2266,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/me/" title="me"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dev/linux/linux-cheatsheet/" title="Bash Cheatsheet on macOS"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ds/" title="Datascience" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dev/linux/systemd_mount/" title="Mount a filesystem" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

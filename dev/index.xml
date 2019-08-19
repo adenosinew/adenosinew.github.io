@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>developer on Documentation for Hugo Learn Theme</title>
+    <link>/dev/</link>
+    <description>Recent content in developer on Documentation for Hugo Learn Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 10 Feb 2019 00:04:53 -0500</lastBuildDate>
+    
+	<atom:link href="/dev/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python Platform module</title>
+      <link>/dev/cs/python_platform/</link>
+      <pubDate>Tue, 05 Mar 2019 10:06:08 -0500</pubDate>
+      
+      <guid>/dev/cs/python_platform/</guid>
+      <description>platform Access to underlying platform’s identifying data # Get Architecture, The function relies on the system’s file command to do the actual work. print(platform.architecture()) # &amp;gt;&amp;gt; (&#39;64bit&#39;, &#39;&#39;) # More reliable way to get the architecture of current interpreter is_64bits = sys.maxsize &amp;gt; 2**32 # &amp;gt;&amp;gt; True # Returns the machine type, e.g. &#39;i386&#39;. An empty string is returned if the value cannot be determined. print(platform.machine()) # &amp;gt;&amp;gt; x86_64 # Returns the computer’s network name (may not be fully qualified!</description>
+    </item>
+    
+  </channel>
+</rss>

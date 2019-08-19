@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Datascience on Documentation for Hugo Learn Theme</title>
+    <link>/ds/</link>
+    <description>Recent content in Datascience on Documentation for Hugo Learn Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 10 Feb 2019 00:04:27 -0500</lastBuildDate>
+    
+	<atom:link href="/ds/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sqlalchemy</title>
+      <link>/ds/sqlalchemy/</link>
+      <pubDate>Sat, 09 Mar 2019 23:13:21 -0500</pubDate>
+      
+      <guid>/ds/sqlalchemy/</guid>
+      <description> Sqlalchemy Reflection Metadata </description>
+    </item>
+    
+    <item>
+      <title>Fancy indexing, view and copy</title>
+      <link>/ds/numpy_fancy_indexing_and_viewing/</link>
+      <pubDate>Wed, 20 Feb 2019 10:14:37 -0500</pubDate>
+      
+      <guid>/ds/numpy_fancy_indexing_and_viewing/</guid>
+      <description>Normal Numpy Indexing Numpy arrays using:
+ simple indices (e.g., arr[0]), slices (e.g., arr[:5]) Boolean masks (e.g., arr[arr &amp;gt; 0])  Numpy Fancy Indexing Fancy indexing is conceptually simple: it means passing an array of indices to access multiple array elements at once.
+import numpy as np rand = np.random.RandomState(42) x = rand.randint(100, size=10) print(x) # Output # [51 92 14 71 60 20 82 86 74 74] # Normal indexing [x[3], x[7], x[2]] # [71, 86, 14] # Fancy indexing ind = [3, 7, 4] x[ind] # [71, 86, 14]  When using fancy indexing, the shape of the result reflects the shape of the index arrays rather than the shape of the array being indexed:</description>
+    </item>
+    
+    <item>
+      <title>Command line tricks for data scientist</title>
+      <link>/ds/commands_for_data_scientist/</link>
+      <pubDate>Sun, 10 Feb 2019 21:52:45 -0500</pubDate>
+      
+      <guid>/ds/commands_for_data_scientist/</guid>
+      <description> reference
+ICONV HEAD TR WC SPLIT SORT &amp;amp; UNIQ CUT PASTE JOIN GREP  SED AWK  </description>
+    </item>
+    
+  </channel>
+</rss>

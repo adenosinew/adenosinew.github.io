@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>adenosinew on Documentation for Hugo Learn Theme</title>
-    <link>/</link>
-    <description>Recent content in adenosinew on Documentation for Hugo Learn Theme</description>
+    <title>Tools on Documentation for Hugo Learn Theme</title>
+    <link>/dev/misc/</link>
+    <description>Recent content in Tools on Documentation for Hugo Learn Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 09 Feb 2019 23:53:32 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 13 Feb 2019 12:24:50 -0500</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/dev/misc/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -106,102 +106,12 @@ RUN [&amp;quot;yum&amp;quot;, &amp;quot;install&amp;quot;, &amp;quot;httpd&amp;q
     </item>
     
     <item>
-      <title>Elasticsearch Query Intro</title>
-      <link>/cloud/elasticsearch-query-intro/</link>
-      <pubDate>Mon, 06 May 2019 14:27:01 -0400</pubDate>
-      
-      <guid>/cloud/elasticsearch-query-intro/</guid>
-      <description>Elasticsearch Communicate with Elasticsearch: this is done by issuing HTTP requests against the REST API. Elastic is started by default in port 9200.
-Elasticsearch Query DSL The query DSL is a flexible, expressive search language that Elasticsearch uses to expose most of the power of Lucene through a simple JSON interface. It is what you should be using to write your queries in production. It makes your queries more flexible, more precise, easier to read, and easier to debug.</description>
-    </item>
-    
-    <item>
-      <title>Elastic Stacks Setup</title>
-      <link>/cloud/elastic-stacks-setup/</link>
-      <pubDate>Mon, 29 Apr 2019 16:54:32 -0400</pubDate>
-      
-      <guid>/cloud/elastic-stacks-setup/</guid>
-      <description>What is Elastic Stacks The Elastic Stack — formerly known as the ELK Stack — is a collection of open-source software produced by Elastic which allows you to search, analyze, and visualize logs generated from any source in any format, a practice known as centralized logging. Centralized logging can be very useful when attempting to identify problems with your servers or applications, as it allows you to search through all of your logs in a single place.</description>
-    </item>
-    
-    <item>
-      <title>Intro to logstash</title>
-      <link>/cloud/logstash-101/</link>
-      <pubDate>Mon, 29 Apr 2019 16:54:32 -0400</pubDate>
-      
-      <guid>/cloud/logstash-101/</guid>
-      <description>Manage the Logstash plugin Logstash has a rich collection of input, filter, codec and output plugins.
-Plugins are available as self-contained packages called gems and hosted on RubyGems.org.
-The plugin manager accessed via bin/logstash-plugin script is used to manage the lifecycle of plugins in your Logstash deployment. You can install, remove and upgrade plugins using the Command Line Interface (CLI) invocations described below.
-# on ubuntu 18.04, you can find the logstash installation in /usr/share/logstash # list all installed plugins bin/logstash-plugin list  Reference Logstash plugin</description>
-    </item>
-    
-    <item>
-      <title>Time Command Explaination</title>
-      <link>/dev/linux/time-explain/</link>
-      <pubDate>Tue, 23 Apr 2019 17:17:38 -0400</pubDate>
-      
-      <guid>/dev/linux/time-explain/</guid>
-      <description>Use time # interactive time command # Results # Use it in file \time -o time.log command # Results  Reference Linux time command</description>
-    </item>
-    
-    <item>
-      <title>RESTful</title>
-      <link>/dev/web/restful/</link>
-      <pubDate>Tue, 23 Apr 2019 16:46:45 -0400</pubDate>
-      
-      <guid>/dev/web/restful/</guid>
-      <description>What is REST REST, or Representational State Transfer is another way of implementing a Web Service. It is the ideology that everything is a resource. Every resource is identified by a unique uniform resource indicator (URI). An important point to note with REST is that it is stateless. This means that when you access the REST web service to retrieve data, you receive the most current state of the resource (ie.</description>
-    </item>
-    
-    <item>
-      <title>Shells</title>
-      <link>/dev/linux/shell_compatiability/</link>
-      <pubDate>Thu, 04 Apr 2019 15:20:52 -0400</pubDate>
-      
-      <guid>/dev/linux/shell_compatiability/</guid>
-      <description>Shell types  sh or Bourne Shell: the original shell still used on UNIX systems and in UNIX-related environments. This is the basic shell, a small program with few features. While this is not the standard shell, it is still available on every Linux system for compatibility with UNIX programs. bash or Bourne Again shell: the standard GNU shell, intuitive and flexible. Probably most advisable for beginning users while being at the same time a powerful tool for the advanced and professional user.</description>
-    </item>
-    
-    <item>
       <title>Docker: From Zero to Hero</title>
       <link>/dev/misc/docker_beginner/</link>
       <pubDate>Wed, 13 Mar 2019 18:02:14 -0400</pubDate>
       
       <guid>/dev/misc/docker_beginner/</guid>
       <description>Dockerfile # Dockerfile FROM node:latest WORKDIR /app COPY . . RUN npm install EXPOSE 3000 ENTRYPOINT [&amp;quot;node&amp;quot;, &amp;quot;app.js&amp;quot;]   FROM, this is us selecting an OS image from Docker Hub. Docker Hub is a global repository that contains images that we can pull down locally. In our case we are choosing an image based on Ubuntu that has Node.js installed, it’s called node. We also specify that we want the latest version of it, by using the following tag :latest WORKDIR, this simply means we set a working directory.</description>
-    </item>
-    
-    <item>
-      <title>Bash Cheatsheet on macOS</title>
-      <link>/dev/linux/linux-cheatsheet/</link>
-      <pubDate>Mon, 11 Mar 2019 21:33:22 -0400</pubDate>
-      
-      <guid>/dev/linux/linux-cheatsheet/</guid>
-      <description>Overview Jure did a very impressive job on the Linux cheatsheet.1 It covered generic linux and some part of ubuntu and Debian distribution.
-Since I am a user of macOS, a lot of shortcuts and commands are not available on macOS&amp;rsquo;s platform, thus I am going to write my own cheatsheet.
-You can also see this one as a best practice of using terminal on macOS.
-Terminal shortcuts [macOS iTerm2] Package management Homebrew is a widely used package management tool on macOS platform.</description>
-    </item>
-    
-    <item>
-      <title>Work with Different Shells</title>
-      <link>/dev/linux/shells/</link>
-      <pubDate>Mon, 11 Mar 2019 21:33:22 -0400</pubDate>
-      
-      <guid>/dev/linux/shells/</guid>
-      <description>There are several shells such as bash, sh, ksh, zsh, fish and many other lesser known shells available on Linux.
-Bash (/bin/bash) is a popular shell on most if not all Linux systems, and it’s normally the default shell for user accounts.
-When creating user accounts with the useradd or adduser utilities, the --shell flag can be used to specify the name of a user’s login shell other than that specified in the respective configuration files.</description>
-    </item>
-    
-    <item>
-      <title>Sqlalchemy</title>
-      <link>/ds/sqlalchemy/</link>
-      <pubDate>Sat, 09 Mar 2019 23:13:21 -0500</pubDate>
-      
-      <guid>/ds/sqlalchemy/</guid>
-      <description> Sqlalchemy Reflection Metadata </description>
     </item>
     
     <item>
@@ -214,15 +124,6 @@ When creating user accounts with the useradd or adduser utilities, the --shell f
 Terraform is a super useful tool developed by HashiCorp, the main idea of terraform is &amp;ldquo;INFRASTRUCTURE AS CODE&amp;rdquo;.
 To me, the most attracting feature Cloud Computing is scalability. Infrastructure in Cloud is inifinite. But there are some downsides of traditional cloud library.
 For AWS, I&amp;rsquo;ve tried awscli, boto3 and go sdk. For a small test, they are easy to use. But for a big test, there are too many logics and dependencies inside.</description>
-    </item>
-    
-    <item>
-      <title>Python Platform module</title>
-      <link>/dev/cs/python_platform/</link>
-      <pubDate>Tue, 05 Mar 2019 10:06:08 -0500</pubDate>
-      
-      <guid>/dev/cs/python_platform/</guid>
-      <description>platform Access to underlying platform’s identifying data # Get Architecture, The function relies on the system’s file command to do the actual work. print(platform.architecture()) # &amp;gt;&amp;gt; (&#39;64bit&#39;, &#39;&#39;) # More reliable way to get the architecture of current interpreter is_64bits = sys.maxsize &amp;gt; 2**32 # &amp;gt;&amp;gt; True # Returns the machine type, e.g. &#39;i386&#39;. An empty string is returned if the value cannot be determined. print(platform.machine()) # &amp;gt;&amp;gt; x86_64 # Returns the computer’s network name (may not be fully qualified!</description>
     </item>
     
     <item>
@@ -251,36 +152,6 @@ User Account Contains
     </item>
     
     <item>
-      <title>Fancy indexing, view and copy</title>
-      <link>/ds/numpy_fancy_indexing_and_viewing/</link>
-      <pubDate>Wed, 20 Feb 2019 10:14:37 -0500</pubDate>
-      
-      <guid>/ds/numpy_fancy_indexing_and_viewing/</guid>
-      <description>Normal Numpy Indexing Numpy arrays using:
- simple indices (e.g., arr[0]), slices (e.g., arr[:5]) Boolean masks (e.g., arr[arr &amp;gt; 0])  Numpy Fancy Indexing Fancy indexing is conceptually simple: it means passing an array of indices to access multiple array elements at once.
-import numpy as np rand = np.random.RandomState(42) x = rand.randint(100, size=10) print(x) # Output # [51 92 14 71 60 20 82 86 74 74] # Normal indexing [x[3], x[7], x[2]] # [71, 86, 14] # Fancy indexing ind = [3, 7, 4] x[ind] # [71, 86, 14]  When using fancy indexing, the shape of the result reflects the shape of the index arrays rather than the shape of the array being indexed:</description>
-    </item>
-    
-    <item>
-      <title>Mount a filesystem</title>
-      <link>/dev/linux/systemd_mount/</link>
-      <pubDate>Thu, 14 Feb 2019 18:05:39 -0500</pubDate>
-      
-      <guid>/dev/linux/systemd_mount/</guid>
-      <description>tldr description of mount tldr mount mount Provides access to an entire filesystem in one directory. - Show all mounted filesystems: mount - Mount a device to a directory: mount -t filesystem_type path/to/device_file path/to/target_directory - Mount a CD-ROM device (with the filetype ISO9660) to /cdrom (readonly): mount -t iso9660 -o ro /dev/cdrom /cdrom - Mount all the filesystem defined in /etc/fstab: mount -a - Mount a specific filesystem described in /etc/fstab (e.</description>
-    </item>
-    
-    <item>
-      <title>10X Develpoer</title>
-      <link>/me/better_develpoer/</link>
-      <pubDate>Thu, 14 Feb 2019 14:08:33 -0500</pubDate>
-      
-      <guid>/me/better_develpoer/</guid>
-      <description>Goal for 2019 Update on Aug 13 2019
- Golang  Get to know Golang Build APIs with Golang  Cloud certification  Get to know AWS certification Prepare for a middle level AWS test  Web development  HTTP basic HTML + CSS Get to know Javascript  Python  Leetcode Practice (~200) Data Science Recap (Numpy + Pandas)   Popular Topics for developer Database Web Development Automation APIs APP development Front End Web Scraper Machine Learning  Useful suggestions  The human brain is a complex machine and it&amp;rsquo;s a result of thousands of years of human evolution.</description>
-    </item>
-    
-    <item>
       <title>Useful commands for docker</title>
       <link>/dev/misc/docker_useful/</link>
       <pubDate>Mon, 11 Feb 2019 22:00:25 -0500</pubDate>
@@ -300,16 +171,6 @@ docker run my_image -it bash   --detach, -d --entrypoint --env, -e or --env-file
       <description>Overview:
 There are tons of tutorial of git. For those basic concepts, I am going to link to some good tutorial. This one is focusing on some real life use cases, what if you encounter these errors or what if I want to do this&amp;hellip;
 Basic Git commands git fetch The git fetch command downloads commits, files, and refs from a remote repository into your local repo. Fetching is what you do when you want to see what everybody else has been working on.</description>
-    </item>
-    
-    <item>
-      <title>Command line tricks for data scientist</title>
-      <link>/ds/commands_for_data_scientist/</link>
-      <pubDate>Sun, 10 Feb 2019 21:52:45 -0500</pubDate>
-      
-      <guid>/ds/commands_for_data_scientist/</guid>
-      <description> reference
-ICONV HEAD TR WC SPLIT SORT &amp;amp; UNIQ CUT PASTE JOIN GREP  SED AWK  </description>
     </item>
     
   </channel>

@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>10X Develpoer :: Documentation for Hugo Learn Theme</title>
+    <title>Python Platform module :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1566224355" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/me/better_develpoer/">
+  <body class="" data-url="/dev/cs/python_platform/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -79,7 +79,7 @@
   
     
     <li data-nav-id="/me/" title="me" class="dd-item 
-        parent
+        
         
         
         ">
@@ -105,7 +105,7 @@
  
   
     
-      <li data-nav-id="/me/better_develpoer/" title="10X Develpoer" class="dd-item active">
+      <li data-nav-id="/me/better_develpoer/" title="10X Develpoer" class="dd-item ">
         <a href="/me/better_develpoer/">
         10X Develpoer
         <i class="fas fa-check read-icon"></i>
@@ -277,7 +277,7 @@
   
     
     <li data-nav-id="/dev/" title="developer" class="dd-item 
-        
+        parent
         
         
         ">
@@ -688,7 +688,7 @@
  
   
     
-      <li data-nav-id="/dev/cs/python_platform/" title="Python Platform module" class="dd-item ">
+      <li data-nav-id="/dev/cs/python_platform/" title="Python Platform module" class="dd-item active">
         <a href="/dev/cs/python_platform/">
         Python Platform module
         <i class="fas fa-check read-icon"></i>
@@ -1005,7 +1005,7 @@
             
           
           
-            <a href='/'>adenosinew</a> > <a href='/me/'>me</a> > 10X Develpoer
+            <a href='/'>adenosinew</a> > <a href='/dev/'>developer</a> > Python Platform module
           
          
           
@@ -1022,10 +1022,10 @@
 <ul>
 <li>
 <ul>
-<li><a href="#goal-for-2019">Goal for 2019</a></li>
-<li><a href="#popular-topics-for-developer">Popular Topics for developer</a></li>
-<li><a href="#useful-suggestions">Useful suggestions</a></li>
-<li><a href="#reference">Reference</a></li>
+<li><a href="#platform-https-docs-python-org-3-7-library-platform-html-module-platform"><a href="https://docs.python.org/3.7/library/platform.html#module-platform"><code>platform</code></a></a>
+<ul>
+<li><a href="#access-to-underlying-platform-s-identifying-data">Access to underlying platform’s identifying data</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -1040,7 +1040,7 @@
         
         <div id="body-inner">
           
-            <h1>10X Develpoer</h1>
+            <h1>Python Platform module</h1>
           
 
         
@@ -1049,68 +1049,35 @@
 
 
 
-<h2 id="goal-for-2019">Goal for 2019</h2>
+<h2 id="platform-https-docs-python-org-3-7-library-platform-html-module-platform"><a href="https://docs.python.org/3.7/library/platform.html#module-platform"><code>platform</code></a></h2>
 
-<p>Update on <strong>Aug 13 2019</strong></p>
+<h3 id="access-to-underlying-platform-s-identifying-data">Access to underlying platform’s identifying data</h3>
 
-<ol>
-<li>Golang
+<pre><code class="language-python"># Get Architecture, The function relies on the system’s file command to do the actual work. 
+print(platform.architecture())
+# &gt;&gt; ('64bit', '')
 
-<ol>
-<li><del>Get to know Golang</del></li>
-<li>Build APIs with Golang</li>
-</ol></li>
-<li>Cloud certification
+# More reliable way to get the architecture of current interpreter
+is_64bits = sys.maxsize &gt; 2**32
+# &gt;&gt; True
 
-<ol>
-<li><del>Get to know AWS certification</del></li>
-<li>Prepare for a middle level AWS test</li>
-</ol></li>
-<li>Web development
+# Returns the machine type, e.g. 'i386'. An empty string is returned if the value cannot be determined.
+print(platform.machine())
+# &gt;&gt; x86_64
 
-<ol>
-<li>HTTP basic</li>
-<li>HTML + CSS</li>
-<li>Get to know Javascript</li>
-</ol></li>
-<li>Python
+# Returns the computer’s network name (may not be fully qualified!). An empty string is returned if the value cannot be determined.
+print(platform.node())
+# &gt;&gt; Adenosine-MacBook-Pro.local
 
-<ol>
-<li>Leetcode Practice (~200)</li>
-<li>Data Science Recap (Numpy + Pandas)</li>
-</ol></li>
-</ol>
+#
+print(platform.platform())
+# &gt;&gt; Darwin-18.2.0-x86_64-i386-64bit
 
-<h2 id="popular-topics-for-developer">Popular Topics for developer</h2>
+# Returns a single string identifying the underlying platform with as much useful information as possible.
+print(platform.processor())
+# &gt;&gt; i386
 
-<ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> Database</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Web Development</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Automation</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> APIs</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> APP development</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Front End</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Web Scraper</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Machine Learning</label></li>
-</ul>
-
-<h2 id="useful-suggestions">Useful suggestions</h2>
-
-<blockquote>
-<p>The human brain is a complex machine and it&rsquo;s a result of thousands of years of human evolution. Our world has evolved very fast. For the brain, being such an old machine, working in today&rsquo;s complex and distracted world is very hard. But if we use our brain as our ancestors did, we can use most of it. The following steps will help you achieve that.</p>
-</blockquote>
-
-<p><em>challenges</em>:
-- complex
-- distraction</p>
-
-<blockquote>
-<p>You have to be an <strong>action-based</strong> person to learn better.</p>
-</blockquote>
-
-<h2 id="reference">Reference</h2>
-
-<p><a href="https://dev.to/teamxenox/use-the-full-power-of-your-brain-to-be-a-better-developer--27pe">Use the full power of Your Brain to be a Better Developer </a></p>
+</code></pre>
 
 
 <footer class=" footline" >
@@ -1149,40 +1116,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -1191,57 +1124,8 @@
 
                     
                     
-                        
-                    
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1276,41 +1160,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
                     
                         
             
@@ -1378,6 +1227,69 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -1409,6 +1321,9 @@
                     
 
                     
+            
+        
+                    
                         
             
             
@@ -1424,6 +1339,44 @@
                     
             
         
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
                         
             
@@ -1633,38 +1586,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -1694,6 +1615,55 @@
 
                     
                     
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
                         
                     
                     
@@ -1703,6 +1673,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2258,10 +2231,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/me/" title="me"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dev/web/restful/" title="RESTful"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ds/" title="Datascience" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dev/misc/" title="Tools" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

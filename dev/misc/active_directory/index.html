@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>10X Develpoer :: Documentation for Hugo Learn Theme</title>
+    <title>Active_directory :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1566224355" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/me/better_develpoer/">
+  <body class="" data-url="/dev/misc/active_directory/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -79,7 +79,7 @@
   
     
     <li data-nav-id="/me/" title="me" class="dd-item 
-        parent
+        
         
         
         ">
@@ -105,7 +105,7 @@
  
   
     
-      <li data-nav-id="/me/better_develpoer/" title="10X Develpoer" class="dd-item active">
+      <li data-nav-id="/me/better_develpoer/" title="10X Develpoer" class="dd-item ">
         <a href="/me/better_develpoer/">
         10X Develpoer
         <i class="fas fa-check read-icon"></i>
@@ -277,7 +277,7 @@
   
     
     <li data-nav-id="/dev/" title="developer" class="dd-item 
-        
+        parent
         
         
         ">
@@ -306,7 +306,7 @@
   
     
     <li data-nav-id="/dev/misc/" title="Tools" class="dd-item 
-        
+        parent
         
         
         ">
@@ -541,7 +541,7 @@
  
   
     
-      <li data-nav-id="/dev/misc/active_directory/" title="Active_directory" class="dd-item ">
+      <li data-nav-id="/dev/misc/active_directory/" title="Active_directory" class="dd-item active">
         <a href="/dev/misc/active_directory/">
         Active_directory
         <i class="fas fa-check read-icon"></i>
@@ -1005,7 +1005,13 @@
             
           
           
-            <a href='/'>adenosinew</a> > <a href='/me/'>me</a> > 10X Develpoer
+            
+            
+          
+          
+            <a href='/'>adenosinew</a> > <a href='/dev/'>developer</a> > <a href='/dev/misc/'>Tools</a> > Active_directory
+          
+         
           
          
           
@@ -1022,10 +1028,17 @@
 <ul>
 <li>
 <ul>
-<li><a href="#goal-for-2019">Goal for 2019</a></li>
-<li><a href="#popular-topics-for-developer">Popular Topics for developer</a></li>
-<li><a href="#useful-suggestions">Useful suggestions</a></li>
-<li><a href="#reference">Reference</a></li>
+<li><a href="#windows-active-directory">Windows Active Directory</a>
+<ul>
+<li><a href="#what-is-active-directory">What is Active Directory</a></li>
+<li><a href="#domain-controller-dc">Domain Controller (DC)</a>
+<ul>
+<li><a href="#user-account">User Account</a></li>
+<li><a href="#computer-account">Computer Account</a></li>
+</ul></li>
+<li><a href="#groups">Groups</a></li>
+<li><a href="#ou-organization-unit">OU (Organization Unit)</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -1040,7 +1053,7 @@
         
         <div id="body-inner">
           
-            <h1>10X Develpoer</h1>
+            <h1>Active_directory</h1>
           
 
         
@@ -1049,68 +1062,45 @@
 
 
 
-<h2 id="goal-for-2019">Goal for 2019</h2>
+<h2 id="windows-active-directory">Windows Active Directory</h2>
 
-<p>Update on <strong>Aug 13 2019</strong></p>
+<h3 id="what-is-active-directory">What is Active Directory</h3>
 
-<ol>
-<li>Golang
+<h3 id="domain-controller-dc">Domain Controller (DC)</h3>
 
-<ol>
-<li><del>Get to know Golang</del></li>
-<li>Build APIs with Golang</li>
-</ol></li>
-<li>Cloud certification
+<p>A server of Active Directory service</p>
 
-<ol>
-<li><del>Get to know AWS certification</del></li>
-<li>Prepare for a middle level AWS test</li>
-</ol></li>
-<li>Web development
+<p>Schema (database)</p>
 
-<ol>
-<li>HTTP basic</li>
-<li>HTML + CSS</li>
-<li>Get to know Javascript</li>
-</ol></li>
-<li>Python
-
-<ol>
-<li>Leetcode Practice (~200)</li>
-<li>Data Science Recap (Numpy + Pandas)</li>
-</ol></li>
-</ol>
-
-<h2 id="popular-topics-for-developer">Popular Topics for developer</h2>
-
-<ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> Database</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Web Development</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Automation</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> APIs</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> APP development</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Front End</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Web Scraper</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Machine Learning</label></li>
+<ul>
+<li>User account</li>
+<li>Computer account</li>
 </ul>
 
-<h2 id="useful-suggestions">Useful suggestions</h2>
+<p>Schema extentable</p>
 
-<blockquote>
-<p>The human brain is a complex machine and it&rsquo;s a result of thousands of years of human evolution. Our world has evolved very fast. For the brain, being such an old machine, working in today&rsquo;s complex and distracted world is very hard. But if we use our brain as our ancestors did, we can use most of it. The following steps will help you achieve that.</p>
-</blockquote>
+<h4 id="user-account">User Account</h4>
 
-<p><em>challenges</em>:
-- complex
-- distraction</p>
+<p>Contains</p>
 
-<blockquote>
-<p>You have to be an <strong>action-based</strong> person to learn better.</p>
-</blockquote>
+<ul>
+<li>username</li>
+<li>password</li>
+<li>Email and etc.</li>
+</ul>
 
-<h2 id="reference">Reference</h2>
+<h4 id="computer-account">Computer Account</h4>
 
-<p><a href="https://dev.to/teamxenox/use-the-full-power-of-your-brain-to-be-a-better-developer--27pe">Use the full power of Your Brain to be a Better Developer </a></p>
+<p>Contains</p>
+
+<ul>
+<li>computer name</li>
+<li>UID and etc.</li>
+</ul>
+
+<h3 id="groups">Groups</h3>
+
+<h3 id="ou-organization-unit">OU (Organization Unit)</h3>
 
 
 <footer class=" footline" >
@@ -1149,40 +1139,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -1191,57 +1147,8 @@
 
                     
                     
-                        
-                    
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1276,41 +1183,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
                     
                         
             
@@ -1378,6 +1250,69 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -1409,6 +1344,9 @@
                     
 
                     
+            
+        
+                    
                         
             
             
@@ -1425,10 +1363,49 @@
             
         
                     
+            
+        
+                    
+            
+        
+                    
                         
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1606,6 +1583,26 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -1704,6 +1701,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1717,53 +1715,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1908,6 +1861,58 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -2258,10 +2263,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/me/" title="me"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dev/misc/setup_mysql/" title="Install MySQL server on CentOS"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ds/" title="Datascience" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dev/misc/docker_useful/" title="Useful commands for docker" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

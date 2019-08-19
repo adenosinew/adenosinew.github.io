@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>10X Develpoer :: Documentation for Hugo Learn Theme</title>
+    <title>Install MySQL server on CentOS :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1566224355" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/me/better_develpoer/">
+  <body class="" data-url="/dev/misc/setup_mysql/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -79,7 +79,7 @@
   
     
     <li data-nav-id="/me/" title="me" class="dd-item 
-        parent
+        
         
         
         ">
@@ -105,7 +105,7 @@
  
   
     
-      <li data-nav-id="/me/better_develpoer/" title="10X Develpoer" class="dd-item active">
+      <li data-nav-id="/me/better_develpoer/" title="10X Develpoer" class="dd-item ">
         <a href="/me/better_develpoer/">
         10X Develpoer
         <i class="fas fa-check read-icon"></i>
@@ -277,7 +277,7 @@
   
     
     <li data-nav-id="/dev/" title="developer" class="dd-item 
-        
+        parent
         
         
         ">
@@ -306,7 +306,7 @@
   
     
     <li data-nav-id="/dev/misc/" title="Tools" class="dd-item 
-        
+        parent
         
         
         ">
@@ -522,7 +522,7 @@
  
   
     
-      <li data-nav-id="/dev/misc/setup_mysql/" title="Install MySQL server on CentOS" class="dd-item ">
+      <li data-nav-id="/dev/misc/setup_mysql/" title="Install MySQL server on CentOS" class="dd-item active">
         <a href="/dev/misc/setup_mysql/">
         Install MySQL server on CentOS
         <i class="fas fa-check read-icon"></i>
@@ -1005,7 +1005,13 @@
             
           
           
-            <a href='/'>adenosinew</a> > <a href='/me/'>me</a> > 10X Develpoer
+            
+            
+          
+          
+            <a href='/'>adenosinew</a> > <a href='/dev/'>developer</a> > <a href='/dev/misc/'>Tools</a> > Install MySQL server on CentOS
+          
+         
           
          
           
@@ -1022,9 +1028,30 @@
 <ul>
 <li>
 <ul>
-<li><a href="#goal-for-2019">Goal for 2019</a></li>
-<li><a href="#popular-topics-for-developer">Popular Topics for developer</a></li>
-<li><a href="#useful-suggestions">Useful suggestions</a></li>
+<li><a href="#install-the-mysql-server">Install the MySQL server</a></li>
+<li><a href="#optimize-mysql-server">Optimize MySQL server</a></li>
+<li><a href="#create-user-and-database">Create User and database</a></li>
+<li><a href="#basic-user-interaction">Basic User interaction</a>
+<ul>
+<li><a href="#list-all-users">List all users</a></li>
+<li><a href="#list-all-databases-and-tables">List all databases and tables</a></li>
+</ul></li>
+<li><a href="#using-mysql">Using MySQL</a>
+<ul>
+<li><a href="#from-localhost">From localhost</a>
+<ul>
+<li><a href="#root-login">Root Login</a></li>
+<li><a href="#create-new-database-and-user">Create new database and user</a></li>
+</ul></li>
+<li><a href="#remote-access">Remote access</a>
+<ul>
+<li><a href="#add-permission-to-public-access">Add permission to public access</a></li>
+<li><a href="#connect-to-the-database-from-cli">Connect to the database from CLI</a>
+<ul>
+<li><a href="#mysql-better-cli">MySQL Better CLI</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
 <li><a href="#reference">Reference</a></li>
 </ul></li>
 </ul>
@@ -1040,7 +1067,7 @@
         
         <div id="body-inner">
           
-            <h1>10X Develpoer</h1>
+            <h1>Install MySQL server on CentOS</h1>
           
 
         
@@ -1049,68 +1076,137 @@
 
 
 
-<h2 id="goal-for-2019">Goal for 2019</h2>
+<p>My laptop is running out of storage, since I have a VPS running as VPN server. I found it would be a good practice to setup a MySQL server in remote.</p>
 
-<p>Update on <strong>Aug 13 2019</strong></p>
+<p>BTW, if you still have AWS free tier, AWS RDS service is super easy and stable.</p>
 
-<ol>
-<li>Golang
+<h2 id="install-the-mysql-server">Install the MySQL server</h2>
 
-<ol>
-<li><del>Get to know Golang</del></li>
-<li>Build APIs with Golang</li>
-</ol></li>
-<li>Cloud certification
+<p>I am not a big fan of ubuntu, on my local, I am using Manjaro. And for remote server, my first choice is always CentOS.</p>
+
+<p>MySQL must be installed from the <a href="https://dev.mysql.com/downloads/repo/yum/">community repository</a>.</p>
 
 <ol>
-<li><del>Get to know AWS certification</del></li>
-<li>Prepare for a middle level AWS test</li>
-</ol></li>
-<li>Web development
+<li><p>Download and add the repository, then update.</p>
 
-<ol>
-<li>HTTP basic</li>
-<li>HTML + CSS</li>
-<li>Get to know Javascript</li>
-</ol></li>
-<li>Python
+<pre><code class="language-shell">wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm
+yum update
+</code></pre></li>
 
-<ol>
-<li>Leetcode Practice (~200)</li>
-<li>Data Science Recap (Numpy + Pandas)</li>
-</ol></li>
+<li><p>Install MySQL as usual and start the service. During installation, you will be asked if you want to accept the results from the .rpm file’s GPG verification. If no error or mismatch occurs, enter <code>y</code>.</p>
+
+<pre><code class="language-shell">sudo yum install mysql-server
+sudo systemctl start mysqld
+</code></pre></li>
 </ol>
 
-<h2 id="popular-topics-for-developer">Popular Topics for developer</h2>
+<h2 id="optimize-mysql-server">Optimize MySQL server</h2>
 
-<ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> Database</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Web Development</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Automation</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> APIs</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> APP development</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Front End</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Web Scraper</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Machine Learning</label></li>
-</ul>
+<p>You will be given the choice to change the MySQL root password, remove anonymous user accounts, disable root logins outside of localhost, and remove test databases. It is recommended that you answer <code>yes</code> to these options. You can read more about the script in the <a href="https://dev.mysql.com/doc/refman/5.6/en/mysql-secure-installation.html">MySQL Reference Manual</a>.</p>
 
-<h2 id="useful-suggestions">Useful suggestions</h2>
+<pre><code class="language-shell">sudo mysql_secure_installation
+</code></pre>
 
-<blockquote>
-<p>The human brain is a complex machine and it&rsquo;s a result of thousands of years of human evolution. Our world has evolved very fast. For the brain, being such an old machine, working in today&rsquo;s complex and distracted world is very hard. But if we use our brain as our ancestors did, we can use most of it. The following steps will help you achieve that.</p>
-</blockquote>
+<p><a href="https://github.com/major/MySQLTuner-perl">MySQL Tuner</a> is a Perl script that connects to a running instance of MySQL and provides configuration recommendations based on workload.</p>
 
-<p><em>challenges</em>:
-- complex
-- distraction</p>
+<pre><code class="language-shell">wget https://raw.githubusercontent.com/major/MySQLTuner-perl/master/mysqltuner.pl
+perl ./mysqltuner.pl
+</code></pre>
 
-<blockquote>
-<p>You have to be an <strong>action-based</strong> person to learn better.</p>
-</blockquote>
+<h2 id="create-user-and-database">Create User and database</h2>
+
+<h2 id="basic-user-interaction">Basic User interaction</h2>
+
+<h3 id="list-all-users">List all users</h3>
+
+<pre><code class="language-sql">SELECT User, Host FROM mysql.user;
+
++------------------+-----------+
+| User             | Host      |
++------------------+-----------+
+| root             | localhost |
+| root             | demohost  |
+| root             | 127.0.0.1 |
+| debian-sys-maint | localhost |
+|                  | %         |
++------------------+-----------+
+</code></pre>
+
+<h3 id="list-all-databases-and-tables">List all databases and tables</h3>
+
+<pre><code class="language-sql">SHOW databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+</code></pre>
+
+<p>Choose one database and list all tables</p>
+
+<pre><code class="language-sql">use mysql;
+show tables;
++---------------------------+
+| Tables_in_mysql           |
++---------------------------+
+| columns_priv              |
+| db                        |
+...        
+| time_zone_name            |
+| time_zone_transition      |
+| time_zone_transition_type |
+| user                      |
++---------------------------+
+32 rows in set (0.00 sec)
+</code></pre>
+
+<h2 id="using-mysql">Using MySQL</h2>
+
+<h3 id="from-localhost">From localhost</h3>
+
+<h4 id="root-login">Root Login</h4>
+
+<pre><code class="language-shell">mysql -u root -p
+</code></pre>
+
+<h4 id="create-new-database-and-user">Create new database and user</h4>
+
+<h3 id="remote-access">Remote access</h3>
+
+<h4 id="add-permission-to-public-access">Add permission to public access</h4>
+
+<pre><code class="language-shell"> GRANT ALL PRIVILEGES ON *.* TO 'username'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
+ FLUSH PRIVILEGES;
+</code></pre>
+
+<h4 id="connect-to-the-database-from-cli">Connect to the database from CLI</h4>
+
+<pre><code class="language-shell">mysql -u {username} -h {remote server ip or name} -P {port} -D {DB name} -p{password}
+</code></pre>
+
+<p><strong>Notes</strong> No space between <code>-p</code> and <code>{password}</code> , better leave the <code>password</code> for blank and enter the password from the prompt.</p>
+
+<h5 id="mysql-better-cli">MySQL Better CLI</h5>
+
+<p><a href="https://www.mycli.net/">mycli</a> is a command line interface for MySQL, MariaDB, and Percona with auto-completion and syntax highlighting.</p>
+
+<pre><code class="language-shell">brew install mycli
+mycli mysql://my_user@my_host.com:3306/my_database
+</code></pre>
 
 <h2 id="reference">Reference</h2>
 
-<p><a href="https://dev.to/teamxenox/use-the-full-power-of-your-brain-to-be-a-better-developer--27pe">Use the full power of Your Brain to be a Better Developer </a></p>
+<p><a href="https://www.linode.com/docs/databases/mysql/how-to-install-mysql-on-centos-7/#tune-mysql">Install mysql on centos Linode</a></p>
+
+<p><a href="https://stackoverflow.com/questions/14779104/how-to-allow-remote-connection-to-mysql">Allow remote connection to mysql</a></p>
+
+<p><a href="https://www.liquidweb.com/kb/create-a-mysql-user-on-linux-via-command-line/">Basic User interaction</a></p>
+
+<p><a href="https://howchoo.com/g/mtm3zdq2nzv/how-to-add-a-mysql-user-and-grant-privileges">Add user and grant privileges</a></p>
 
 
 <footer class=" footline" >
@@ -1149,40 +1245,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -1191,57 +1253,8 @@
 
                     
                     
-                        
-                    
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1276,41 +1289,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
                     
                         
             
@@ -1378,6 +1356,69 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -1409,6 +1450,9 @@
                     
 
                     
+            
+        
+                    
                         
             
             
@@ -1425,10 +1469,49 @@
             
         
                     
+            
+        
+                    
+            
+        
+                    
                         
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1590,6 +1673,26 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -1704,6 +1807,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1716,6 +1820,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1877,6 +1984,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1892,6 +2000,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2258,10 +2369,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/me/" title="me"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dev/misc/terraform_useful/" title="Terraform Best Practice"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ds/" title="Datascience" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dev/misc/active_directory/" title="Active_directory" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

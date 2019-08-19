@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>10X Develpoer :: Documentation for Hugo Learn Theme</title>
+    <title>Useful Git commands :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1566224355" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/me/better_develpoer/">
+  <body class="" data-url="/dev/misc/git_useful/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -79,7 +79,7 @@
   
     
     <li data-nav-id="/me/" title="me" class="dd-item 
-        parent
+        
         
         
         ">
@@ -105,7 +105,7 @@
  
   
     
-      <li data-nav-id="/me/better_develpoer/" title="10X Develpoer" class="dd-item active">
+      <li data-nav-id="/me/better_develpoer/" title="10X Develpoer" class="dd-item ">
         <a href="/me/better_develpoer/">
         10X Develpoer
         <i class="fas fa-check read-icon"></i>
@@ -277,7 +277,7 @@
   
     
     <li data-nav-id="/dev/" title="developer" class="dd-item 
-        
+        parent
         
         
         ">
@@ -306,7 +306,7 @@
   
     
     <li data-nav-id="/dev/misc/" title="Tools" class="dd-item 
-        
+        parent
         
         
         ">
@@ -579,7 +579,7 @@
  
   
     
-      <li data-nav-id="/dev/misc/git_useful/" title="Useful Git commands" class="dd-item ">
+      <li data-nav-id="/dev/misc/git_useful/" title="Useful Git commands" class="dd-item active">
         <a href="/dev/misc/git_useful/">
         Useful Git commands
         <i class="fas fa-check read-icon"></i>
@@ -1005,7 +1005,13 @@
             
           
           
-            <a href='/'>adenosinew</a> > <a href='/me/'>me</a> > 10X Develpoer
+            
+            
+          
+          
+            <a href='/'>adenosinew</a> > <a href='/dev/'>developer</a> > <a href='/dev/misc/'>Tools</a> > Useful Git commands
+          
+         
           
          
           
@@ -1022,9 +1028,20 @@
 <ul>
 <li>
 <ul>
-<li><a href="#goal-for-2019">Goal for 2019</a></li>
-<li><a href="#popular-topics-for-developer">Popular Topics for developer</a></li>
-<li><a href="#useful-suggestions">Useful suggestions</a></li>
+<li><a href="#basic-git-commands">Basic Git commands</a>
+<ul>
+<li><a href="#git-fetch"><code>git fetch</code></a></li>
+<li><a href="#git-merge"><code>git merge</code></a></li>
+<li><a href="#git-log"><code>git log</code></a></li>
+</ul></li>
+<li><a href="#git-use-case-snippets">Git use case (snippets)</a>
+<ul>
+<li><a href="#create-a-new-branch-based-on-a-arbitrary-branch">Create a new branch based on a arbitrary branch</a></li>
+<li><a href="#create-a-new-branch-based-on-a-commit">Create a new branch based on a commit</a></li>
+<li><a href="#update-a-branch-feature-with-different-branch-develop">Update a branch (feature) with different branch (develop)</a></li>
+<li><a href="#remove-grey-submodule">Remove grey submodule</a></li>
+<li><a href="#fix-conflicts">Fix conflicts</a></li>
+</ul></li>
 <li><a href="#reference">Reference</a></li>
 </ul></li>
 </ul>
@@ -1040,7 +1057,7 @@
         
         <div id="body-inner">
           
-            <h1>10X Develpoer</h1>
+            <h1>Useful Git commands</h1>
           
 
         
@@ -1049,68 +1066,66 @@
 
 
 
-<h2 id="goal-for-2019">Goal for 2019</h2>
+<p>Overview:</p>
 
-<p>Update on <strong>Aug 13 2019</strong></p>
+<p>There are tons of tutorial of git. For those basic concepts, I am going to link to some good tutorial. This one is focusing on some real life use cases, what if you encounter these errors or what if I want to do this&hellip;</p>
 
-<ol>
-<li>Golang
+<h2 id="basic-git-commands">Basic Git commands</h2>
 
-<ol>
-<li><del>Get to know Golang</del></li>
-<li>Build APIs with Golang</li>
-</ol></li>
-<li>Cloud certification
+<h3 id="git-fetch"><code>git fetch</code></h3>
 
-<ol>
-<li><del>Get to know AWS certification</del></li>
-<li>Prepare for a middle level AWS test</li>
-</ol></li>
-<li>Web development
+<p>The <code>git fetch</code> command downloads commits, files, and refs from a remote repository into your local repo. Fetching is what you do when you want to see what everybody else has been working on.</p>
 
-<ol>
-<li>HTTP basic</li>
-<li>HTML + CSS</li>
-<li>Get to know Javascript</li>
-</ol></li>
-<li>Python
+<h3 id="git-merge"><code>git merge</code></h3>
 
-<ol>
-<li>Leetcode Practice (~200)</li>
-<li>Data Science Recap (Numpy + Pandas)</li>
-</ol></li>
-</ol>
+<p>TODO</p>
 
-<h2 id="popular-topics-for-developer">Popular Topics for developer</h2>
+<h3 id="git-log"><code>git log</code></h3>
 
-<ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> Database</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Web Development</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Automation</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> APIs</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> APP development</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Front End</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Web Scraper</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Machine Learning</label></li>
-</ul>
+<p>TODO</p>
 
-<h2 id="useful-suggestions">Useful suggestions</h2>
+<h2 id="git-use-case-snippets">Git use case (snippets)</h2>
 
-<blockquote>
-<p>The human brain is a complex machine and it&rsquo;s a result of thousands of years of human evolution. Our world has evolved very fast. For the brain, being such an old machine, working in today&rsquo;s complex and distracted world is very hard. But if we use our brain as our ancestors did, we can use most of it. The following steps will help you achieve that.</p>
-</blockquote>
+<h3 id="create-a-new-branch-based-on-a-arbitrary-branch">Create a new branch based on a arbitrary branch</h3>
 
-<p><em>challenges</em>:
-- complex
-- distraction</p>
+<p>TODO</p>
 
-<blockquote>
-<p>You have to be an <strong>action-based</strong> person to learn better.</p>
-</blockquote>
+<h3 id="create-a-new-branch-based-on-a-commit">Create a new branch based on a commit</h3>
+
+<pre><code class="language-bash">git log
+# Get a commit id
+git checkout -b &lt;new_branch_name&gt; &lt;commit_id&gt;
+</code></pre>
+
+<h3 id="update-a-branch-feature-with-different-branch-develop">Update a branch (feature) with different branch (develop)</h3>
+
+<pre><code class="language-bash">git checkout develop
+git pull
+git checkout feature
+
+git merge develop
+# or
+git rebase develop
+</code></pre>
+
+<p>The difference between with <code>git rebase</code> is that rebase keep all commits history from your branch, and that is important if your partial commits have a lot of content that can be interesting to keep. This option is obligatory in some teams.</p>
+
+<h3 id="remove-grey-submodule">Remove grey submodule</h3>
+
+<pre><code class="language-shell">git rm --cached &lt;folder_name&gt;
+
+git add .
+git commit -m &quot;&lt;your_message&gt;&quot;
+git push --all
+</code></pre>
+
+<h3 id="fix-conflicts">Fix conflicts</h3>
+
+<p>TODO</p>
 
 <h2 id="reference">Reference</h2>
 
-<p><a href="https://dev.to/teamxenox/use-the-full-power-of-your-brain-to-be-a-better-developer--27pe">Use the full power of Your Brain to be a Better Developer </a></p>
+<p><a href="https://www.atlassian.com/git/tutorials/syncing/git-fetch">Atlassian git fetch</a></p>
 
 
 <footer class=" footline" >
@@ -1149,40 +1164,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -1191,57 +1172,8 @@
 
                     
                     
-                        
-                    
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1276,41 +1208,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
                     
                         
             
@@ -1378,9 +1275,6 @@
             
         
                     
-            
-        
-                    
                         
             
             
@@ -1395,211 +1289,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1662,8 +1351,26 @@
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1684,10 +1391,14 @@
             
         
                     
+            
+        
+                    
                         
             
             
                 
+                    
                     
                 
                 
@@ -1704,6 +1415,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1716,6 +1428,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1925,6 +1640,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1943,6 +1659,320 @@
             
             
                 
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -2258,10 +2288,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/me/" title="me"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dev/misc/docker_useful/" title="Useful commands for docker"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ds/" title="Datascience" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dev/algorithm/" title="Algorithm" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -3,27 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/developer/windows/</loc>
-    <lastmod>2019-02-28T11:10:54-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/collections/bestpractice/</loc>
-    <lastmod>2019-02-13T16:39:09-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/datascience/ml/</loc>
+    <loc>/ds/ml/</loc>
     <lastmod>2019-02-13T13:48:42-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developer/tools/</loc>
+    <loc>/dev/misc/</loc>
     <lastmod>2019-02-13T12:24:50-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developer/tools/vim_useful/</loc>
+    <loc>/dev/misc/vim_useful/</loc>
     <lastmod>2019-02-13T12:23:19-05:00</lastmod>
   </url>
   
@@ -33,42 +23,37 @@
   </url>
   
   <url>
-    <loc>/developer/tools/ssh_useful/</loc>
+    <loc>/dev/misc/ssh_useful/</loc>
     <lastmod>2019-02-13T12:23:19-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developer/algorithm/</loc>
+    <loc>/dev/algorithm/</loc>
     <lastmod>2019-02-13T11:59:45-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/datascience/</loc>
+    <loc>/ds/</loc>
     <lastmod>2019-02-10T00:04:27-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developer/webtech/</loc>
+    <loc>/dev/web/</loc>
     <lastmod>2019-02-13T12:23:19-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developer/</loc>
+    <loc>/dev/</loc>
     <lastmod>2019-02-10T00:04:53-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developer/tools/raspberry_pi_3_nas/</loc>
+    <loc>/dev/misc/raspberry_pi_3_nas/</loc>
   </url>
   
   <url>
-    <loc>/developer/tools/common_commands_useful/</loc>
+    <loc>/dev/misc/common_commands_useful/</loc>
     <lastmod>2019-02-13T12:23:19-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/collections/</loc>
-    <lastmod>2019-02-10T00:05:08-05:00</lastmod>
   </url>
   
   <url>
@@ -77,22 +62,22 @@
   </url>
   
   <url>
-    <loc>/developer/tools/cli_improved/</loc>
+    <loc>/dev/misc/cli_improved/</loc>
     <lastmod>2019-02-13T12:23:19-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developer/tools/cli_best_practice/</loc>
+    <loc>/dev/misc/cli_best_practice/</loc>
     <lastmod>2019-02-13T12:23:19-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developer/tools/10_basic_commands_for_linux_performance_detection/</loc>
+    <loc>/dev/misc/10_basic_commands_for_linux_performance_detection/</loc>
     <lastmod>2019-02-13T12:23:19-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developer/tools/dockerfile_intro/</loc>
+    <loc>/dev/misc/dockerfile_intro/</loc>
     <lastmod>2019-08-12T16:36:15-04:00</lastmod>
   </url>
   
@@ -112,82 +97,77 @@
   </url>
   
   <url>
-    <loc>/developer/linux/time-explain/</loc>
+    <loc>/dev/linux/time-explain/</loc>
     <lastmod>2019-04-23T17:17:38-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/developer/webtech/restful/</loc>
+    <loc>/dev/web/restful/</loc>
     <lastmod>2019-04-23T16:46:45-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/developer/linux/shell_compatiability/</loc>
+    <loc>/dev/linux/shell_compatiability/</loc>
     <lastmod>2019-04-04T15:20:52-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/developer/tools/docker_beginner/</loc>
+    <loc>/dev/misc/docker_beginner/</loc>
     <lastmod>2019-03-13T18:02:14-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/developer/linux/linux-cheatsheet/</loc>
+    <loc>/dev/linux/linux-cheatsheet/</loc>
     <lastmod>2019-03-11T21:33:22-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/developer/linux/shells/</loc>
+    <loc>/dev/linux/shells/</loc>
     <lastmod>2019-03-11T21:33:22-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/datascience/sqlalchemy/</loc>
+    <loc>/ds/sqlalchemy/</loc>
     <lastmod>2019-03-09T23:13:21-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developer/tools/terraform_useful/</loc>
+    <loc>/dev/misc/terraform_useful/</loc>
     <lastmod>2019-03-06T11:35:48-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/collections/snippets/python_platform/</loc>
+    <loc>/dev/cs/python_platform/</loc>
     <lastmod>2019-03-05T10:06:08-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developer/tools/setup_mysql/</loc>
+    <loc>/dev/misc/setup_mysql/</loc>
     <lastmod>2019-03-04T21:38:50-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developer/windows/active_directory/</loc>
+    <loc>/dev/misc/active_directory/</loc>
     <lastmod>2019-02-28T11:11:39-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/datascience/numpy_fancy_indexing_and_viewing/</loc>
+    <loc>/ds/numpy_fancy_indexing_and_viewing/</loc>
     <lastmod>2019-02-20T10:14:37-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/datascience/pytorch/</loc>
+    <loc>/ds/pytorch/</loc>
     <lastmod>2019-02-19T10:07:01-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/collections/snippets/</loc>
-    <lastmod>2019-02-14T21:41:10-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/developer/linux/systemd_mount/</loc>
+    <loc>/dev/linux/systemd_mount/</loc>
     <lastmod>2019-02-14T18:05:39-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developer/linux/</loc>
+    <loc>/dev/linux/</loc>
     <lastmod>2019-02-14T18:04:45-05:00</lastmod>
   </url>
   
@@ -197,17 +177,17 @@
   </url>
   
   <url>
-    <loc>/developer/tools/git_useful/</loc>
+    <loc>/dev/misc/docker_useful/</loc>
     <lastmod>2019-02-11T22:00:25-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developer/tools/docker_useful/</loc>
+    <loc>/dev/misc/git_useful/</loc>
     <lastmod>2019-02-11T22:00:25-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/datascience/commands_for_data_scientist/</loc>
+    <loc>/ds/commands_for_data_scientist/</loc>
     <lastmod>2019-02-10T21:52:45-05:00</lastmod>
   </url>
   
@@ -218,12 +198,10 @@
   
   <url>
     <loc>/categories/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>

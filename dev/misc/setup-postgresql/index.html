@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>Python Platform module :: Documentation for Hugo Learn Theme</title>
+    <title>How to Setup Postgresql :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1566785085" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/dev/cs/python_platform/">
+  <body class="" data-url="/dev/misc/setup-postgresql/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -306,7 +306,7 @@
   
     
     <li data-nav-id="/dev/misc/" title="Tools" class="dd-item 
-        
+        parent
         
         
         ">
@@ -465,7 +465,7 @@
  
   
     
-      <li data-nav-id="/dev/misc/setup-postgresql/" title="How to Setup Postgresql" class="dd-item ">
+      <li data-nav-id="/dev/misc/setup-postgresql/" title="How to Setup Postgresql" class="dd-item active">
         <a href="/dev/misc/setup-postgresql/">
         How to Setup Postgresql
         <i class="fas fa-check read-icon"></i>
@@ -726,7 +726,7 @@
  
   
     
-      <li data-nav-id="/dev/cs/python_platform/" title="Python Platform module" class="dd-item active">
+      <li data-nav-id="/dev/cs/python_platform/" title="Python Platform module" class="dd-item ">
         <a href="/dev/cs/python_platform/">
         Python Platform module
         <i class="fas fa-check read-icon"></i>
@@ -1043,7 +1043,13 @@
             
           
           
-            <a href='/'>adenosinew</a> > <a href='/dev/'>developer</a> > Python Platform module
+            
+            
+          
+          
+            <a href='/'>adenosinew</a> > <a href='/dev/'>developer</a> > <a href='/dev/misc/'>Tools</a> > How to Setup Postgresql
+          
+         
           
          
           
@@ -1060,10 +1066,33 @@
 <ul>
 <li>
 <ul>
-<li><a href="#platform-https-docs-python-org-3-7-library-platform-html-module-platform"><a href="https://docs.python.org/3.7/library/platform.html#module-platform"><code>platform</code></a></a>
+<li><a href="#installation">Installation</a>
 <ul>
-<li><a href="#access-to-underlying-platform-s-identifying-data">Access to underlying platform’s identifying data</a></li>
+<li><a href="#ubuntu">Ubuntu</a></li>
+<li><a href="#manjaro">Manjaro</a></li>
 </ul></li>
+<li><a href="#authentication">Authentication</a>
+<ul>
+<li><a href="#change-the-password">Change the password</a></li>
+</ul></li>
+<li><a href="#allow-remote-connection">Allow remote connection</a>
+<ul>
+<li><a href="#check-the-port-5432">Check the port (5432)</a></li>
+<li><a href="#configuring-postgresql-conf">Configuring <code>postgresql.conf</code></a></li>
+<li><a href="#configuring-pg-hba-conf">Configuring <code>pg_hba.conf</code></a></li>
+<li><a href="#configuring-firewall">Configuring firewall</a></li>
+</ul></li>
+<li><a href="#more-configuration">More configuration</a>
+<ul>
+<li><a href="#understanding-postgresql-conf">Understanding <code>postgresql.conf</code></a></li>
+<li><a href="#tune-authentication-options-through-pg-hba-conf">Tune Authentication Options through <code>pg_hba.conf</code></a></li>
+</ul></li>
+<li><a href="#pg-cli">PG CLI</a>
+<ul>
+<li><a href="#installation-1">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+</ul></li>
+<li><a href="#reference">Reference</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1078,7 +1107,7 @@
         
         <div id="body-inner">
           
-            <h1>Python Platform module</h1>
+            <h1>How to Setup Postgresql</h1>
           
 
         
@@ -1087,35 +1116,132 @@
 
 
 
-<h2 id="platform-https-docs-python-org-3-7-library-platform-html-module-platform"><a href="https://docs.python.org/3.7/library/platform.html#module-platform"><code>platform</code></a></h2>
+<h2 id="installation">Installation</h2>
 
-<h3 id="access-to-underlying-platform-s-identifying-data">Access to underlying platform’s identifying data</h3>
+<h3 id="ubuntu">Ubuntu</h3>
 
-<pre><code class="language-python"># Get Architecture, The function relies on the system’s file command to do the actual work. 
-print(platform.architecture())
-# &gt;&gt; ('64bit', '')
-
-# More reliable way to get the architecture of current interpreter
-is_64bits = sys.maxsize &gt; 2**32
-# &gt;&gt; True
-
-# Returns the machine type, e.g. 'i386'. An empty string is returned if the value cannot be determined.
-print(platform.machine())
-# &gt;&gt; x86_64
-
-# Returns the computer’s network name (may not be fully qualified!). An empty string is returned if the value cannot be determined.
-print(platform.node())
-# &gt;&gt; Adenosine-MacBook-Pro.local
-
-#
-print(platform.platform())
-# &gt;&gt; Darwin-18.2.0-x86_64-i386-64bit
-
-# Returns a single string identifying the underlying platform with as much useful information as possible.
-print(platform.processor())
-# &gt;&gt; i386
-
+<pre><code class="language-shell">sudo apt update
+sudo apt install postgresql postgresql-contrib
 </code></pre>
+
+<h3 id="manjaro">Manjaro</h3>
+
+<pre><code class="language-shell">pacman -S postgresql
+</code></pre>
+
+<h2 id="authentication">Authentication</h2>
+
+<p>New installation has a <code>postgres</code> user by default</p>
+
+<p><code>postgres</code> has no <strong>DB</strong> password set on Ubuntu by default.</p>
+
+<p>You can login to that account only by using the <code>postgres</code> <strong>OS user</strong> account</p>
+
+<pre><code class="language-shell">sudo -u postgres psql
+</code></pre>
+
+<h3 id="change-the-password">Change the password</h3>
+
+<pre><code class="language-shell">psql&gt; ALTER USER &lt;username&gt; PASSWORD 'newpassword';
+</code></pre>
+
+<p><em>Rule of thumb</em>:</p>
+
+<p><strong>YOU SHOULD NEVER EVER SET A PASSWORD FOR THE POSTGRES USER</strong>.</p>
+
+<h2 id="allow-remote-connection">Allow remote connection</h2>
+
+<p>By default PostgreSQL is configured to be bound to &ldquo;localhost&rdquo;</p>
+
+<h3 id="check-the-port-5432">Check the port (5432)</h3>
+
+<p>Run following command to see what is the port 5432 bound to</p>
+
+<pre><code class="language-shell">netstat -nlt
+
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN        
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN
+tcp        0      0 127.0.0.1:5432          0.0.0.0:*               LISTEN 
+</code></pre>
+
+<p>As we can see above port <code>5432</code> is bound to <code>127.0.0.1</code>. It means any attempt to connect to the postgresql server from outside the machine will be refused. We can try hitting the port <code>5432</code> by using telnet.</p>
+
+<pre><code>telnet &lt;remote-server-ip-address&gt; 5432
+</code></pre>
+
+<h3 id="configuring-postgresql-conf">Configuring <code>postgresql.conf</code></h3>
+
+<p>Open <code>/etc/postgresql/postgresql.conf</code></p>
+
+<p>Replace the</p>
+
+<pre><code class="language-shell">listen_addresses = 'localhost'
+</code></pre>
+
+<p>with</p>
+
+<pre><code class="language-shell">listen_addresses = '*'
+</code></pre>
+
+<p>And restart the PostgreSQL service</p>
+
+<h3 id="configuring-pg-hba-conf">Configuring <code>pg_hba.conf</code></h3>
+
+<p>Open <code>pg_hba.conf</code> and add following entry at the very end</p>
+
+<pre><code class="language-shell"># First entry for IPv4 and second entry for IPv6
+host    all             all              0.0.0.0/0                       md5
+host    all             all              ::/0                            md5
+</code></pre>
+
+<h3 id="configuring-firewall">Configuring firewall</h3>
+
+<p>In real world, you might have firewall running</p>
+
+<p>Open port 5432 for TCP</p>
+
+<h2 id="more-configuration">More configuration</h2>
+
+<p>PostgreSQL can be configured and tuned through a series of configuration files.</p>
+
+<h3 id="understanding-postgresql-conf">Understanding <code>postgresql.conf</code></h3>
+
+<p>Most global configuration settings are stored in <code>postgresql.conf</code>, which is created automatically when you install PostgreSQL.</p>
+
+<h3 id="tune-authentication-options-through-pg-hba-conf">Tune Authentication Options through <code>pg_hba.conf</code></h3>
+
+<p>The <code>pg_hba.conf</code> file handles the default authentication options for client connections to the database.</p>
+
+<h2 id="pg-cli">PG CLI</h2>
+
+<p>Pgcli is a command line interface for Postgres with auto-completion and syntax highlighting.</p>
+
+<h3 id="installation-1">Installation</h3>
+
+<p>macOS</p>
+
+<pre><code class="language-shell">brew install pgcli
+</code></pre>
+
+<p>Others</p>
+
+<pre><code class="language-shell">pip install pgcli
+</code></pre>
+
+<h3 id="usage">Usage</h3>
+
+<pre><code class="language-shell">pgcli postgres://&lt;username&gt;:&lt;passw0rd&gt;@&lt;host&gt;:5432/&lt;database&gt;
+</code></pre>
+
+<h2 id="reference">Reference</h2>
+
+<p><a href="https://lobotuerto.com/blog/how-to-install-postgresql-in-manjaro-linux/">Install Postgresql in manjaro</a></p>
+
+<p><a href="https://blog.bigbinary.com/2016/01/23/configure-postgresql-to-allow-remote-connection.html">Configure PostgreSQL to allow remote connection</a></p>
+
+<p><a href="https://www.linode.com/docs/databases/postgresql/configure-postgresql/">Configure PostgreSQL by Linode</a></p>
 
 
 <footer class=" footline" >
@@ -1405,8 +1531,6 @@ print(platform.processor())
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1420,6 +1544,141 @@ print(platform.processor())
             
             
                 
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1544,10 +1803,93 @@ print(platform.processor())
             
         
                     
+            
+        
+                    
                         
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1661,24 +2003,6 @@ print(platform.processor())
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1696,197 +2020,8 @@ print(platform.processor())
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2333,10 +2468,10 @@ print(platform.processor())
 	 
 	 
 		
-			<a class="nav nav-prev" href="/dev/web/restful/" title="RESTful"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dev/misc/10_basic_commands_for_linux_performance_detection/" title="Check Linux Performance CLI"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/dev/misc/" title="Tools" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dev/misc/httpie/" title="Intro to Httpie" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

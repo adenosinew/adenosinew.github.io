@@ -88,6 +88,33 @@ yaourt -S bat  prettyping &amp;gt; ping fzf &amp;gt; ctrl + r In addition to sea
     </item>
     
     <item>
+      <title>How to Setup Postgresql</title>
+      <link>/dev/misc/setup-postgresql/</link>
+      <pubDate>Sun, 25 Aug 2019 21:28:09 -0400</pubDate>
+      
+      <guid>/dev/misc/setup-postgresql/</guid>
+      <description>Installation Ubuntu sudo apt update sudo apt install postgresql postgresql-contrib  Manjaro pacman -S postgresql  Authentication New installation has a postgres user by default
+postgres has no DB password set on Ubuntu by default.
+You can login to that account only by using the postgres OS user account
+sudo -u postgres psql  Change the password psql&amp;gt; ALTER USER &amp;lt;username&amp;gt; PASSWORD &#39;newpassword&#39;;  Rule of thumb:
+YOU SHOULD NEVER EVER SET A PASSWORD FOR THE POSTGRES USER.</description>
+    </item>
+    
+    <item>
+      <title>Intro to Httpie</title>
+      <link>/dev/misc/httpie/</link>
+      <pubDate>Wed, 21 Aug 2019 11:30:37 -0400</pubDate>
+      
+      <guid>/dev/misc/httpie/</guid>
+      <description> What is HTTPie HTTPie Official Website
+HTTPie is a command line HTTP client with intuitive UI, JSON support, syntax highlighting, wget-like downloads, plugins and more.
+Installation macOS brew install httpie
+Linux pacman -S httpie
+Usage Synopsis:
+http [flags] [METHOD] URL [ITEM [ITEM]]  </description>
+    </item>
+    
+    <item>
       <title>Dockerfile_intro</title>
       <link>/dev/misc/dockerfile_intro/</link>
       <pubDate>Mon, 12 Aug 2019 16:36:15 -0400</pubDate>

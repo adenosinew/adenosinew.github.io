@@ -105,6 +105,20 @@
 	"content": " 1. uptime uptime 20:25:38 up 7 min, 3 users, load average: 0.24, 0.45, 0.27 #该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。  2. dmesg | tail dmesg | tail [ 51.424401] wlp5s0: RX AssocResp from 38:4c:90:8f:8c:85 (capab=0x831 status=0 aid=3) [ 51.426461] wlp5s0: associated [ 51.429463] ath: EEPROM regdomain: 0x8348 [ 51.429463] ath: EEPROM indicates we should expect a country code [ 51.429464] ath: doing EEPROM country-\u0026gt;regdmn map search [ 51.429465] ath: country maps to regdmn code: 0x3a [ 51.429465] ath: Country alpha2 being used: US [ 51.429466] ath: Regpair used: 0x3a [ 51.429466] ath: regdomain 0x8348 dynamically updated by country IE [ 51.679984] IPv6: ADDRCONF(NETDEV_CHANGE): wlp5s0: link becomes ready # 打印内核环形缓存区中的内容，可以用来查看一些错误；  3. vmstat 1 vmstat 1  4. mpstat -P ALL 1 "
 },
 {
+	"uri": "/dev/misc/setup-postgresql/",
+	"title": "How to Setup Postgresql",
+	"tags": [],
+	"description": "",
+	"content": " Installation Ubuntu sudo apt update sudo apt install postgresql postgresql-contrib  Manjaro pacman -S postgresql  Authentication New installation has a postgres user by default\npostgres has no DB password set on Ubuntu by default.\nYou can login to that account only by using the postgres OS user account\nsudo -u postgres psql  Change the password psql\u0026gt; ALTER USER \u0026lt;username\u0026gt; PASSWORD 'newpassword';  Rule of thumb:\nYOU SHOULD NEVER EVER SET A PASSWORD FOR THE POSTGRES USER.\nAllow remote connection By default PostgreSQL is configured to be bound to \u0026ldquo;localhost\u0026rdquo;\nCheck the port (5432) Run following command to see what is the port 5432 bound to\nnetstat -nlt Proto Recv-Q Send-Q Local Address Foreign Address State tcp 0 0 0.0.0.0:443 0.0.0.0:* LISTEN tcp 0 0 0.0.0.0:80 0.0.0.0:* LISTEN tcp 0 0 0.0.0.0:22 0.0.0.0:* LISTEN tcp 0 0 127.0.0.1:5432 0.0.0.0:* LISTEN  As we can see above port 5432 is bound to 127.0.0.1. It means any attempt to connect to the postgresql server from outside the machine will be refused. We can try hitting the port 5432 by using telnet.\ntelnet \u0026lt;remote-server-ip-address\u0026gt; 5432  Configuring postgresql.conf Open /etc/postgresql/postgresql.conf\nReplace the\nlisten_addresses = 'localhost'  with\nlisten_addresses = '*'  And restart the PostgreSQL service\nConfiguring pg_hba.conf Open pg_hba.conf and add following entry at the very end\n# First entry for IPv4 and second entry for IPv6 host all all 0.0.0.0/0 md5 host all all ::/0 md5  Configuring firewall In real world, you might have firewall running\nOpen port 5432 for TCP\nMore configuration PostgreSQL can be configured and tuned through a series of configuration files.\nUnderstanding postgresql.conf Most global configuration settings are stored in postgresql.conf, which is created automatically when you install PostgreSQL.\nTune Authentication Options through pg_hba.conf The pg_hba.conf file handles the default authentication options for client connections to the database.\nPG CLI Pgcli is a command line interface for Postgres with auto-completion and syntax highlighting.\nInstallation macOS\nbrew install pgcli  Others\npip install pgcli  Usage pgcli postgres://\u0026lt;username\u0026gt;:\u0026lt;passw0rd\u0026gt;@\u0026lt;host\u0026gt;:5432/\u0026lt;database\u0026gt;  Reference Install Postgresql in manjaro\nConfigure PostgreSQL to allow remote connection\nConfigure PostgreSQL by Linode\n"
+},
+{
+	"uri": "/dev/misc/httpie/",
+	"title": "Intro to Httpie",
+	"tags": [],
+	"description": "",
+	"content": " What is HTTPie HTTPie Official Website\nHTTPie is a command line HTTP client with intuitive UI, JSON support, syntax highlighting, wget-like downloads, plugins and more.\nInstallation macOS brew install httpie\nLinux pacman -S httpie\nUsage Synopsis:\nhttp [flags] [METHOD] URL [ITEM [ITEM]]  "
+},
+{
 	"uri": "/dev/misc/dockerfile_intro/",
 	"title": "Dockerfile_intro",
 	"tags": [],

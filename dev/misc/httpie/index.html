@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>Python Platform module :: Documentation for Hugo Learn Theme</title>
+    <title>Intro to Httpie :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1566785085" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/dev/cs/python_platform/">
+  <body class="" data-url="/dev/misc/httpie/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -306,7 +306,7 @@
   
     
     <li data-nav-id="/dev/misc/" title="Tools" class="dd-item 
-        
+        parent
         
         
         ">
@@ -484,7 +484,7 @@
  
   
     
-      <li data-nav-id="/dev/misc/httpie/" title="Intro to Httpie" class="dd-item ">
+      <li data-nav-id="/dev/misc/httpie/" title="Intro to Httpie" class="dd-item active">
         <a href="/dev/misc/httpie/">
         Intro to Httpie
         <i class="fas fa-check read-icon"></i>
@@ -726,7 +726,7 @@
  
   
     
-      <li data-nav-id="/dev/cs/python_platform/" title="Python Platform module" class="dd-item active">
+      <li data-nav-id="/dev/cs/python_platform/" title="Python Platform module" class="dd-item ">
         <a href="/dev/cs/python_platform/">
         Python Platform module
         <i class="fas fa-check read-icon"></i>
@@ -1043,7 +1043,13 @@
             
           
           
-            <a href='/'>adenosinew</a> > <a href='/dev/'>developer</a> > Python Platform module
+            
+            
+          
+          
+            <a href='/'>adenosinew</a> > <a href='/dev/'>developer</a> > <a href='/dev/misc/'>Tools</a> > Intro to Httpie
+          
+         
           
          
           
@@ -1060,10 +1066,13 @@
 <ul>
 <li>
 <ul>
-<li><a href="#platform-https-docs-python-org-3-7-library-platform-html-module-platform"><a href="https://docs.python.org/3.7/library/platform.html#module-platform"><code>platform</code></a></a>
+<li><a href="#what-is-httpie">What is HTTPie</a></li>
+<li><a href="#installation">Installation</a>
 <ul>
-<li><a href="#access-to-underlying-platform-s-identifying-data">Access to underlying platform’s identifying data</a></li>
+<li><a href="#macos">macOS</a></li>
+<li><a href="#linux">Linux</a></li>
 </ul></li>
+<li><a href="#usage">Usage</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1078,7 +1087,7 @@
         
         <div id="body-inner">
           
-            <h1>Python Platform module</h1>
+            <h1>Intro to Httpie</h1>
           
 
         
@@ -1087,34 +1096,27 @@
 
 
 
-<h2 id="platform-https-docs-python-org-3-7-library-platform-html-module-platform"><a href="https://docs.python.org/3.7/library/platform.html#module-platform"><code>platform</code></a></h2>
+<h2 id="what-is-httpie">What is HTTPie</h2>
 
-<h3 id="access-to-underlying-platform-s-identifying-data">Access to underlying platform’s identifying data</h3>
+<p><a href="https://httpie.org/">HTTPie Official Website</a></p>
 
-<pre><code class="language-python"># Get Architecture, The function relies on the system’s file command to do the actual work. 
-print(platform.architecture())
-# &gt;&gt; ('64bit', '')
+<p>HTTPie is a command line HTTP client with intuitive UI, JSON support, syntax highlighting, wget-like downloads, plugins and more.</p>
 
-# More reliable way to get the architecture of current interpreter
-is_64bits = sys.maxsize &gt; 2**32
-# &gt;&gt; True
+<h2 id="installation">Installation</h2>
 
-# Returns the machine type, e.g. 'i386'. An empty string is returned if the value cannot be determined.
-print(platform.machine())
-# &gt;&gt; x86_64
+<h3 id="macos">macOS</h3>
 
-# Returns the computer’s network name (may not be fully qualified!). An empty string is returned if the value cannot be determined.
-print(platform.node())
-# &gt;&gt; Adenosine-MacBook-Pro.local
+<p><code>brew install httpie</code></p>
 
-#
-print(platform.platform())
-# &gt;&gt; Darwin-18.2.0-x86_64-i386-64bit
+<h3 id="linux">Linux</h3>
 
-# Returns a single string identifying the underlying platform with as much useful information as possible.
-print(platform.processor())
-# &gt;&gt; i386
+<p><code>pacman -S httpie</code></p>
 
+<h2 id="usage">Usage</h2>
+
+<p>Synopsis:</p>
+
+<pre><code class="language-bash">http [flags] [METHOD] URL [ITEM [ITEM]]
 </code></pre>
 
 
@@ -1405,8 +1407,6 @@ print(platform.processor())
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1420,6 +1420,9 @@ print(platform.processor())
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1549,6 +1552,221 @@ print(platform.processor())
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -1672,93 +1890,11 @@ print(platform.processor())
             
         
                     
-            
-        
-                    
                         
             
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1776,133 +1912,8 @@ print(platform.processor())
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2333,10 +2344,10 @@ print(platform.processor())
 	 
 	 
 		
-			<a class="nav nav-prev" href="/dev/web/restful/" title="RESTful"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dev/misc/setup-postgresql/" title="How to Setup Postgresql"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/dev/misc/" title="Tools" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dev/misc/dockerfile_intro/" title="Dockerfile_intro" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

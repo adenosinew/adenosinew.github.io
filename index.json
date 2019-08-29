@@ -105,6 +105,27 @@
 	"content": " 1. uptime uptime 20:25:38 up 7 min, 3 users, load average: 0.24, 0.45, 0.27 #该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。  2. dmesg | tail dmesg | tail [ 51.424401] wlp5s0: RX AssocResp from 38:4c:90:8f:8c:85 (capab=0x831 status=0 aid=3) [ 51.426461] wlp5s0: associated [ 51.429463] ath: EEPROM regdomain: 0x8348 [ 51.429463] ath: EEPROM indicates we should expect a country code [ 51.429464] ath: doing EEPROM country-\u0026gt;regdmn map search [ 51.429465] ath: country maps to regdmn code: 0x3a [ 51.429465] ath: Country alpha2 being used: US [ 51.429466] ath: Regpair used: 0x3a [ 51.429466] ath: regdomain 0x8348 dynamically updated by country IE [ 51.679984] IPv6: ADDRCONF(NETDEV_CHANGE): wlp5s0: link becomes ready # 打印内核环形缓存区中的内容，可以用来查看一些错误；  3. vmstat 1 vmstat 1  4. mpstat -P ALL 1 "
 },
 {
+	"uri": "/dev/linux/network-cli/",
+	"title": "Basic networking commands in Linux",
+	"tags": [],
+	"description": "",
+	"content": " Intro Linux is a powerful operating system, and networking is an essential part of servers.\nIt provides lots of built-in and useful third party tools\nConnectivity ping Sends an ICMP echo message (one packet) to a host.\nPing means a packet was sent from your machine via ICMP, and echoed at the IP level. Ping tells you if the other Host is Up.\nping -c 3 www.google.com PING www.google.com (172.217.12.132): 56 data bytes 64 bytes from 172.217.12.132: icmp_seq=0 ttl=54 time=28.390 ms 64 bytes from 172.217.12.132: icmp_seq=1 ttl=54 time=47.900 ms 64 bytes from 172.217.12.132: icmp_seq=2 ttl=54 time=24.011 ms --- www.google.com ping statistics --- 3 packets transmitted, 3 packets received, 0.0% packet loss round-trip min/avg/max/stddev = 24.011/33.434/47.900/10.384 ms  telnet telnet connect destination host:port via a telnet protocol if connection establishes means connectivity between two hosts is working fine.\nNot available on macOS\narp Arp is used to translate IP addresses into Ethernet addresses.\narp -a  Routing Placeholder traceroute Print the route packets trace to network host.\ntraceroute blog.woos.me  dig DNS lookup utility\ndig (Domain Information Groper) is a flexible tool for interrogating DNS name servers.\ndig blog.woos.me  nslookup nslookup is a program to query Internet domain name servers.\nnslookup blog.woos.me  w Show who is logged on and what they are doing. Print user login, TTY, remote host, login time, idle time, current process.\nifup \u0026amp; ifdown tcpdump Dump traffic on a network.\n# Capture the traffic of a specific interface: tcpdump -i \u0026lt;eth0\u0026gt;  Reference basic linux networking commands\n"
+},
+{
+	"uri": "/dev/misc/authentication-protocol/",
+	"title": "Authentication Protocols",
+	"tags": [],
+	"description": "",
+	"content": " Terminology  Token vs Cookies Json Web Tokens (JWT) OpenID connect OAuth 2 LDAP SAML Kerboes AD \u0026amp; ADFS SSO  What is OpenID OpenID Connect (OIDC) is an authentication protocol, based on the OAuth 2.0 family of specifications. It uses simple JSON Web Tokens (JWT), which you can obtain using flows conforming to the OAuth 2.0 specifications.\nWhile OAuth 2.0 is about resource access and sharing, OIDC is all about user authentication. Its purpose is to give you one login for multiple sites. Each time you need to log in to a website using OIDC, you are redirected to your OpenID site where you login, and then taken back to the website.\n"
+},
+{
+	"uri": "/dev/cs/working-with-a-sql-database-in-go/",
+	"title": "Working With a SQL Database in Go",
+	"tags": [],
+	"description": "",
+	"content": " database/sql Go offers a clean SQL database API in its standard library database/sql package, but the specific database drivers must be installed separately.\nIt’s a smart approach because it provides a common interface that nearly every DB driver implements.\nIf you want to use MySQL, you can use https://github.com/go-sql-driver/mysql.\nIf you’re using Postgres, use https://github.com/lib/pq.\nYou just need to include the lib using import _, and the database/sql API will be configured to enable that driver:\nimport \u0026quot;database/sql\u0026quot; import _ \u0026quot;github.com/go-sql-driver/mysql\u0026quot;  Note\n import 下划线（如：import _ hello/imp）的作用：当导入一个包时，该包下的文件里所有init()函数都会被执行，然而，有些时候我们并不需要把整个包都导入进来，仅仅是是希望它执行init()函数而已。这个时候就可以使用 import _ 引用该包。即使用 import _ 包 只是引用该包，仅仅是为了调用init()函数，所以无法通过包名来调用包中的其他函数。\n Reference Working With a SQL Database in Go\nWhy we import SQL drives as the blank identifier (_) in Go\n"
+},
+{
 	"uri": "/dev/misc/setup-postgresql/",
 	"title": "How to Setup Postgresql",
 	"tags": [],

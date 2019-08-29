@@ -12,6 +12,19 @@
     
     
     <item>
+      <title>Basic networking commands in Linux</title>
+      <link>/dev/linux/network-cli/</link>
+      <pubDate>Wed, 28 Aug 2019 21:34:45 -0400</pubDate>
+      
+      <guid>/dev/linux/network-cli/</guid>
+      <description>Intro Linux is a powerful operating system, and networking is an essential part of servers.
+It provides lots of built-in and useful third party tools
+Connectivity ping Sends an ICMP echo message (one packet) to a host.
+Ping means a packet was sent from your machine via ICMP, and echoed at the IP level. Ping tells you if the other Host is Up.
+ping -c 3 www.google.com PING www.google.com (172.</description>
+    </item>
+    
+    <item>
       <title>Time Command Explaination</title>
       <link>/dev/linux/time-explain/</link>
       <pubDate>Tue, 23 Apr 2019 17:17:38 -0400</pubDate>

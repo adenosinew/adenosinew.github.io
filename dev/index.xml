@@ -12,6 +12,19 @@
     
     
     <item>
+      <title>Working With a SQL Database in Go</title>
+      <link>/dev/cs/working-with-a-sql-database-in-go/</link>
+      <pubDate>Sun, 25 Aug 2019 22:09:51 -0400</pubDate>
+      
+      <guid>/dev/cs/working-with-a-sql-database-in-go/</guid>
+      <description>database/sql Go offers a clean SQL database API in its standard library database/sql package, but the specific database drivers must be installed separately.
+It’s a smart approach because it provides a common interface that nearly every DB driver implements.
+If you want to use MySQL, you can use https://github.com/go-sql-driver/mysql.
+If you’re using Postgres, use https://github.com/lib/pq.
+You just need to include the lib using import _, and the database/sql API will be configured to enable that driver:</description>
+    </item>
+    
+    <item>
       <title>Python Platform module</title>
       <link>/dev/cs/python_platform/</link>
       <pubDate>Tue, 05 Mar 2019 10:06:08 -0500</pubDate>

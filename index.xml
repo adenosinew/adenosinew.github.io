@@ -88,6 +88,42 @@ yaourt -S bat  prettyping &amp;gt; ping fzf &amp;gt; ctrl + r In addition to sea
     </item>
     
     <item>
+      <title>Basic networking commands in Linux</title>
+      <link>/dev/linux/network-cli/</link>
+      <pubDate>Wed, 28 Aug 2019 21:34:45 -0400</pubDate>
+      
+      <guid>/dev/linux/network-cli/</guid>
+      <description>Intro Linux is a powerful operating system, and networking is an essential part of servers.
+It provides lots of built-in and useful third party tools
+Connectivity ping Sends an ICMP echo message (one packet) to a host.
+Ping means a packet was sent from your machine via ICMP, and echoed at the IP level. Ping tells you if the other Host is Up.
+ping -c 3 www.google.com PING www.google.com (172.</description>
+    </item>
+    
+    <item>
+      <title>Authentication Protocols</title>
+      <link>/dev/misc/authentication-protocol/</link>
+      <pubDate>Tue, 27 Aug 2019 14:48:04 -0400</pubDate>
+      
+      <guid>/dev/misc/authentication-protocol/</guid>
+      <description>Terminology  Token vs Cookies Json Web Tokens (JWT) OpenID connect OAuth 2 LDAP SAML Kerboes AD &amp;amp; ADFS SSO  What is OpenID OpenID Connect (OIDC) is an authentication protocol, based on the OAuth 2.0 family of specifications. It uses simple JSON Web Tokens (JWT), which you can obtain using flows conforming to the OAuth 2.0 specifications.
+While OAuth 2.0 is about resource access and sharing, OIDC is all about user authentication.</description>
+    </item>
+    
+    <item>
+      <title>Working With a SQL Database in Go</title>
+      <link>/dev/cs/working-with-a-sql-database-in-go/</link>
+      <pubDate>Sun, 25 Aug 2019 22:09:51 -0400</pubDate>
+      
+      <guid>/dev/cs/working-with-a-sql-database-in-go/</guid>
+      <description>database/sql Go offers a clean SQL database API in its standard library database/sql package, but the specific database drivers must be installed separately.
+It’s a smart approach because it provides a common interface that nearly every DB driver implements.
+If you want to use MySQL, you can use https://github.com/go-sql-driver/mysql.
+If you’re using Postgres, use https://github.com/lib/pq.
+You just need to include the lib using import _, and the database/sql API will be configured to enable that driver:</description>
+    </item>
+    
+    <item>
       <title>How to Setup Postgresql</title>
       <link>/dev/misc/setup-postgresql/</link>
       <pubDate>Sun, 25 Aug 2019 21:28:09 -0400</pubDate>

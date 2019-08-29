@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>Docker: From Zero to Hero :: Documentation for Hugo Learn Theme</title>
+    <title>Authentication Protocols :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1567044401" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/dev/misc/docker_beginner/">
+  <body class="" data-url="/dev/misc/authentication-protocol/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -465,7 +465,7 @@
  
   
     
-      <li data-nav-id="/dev/misc/authentication-protocol/" title="Authentication Protocols" class="dd-item ">
+      <li data-nav-id="/dev/misc/authentication-protocol/" title="Authentication Protocols" class="dd-item active">
         <a href="/dev/misc/authentication-protocol/">
         Authentication Protocols
         <i class="fas fa-check read-icon"></i>
@@ -541,7 +541,7 @@
  
   
     
-      <li data-nav-id="/dev/misc/docker_beginner/" title="Docker: From Zero to Hero" class="dd-item active">
+      <li data-nav-id="/dev/misc/docker_beginner/" title="Docker: From Zero to Hero" class="dd-item ">
         <a href="/dev/misc/docker_beginner/">
         Docker beginner tutorial
         <i class="fas fa-check read-icon"></i>
@@ -1104,7 +1104,7 @@
             
           
           
-            <a href='/'>adenosinew</a> > <a href='/dev/'>developer</a> > <a href='/dev/misc/'>Tools</a> > Docker: From Zero to Hero
+            <a href='/'>adenosinew</a> > <a href='/dev/'>developer</a> > <a href='/dev/misc/'>Tools</a> > Authentication Protocols
           
          
           
@@ -1123,8 +1123,8 @@
 <ul>
 <li>
 <ul>
-<li><a href="#dockerfile">Dockerfile</a></li>
-<li><a href="#reference">Reference</a></li>
+<li><a href="#terminology">Terminology</a></li>
+<li><a href="#what-is-openid">What is OpenID</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1139,7 +1139,7 @@
         
         <div id="body-inner">
           
-            <h1>Docker: From Zero to Hero</h1>
+            <h1>Authentication Protocols</h1>
           
 
         
@@ -1148,41 +1148,25 @@
 
 
 
-<h2 id="dockerfile">Dockerfile</h2>
-
-<pre><code># Dockerfile
-
-FROM node:latest
-
-WORKDIR /app
-
-COPY . .
-
-RUN npm install
-
-EXPOSE 3000
-
-ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
-</code></pre>
+<h2 id="terminology">Terminology</h2>
 
 <ul>
-<li>FROM, this is us selecting an OS image from Docker Hub. Docker Hub is a global repository that contains images that we can pull down locally. In our case we are choosing an image based on Ubuntu that has Node.js installed, it’s called node. We also specify that we want the latest version of it, by using the following tag :latest</li>
-<li>WORKDIR, this simply means we set a working directory. This is a way to set up for what is to happen later, in the next command below</li>
-<li>COPY, here we copy the files from the directory we are standing into the directory specified by our WORKDIR command</li>
-<li>RUN, this runs a command in the terminal, in our case we are installing all the libraries we need to build our Node.js express application</li>
-<li>EXPOSE, this means we are opening up a port, it is through this port that we communicate with our container</li>
-<li>ENTRYPOINT, this is where we should state how we start up our application, the commands need to be specified as an array so the array [“node”, “app.js”] will be translated to the node app.js in the terminal</li>
+<li>Token vs Cookies</li>
+<li>Json Web Tokens (JWT)</li>
+<li>OpenID connect</li>
+<li>OAuth 2</li>
+<li>LDAP</li>
+<li>SAML</li>
+<li>Kerboes</li>
+<li>AD &amp; ADFS</li>
+<li>SSO</li>
 </ul>
 
-<p>First things first, let’s create our image with the following command:</p>
+<h2 id="what-is-openid">What is OpenID</h2>
 
-<pre><code class="language-shell">docker build -t adenosinew/node:latest .
-</code></pre>
+<p><strong>OpenID Connect</strong> (OIDC) is an authentication protocol, based on the OAuth 2.0 family of specifications. It uses simple <strong>JSON Web Tokens</strong> (JWT), which you can obtain using flows conforming to the OAuth 2.0 specifications.</p>
 
-<h2 id="reference">Reference</h2>
-
-<p><a href="https://dev.to/softchris/docker---from-the-beginning-part-i-28c6">Docker - from the beginning, part I</a>
-<a href="https://dev.to/softchris/docker-from-the-beginning---part-ii-5g8n">Docker - from the beginning, part II</a></p>
+<p>While OAuth 2.0 is about resource access and sharing, OIDC is all about user authentication. Its purpose is to give you one login for multiple sites. Each time you need to log in to a website using OIDC, you are redirected to your OpenID site where you login, and then taken back to the website.</p>
 
 
 <footer class=" footline" >
@@ -1601,70 +1585,6 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -1760,6 +1680,70 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1847,70 +1831,6 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
                     
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2119,102 +2039,6 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -2282,6 +2106,51 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -2295,43 +2164,8 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
 
                     
                     
-                        
-                    
                     
 
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -2429,10 +2263,48 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
         
                     
+            
+        
+                    
+            
+        
+                    
                         
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -2498,6 +2370,54 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -2517,6 +2437,70 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2947,10 +2931,10 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
 	 
 	 
 		
-			<a class="nav nav-prev" href="/dev/misc/dockerfile_intro/" title="Dockerfile_intro"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dev/misc/10_basic_commands_for_linux_performance_detection/" title="Check Linux Performance CLI"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/dev/misc/terraform_useful/" title="Terraform Best Practice" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dev/misc/setup-postgresql/" title="How to Setup Postgresql" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

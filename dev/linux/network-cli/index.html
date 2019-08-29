@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>Docker: From Zero to Hero :: Documentation for Hugo Learn Theme</title>
+    <title>Basic networking commands in Linux :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1567044401" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/dev/misc/docker_beginner/">
+  <body class="" data-url="/dev/linux/network-cli/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -306,7 +306,7 @@
   
     
     <li data-nav-id="/dev/misc/" title="Tools" class="dd-item 
-        parent
+        
         
         
         ">
@@ -541,7 +541,7 @@
  
   
     
-      <li data-nav-id="/dev/misc/docker_beginner/" title="Docker: From Zero to Hero" class="dd-item active">
+      <li data-nav-id="/dev/misc/docker_beginner/" title="Docker: From Zero to Hero" class="dd-item ">
         <a href="/dev/misc/docker_beginner/">
         Docker beginner tutorial
         <i class="fas fa-check read-icon"></i>
@@ -784,7 +784,7 @@
   
     
     <li data-nav-id="/dev/linux/" title="Linux" class="dd-item 
-        
+        parent
         
         
         ">
@@ -810,7 +810,7 @@
  
   
     
-      <li data-nav-id="/dev/linux/network-cli/" title="Basic networking commands in Linux" class="dd-item ">
+      <li data-nav-id="/dev/linux/network-cli/" title="Basic networking commands in Linux" class="dd-item active">
         <a href="/dev/linux/network-cli/">
         Basic networking commands in Linux
         <i class="fas fa-check read-icon"></i>
@@ -1104,7 +1104,7 @@
             
           
           
-            <a href='/'>adenosinew</a> > <a href='/dev/'>developer</a> > <a href='/dev/misc/'>Tools</a> > Docker: From Zero to Hero
+            <a href='/'>adenosinew</a> > <a href='/dev/'>developer</a> > <a href='/dev/linux/'>Linux</a> > Basic networking commands in Linux
           
          
           
@@ -1123,7 +1123,23 @@
 <ul>
 <li>
 <ul>
-<li><a href="#dockerfile">Dockerfile</a></li>
+<li><a href="#intro">Intro</a></li>
+<li><a href="#connectivity">Connectivity</a>
+<ul>
+<li><a href="#ping"><code>ping</code></a></li>
+<li><a href="#telnet"><code>telnet</code></a></li>
+<li><a href="#arp"><code>arp</code></a></li>
+</ul></li>
+<li><a href="#routing">Routing</a></li>
+<li><a href="#placeholder">Placeholder</a>
+<ul>
+<li><a href="#traceroute"><code>traceroute</code></a></li>
+<li><a href="#dig"><code>dig</code></a></li>
+<li><a href="#nslookup"><code>nslookup</code></a></li>
+<li><a href="#w"><code>w</code></a></li>
+<li><a href="#ifup-ifdown"><code>ifup</code> &amp; <code>ifdown</code></a></li>
+<li><a href="#tcpdump"><code>tcpdump</code></a></li>
+</ul></li>
 <li><a href="#reference">Reference</a></li>
 </ul></li>
 </ul>
@@ -1139,7 +1155,7 @@
         
         <div id="body-inner">
           
-            <h1>Docker: From Zero to Hero</h1>
+            <h1>Basic networking commands in Linux</h1>
           
 
         
@@ -1148,41 +1164,90 @@
 
 
 
-<h2 id="dockerfile">Dockerfile</h2>
+<h2 id="intro">Intro</h2>
 
-<pre><code># Dockerfile
+<p>Linux is a powerful operating system, and networking is an essential part of servers.</p>
 
-FROM node:latest
+<p>It provides lots of built-in and useful third party tools</p>
 
-WORKDIR /app
+<h2 id="connectivity">Connectivity</h2>
 
-COPY . .
+<h3 id="ping"><code>ping</code></h3>
 
-RUN npm install
+<p>Sends an ICMP echo message (one packet) to a host.</p>
 
-EXPOSE 3000
+<p>Ping means a packet was sent from your machine via ICMP, and echoed at the IP level. Ping tells you if the other Host is Up.</p>
 
-ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
+<pre><code class="language-shell">ping -c 3 www.google.com
+
+PING www.google.com (172.217.12.132): 56 data bytes
+64 bytes from 172.217.12.132: icmp_seq=0 ttl=54 time=28.390 ms
+64 bytes from 172.217.12.132: icmp_seq=1 ttl=54 time=47.900 ms
+64 bytes from 172.217.12.132: icmp_seq=2 ttl=54 time=24.011 ms
+
+--- www.google.com ping statistics ---
+3 packets transmitted, 3 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 24.011/33.434/47.900/10.384 ms
 </code></pre>
 
-<ul>
-<li>FROM, this is us selecting an OS image from Docker Hub. Docker Hub is a global repository that contains images that we can pull down locally. In our case we are choosing an image based on Ubuntu that has Node.js installed, it’s called node. We also specify that we want the latest version of it, by using the following tag :latest</li>
-<li>WORKDIR, this simply means we set a working directory. This is a way to set up for what is to happen later, in the next command below</li>
-<li>COPY, here we copy the files from the directory we are standing into the directory specified by our WORKDIR command</li>
-<li>RUN, this runs a command in the terminal, in our case we are installing all the libraries we need to build our Node.js express application</li>
-<li>EXPOSE, this means we are opening up a port, it is through this port that we communicate with our container</li>
-<li>ENTRYPOINT, this is where we should state how we start up our application, the commands need to be specified as an array so the array [“node”, “app.js”] will be translated to the node app.js in the terminal</li>
-</ul>
+<h3 id="telnet"><code>telnet</code></h3>
 
-<p>First things first, let’s create our image with the following command:</p>
+<p>telnet connect destination host:port via a telnet protocol if connection establishes means connectivity between two hosts is working fine.</p>
 
-<pre><code class="language-shell">docker build -t adenosinew/node:latest .
+<p><strong>Not available on macOS</strong></p>
+
+<h3 id="arp"><code>arp</code></h3>
+
+<p>Arp is used to translate IP addresses into Ethernet addresses.</p>
+
+<pre><code class="language-shell">arp -a
+</code></pre>
+
+<h2 id="routing">Routing</h2>
+
+<h2 id="placeholder">Placeholder</h2>
+
+<h3 id="traceroute"><code>traceroute</code></h3>
+
+<p>Print the route packets trace to network host.</p>
+
+<pre><code class="language-shell">traceroute blog.woos.me
+</code></pre>
+
+<h3 id="dig"><code>dig</code></h3>
+
+<p>DNS lookup utility</p>
+
+<p>dig (Domain Information Groper) is a flexible tool for interrogating DNS name servers.</p>
+
+<pre><code class="language-shell">dig blog.woos.me
+</code></pre>
+
+<h3 id="nslookup"><code>nslookup</code></h3>
+
+<p>nslookup is a program to query Internet domain name servers.</p>
+
+<pre><code class="language-shell">nslookup blog.woos.me
+</code></pre>
+
+<h3 id="w"><code>w</code></h3>
+
+<p>Show who is logged on and what they are doing.
+Print user login, TTY, remote host, login time, idle time, current process.</p>
+
+<h3 id="ifup-ifdown"><code>ifup</code> &amp; <code>ifdown</code></h3>
+
+<h3 id="tcpdump"><code>tcpdump</code></h3>
+
+<p>Dump traffic on a network.</p>
+
+<pre><code class="language-shell"># Capture the traffic of a specific interface:
+tcpdump -i &lt;eth0&gt;
 </code></pre>
 
 <h2 id="reference">Reference</h2>
 
-<p><a href="https://dev.to/softchris/docker---from-the-beginning-part-i-28c6">Docker - from the beginning, part I</a>
-<a href="https://dev.to/softchris/docker-from-the-beginning---part-ii-5g8n">Docker - from the beginning, part II</a></p>
+<p><a href="https://itsfoss.com/basic-linux-networking-commands/">basic linux networking commands</a></p>
 
 
 <footer class=" footline" >
@@ -1472,6 +1537,8 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -1485,9 +1552,6 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1665,7 +1729,6 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
                 
                     
-                    
                 
                 
 
@@ -1681,9 +1744,6 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1830,7 +1890,6 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
             
                 
-                    
                     
                 
                 
@@ -1845,9 +1904,6 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
                 
                     
-                        
-                        
-                    
                 
                 
 
@@ -2024,7 +2080,6 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
                 
                     
-                    
                 
                 
 
@@ -2040,9 +2095,6 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2175,6 +2227,7 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
                 
                     
+                    
                 
                 
 
@@ -2188,6 +2241,7 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
                 
                     
+                    
                 
                 
 
@@ -2203,6 +2257,9 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2305,7 +2362,6 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
                 
                     
-                    
                 
                 
 
@@ -2318,9 +2374,6 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2497,7 +2550,6 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
             
                 
-                    
                     
                 
                 
@@ -2514,9 +2566,6 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2649,6 +2698,7 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
                 
                     
+                    
                 
                 
 
@@ -2661,6 +2711,7 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
             
                 
+                    
                     
                 
                 
@@ -2677,6 +2728,9 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2764,6 +2818,7 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
                 
                     
+                    
                 
                 
 
@@ -2776,6 +2831,7 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
             
                 
+                    
                     
                 
                 
@@ -2792,6 +2848,9 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2947,10 +3006,10 @@ ENTRYPOINT [&quot;node&quot;, &quot;app.js&quot;]
 	 
 	 
 		
-			<a class="nav nav-prev" href="/dev/misc/dockerfile_intro/" title="Dockerfile_intro"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dev/linux/" title="Linux"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/dev/misc/terraform_useful/" title="Terraform Best Practice" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dev/linux/time-explain/" title="Time Command Explaination" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

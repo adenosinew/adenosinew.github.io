@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>/dev/misc/</loc>
-    <lastmod>2019-02-13T12:24:50-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/dev/misc/vim_useful/</loc>
     <lastmod>2019-02-13T12:23:19-05:00</lastmod>
   </url>
@@ -77,7 +72,7 @@
   </url>
   
   <url>
-    <loc>/dev/linux/network-cli/</loc>
+    <loc>/dev/misc/network-cli/</loc>
     <lastmod>2019-08-28T21:34:45-04:00</lastmod>
   </url>
   
@@ -122,7 +117,7 @@
   </url>
   
   <url>
-    <loc>/dev/linux/time-explain/</loc>
+    <loc>/dev/misc/time-explain/</loc>
     <lastmod>2019-04-23T17:17:38-04:00</lastmod>
   </url>
   
@@ -132,7 +127,7 @@
   </url>
   
   <url>
-    <loc>/dev/linux/shell_compatiability/</loc>
+    <loc>/dev/misc/shell_compatiability/</loc>
     <lastmod>2019-04-04T15:20:52-04:00</lastmod>
   </url>
   
@@ -142,12 +137,12 @@
   </url>
   
   <url>
-    <loc>/dev/linux/linux-cheatsheet/</loc>
+    <loc>/dev/misc/linux-cheatsheet/</loc>
     <lastmod>2019-03-11T21:33:22-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/dev/linux/shells/</loc>
+    <loc>/dev/misc/work-with-different-shells/</loc>
     <lastmod>2019-03-11T21:33:22-04:00</lastmod>
   </url>
   
@@ -187,12 +182,12 @@
   </url>
   
   <url>
-    <loc>/dev/linux/systemd_mount/</loc>
+    <loc>/dev/misc/systemd_mount/</loc>
     <lastmod>2019-02-14T18:05:39-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/dev/linux/</loc>
+    <loc>/dev/misc/</loc>
     <lastmod>2019-02-14T18:04:45-05:00</lastmod>
   </url>
   

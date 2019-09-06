@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
 <link rel="icon" href="/images/site_elements/star_logo.png" type="image/x-icon" />
-    <title>Elastic Stacks Setup :: Documentation for Hugo Learn Theme</title>
+    <title>Basic networking commands in Linux :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1567736541" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/cloud/elastic-stacks-setup/">
+  <body class="" data-url="/dev/misc/network-cli/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -277,7 +277,7 @@
   
     
     <li data-nav-id="/dev/" title="developer" class="dd-item 
-        
+        parent
         
         
         ">
@@ -425,7 +425,7 @@
   
     
     <li data-nav-id="/dev/misc/" title="Linux" class="dd-item 
-        
+        parent
         
         
         ">
@@ -584,7 +584,7 @@
  
   
     
-      <li data-nav-id="/dev/misc/network-cli/" title="Basic networking commands in Linux" class="dd-item ">
+      <li data-nav-id="/dev/misc/network-cli/" title="Basic networking commands in Linux" class="dd-item active">
         <a href="/dev/misc/network-cli/">
         Basic networking commands in Linux
         <i class="fas fa-check read-icon"></i>
@@ -905,7 +905,7 @@
   
     
     <li data-nav-id="/cloud/" title="Cloud" class="dd-item 
-        parent
+        
         
         
         ">
@@ -950,7 +950,7 @@
  
   
     
-      <li data-nav-id="/cloud/elastic-stacks-setup/" title="Elastic Stacks Setup" class="dd-item active">
+      <li data-nav-id="/cloud/elastic-stacks-setup/" title="Elastic Stacks Setup" class="dd-item ">
         <a href="/cloud/elastic-stacks-setup/">
         Elastic Stacks Setup
         <i class="fas fa-check read-icon"></i>
@@ -1064,7 +1064,13 @@
             
           
           
-            <a href='/'>adenosinew</a> > <a href='/cloud/'>Cloud</a> > Elastic Stacks Setup
+            
+            
+          
+          
+            <a href='/'>adenosinew</a> > <a href='/dev/'>developer</a> > <a href='/dev/misc/'>Linux</a> > Basic networking commands in Linux
+          
+         
           
          
           
@@ -1081,12 +1087,22 @@
 <ul>
 <li>
 <ul>
-<li><a href="#what-is-elastic-stacks">What is Elastic Stacks</a></li>
-<li><a href="#install-elastic-stacks">Install Elastic Stacks</a></li>
-<li><a href="#test-the-installation">Test the installation</a></li>
-<li><a href="#work-with-windows">Work with Windows</a>
+<li><a href="#intro">Intro</a></li>
+<li><a href="#connectivity">Connectivity</a>
 <ul>
-<li><a href="#installing-and-configuring-the-winlogbeat">Installing and configuring the winlogbeat</a></li>
+<li><a href="#ping"><code>ping</code></a></li>
+<li><a href="#telnet"><code>telnet</code></a></li>
+<li><a href="#arp"><code>arp</code></a></li>
+</ul></li>
+<li><a href="#routing">Routing</a></li>
+<li><a href="#placeholder">Placeholder</a>
+<ul>
+<li><a href="#traceroute"><code>traceroute</code></a></li>
+<li><a href="#dig"><code>dig</code></a></li>
+<li><a href="#nslookup"><code>nslookup</code></a></li>
+<li><a href="#w"><code>w</code></a></li>
+<li><a href="#ifup-ifdown"><code>ifup</code> &amp; <code>ifdown</code></a></li>
+<li><a href="#tcpdump"><code>tcpdump</code></a></li>
 </ul></li>
 <li><a href="#reference">Reference</a></li>
 </ul></li>
@@ -1103,7 +1119,7 @@
         
         <div id="body-inner">
           
-            <h1>Elastic Stacks Setup</h1>
+            <h1>Basic networking commands in Linux</h1>
           
 
         
@@ -1112,37 +1128,90 @@
 
 
 
-<h2 id="what-is-elastic-stacks">What is Elastic Stacks</h2>
+<h2 id="intro">Intro</h2>
 
-<p>The Elastic Stack — formerly known as the <em>ELK Stack</em> — is a collection of open-source software produced by <a href="https://www.elastic.co/">Elastic</a> which allows you to search, analyze, and visualize logs generated from any source in any format, a practice known as <em>centralized logging</em>. Centralized logging can be very useful when attempting to identify problems with your servers or applications, as it allows you to search through all of your logs in a single place. It&rsquo;s also useful because it allows you to identify issues that span multiple servers by correlating their logs during a specific time frame.</p>
+<p>Linux is a powerful operating system, and networking is an essential part of servers.</p>
 
-<p>The Elastic Stack has four main components:</p>
+<p>It provides lots of built-in and useful third party tools</p>
 
-<ul>
-<li><a href="https://www.elastic.co/products/elasticsearch"><strong>Elasticsearch</strong></a>: a distributed <a href="https://en.wikipedia.org/wiki/Representational_state_transfer"><em>RESTful</em></a> search engine which stores all of the collected data. <em>Use Memory</em></li>
-<li><a href="https://www.elastic.co/products/logstash"><strong>Logstash</strong></a>: the data processing component of the Elastic Stack which sends incoming data to Elasticsearch.</li>
-<li><a href="https://www.elastic.co/products/kibana"><strong>Kibana</strong></a>: a web interface for searching and visualizing logs.</li>
-<li><a href="https://www.elastic.co/products/beats"><strong>Beats</strong></a>: lightweight, single-purpose data shippers that can send data from hundreds or thousands of machines to either Logstash or Elasticsearch.</li>
-</ul>
+<h2 id="connectivity">Connectivity</h2>
 
-<h2 id="install-elastic-stacks">Install Elastic Stacks</h2>
+<h3 id="ping"><code>ping</code></h3>
 
-<p>TODO</p>
+<p>Sends an ICMP echo message (one packet) to a host.</p>
 
-<h2 id="test-the-installation">Test the installation</h2>
+<p>Ping means a packet was sent from your machine via ICMP, and echoed at the IP level. Ping tells you if the other Host is Up.</p>
 
-<p>TODO</p>
+<pre><code class="language-shell">ping -c 3 www.google.com
 
-<h2 id="work-with-windows">Work with Windows</h2>
+PING www.google.com (172.217.12.132): 56 data bytes
+64 bytes from 172.217.12.132: icmp_seq=0 ttl=54 time=28.390 ms
+64 bytes from 172.217.12.132: icmp_seq=1 ttl=54 time=47.900 ms
+64 bytes from 172.217.12.132: icmp_seq=2 ttl=54 time=24.011 ms
 
-<h3 id="installing-and-configuring-the-winlogbeat">Installing and configuring the winlogbeat</h3>
+--- www.google.com ping statistics ---
+3 packets transmitted, 3 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 24.011/33.434/47.900/10.384 ms
+</code></pre>
 
-<pre><code class="language-powershell">Test-NetConnection elastic-instance-ip -Port 5044
+<h3 id="telnet"><code>telnet</code></h3>
+
+<p>telnet connect destination host:port via a telnet protocol if connection establishes means connectivity between two hosts is working fine.</p>
+
+<p><strong>Not available on macOS</strong></p>
+
+<h3 id="arp"><code>arp</code></h3>
+
+<p>Arp is used to translate IP addresses into Ethernet addresses.</p>
+
+<pre><code class="language-shell">arp -a
+</code></pre>
+
+<h2 id="routing">Routing</h2>
+
+<h2 id="placeholder">Placeholder</h2>
+
+<h3 id="traceroute"><code>traceroute</code></h3>
+
+<p>Print the route packets trace to network host.</p>
+
+<pre><code class="language-shell">traceroute blog.woos.me
+</code></pre>
+
+<h3 id="dig"><code>dig</code></h3>
+
+<p>DNS lookup utility</p>
+
+<p>dig (Domain Information Groper) is a flexible tool for interrogating DNS name servers.</p>
+
+<pre><code class="language-shell">dig blog.woos.me
+</code></pre>
+
+<h3 id="nslookup"><code>nslookup</code></h3>
+
+<p>nslookup is a program to query Internet domain name servers.</p>
+
+<pre><code class="language-shell">nslookup blog.woos.me
+</code></pre>
+
+<h3 id="w"><code>w</code></h3>
+
+<p>Show who is logged on and what they are doing.
+Print user login, TTY, remote host, login time, idle time, current process.</p>
+
+<h3 id="ifup-ifdown"><code>ifup</code> &amp; <code>ifdown</code></h3>
+
+<h3 id="tcpdump"><code>tcpdump</code></h3>
+
+<p>Dump traffic on a network.</p>
+
+<pre><code class="language-shell"># Capture the traffic of a specific interface:
+tcpdump -i &lt;eth0&gt;
 </code></pre>
 
 <h2 id="reference">Reference</h2>
 
-<p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elastic-stack-on-ubuntu-18-04">Install ELK on ubuntu 18.04</a></p>
+<p><a href="https://itsfoss.com/basic-linux-networking-commands/">basic linux networking commands</a></p>
 
 
 <footer class=" footline" >
@@ -1416,6 +1485,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1430,6 +1500,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1542,6 +1615,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1554,6 +1628,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1666,6 +1743,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1683,6 +1761,9 @@
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -1991,6 +2072,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -2005,6 +2087,9 @@
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -2117,6 +2202,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2132,6 +2218,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2379,6 +2468,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2391,6 +2481,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2504,6 +2597,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2519,6 +2613,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2765,7 +2862,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -2779,9 +2875,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2798,7 +2891,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -2815,9 +2907,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2842,10 +2931,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/cloud/elasticsearch-query-intro/" title="Elasticsearch Query Intro"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dev/misc/10_basic_commands_for_linux_performance_detection/" title="Check Linux Performance CLI"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/cloud/logstash-101/" title="Intro to logstash" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dev/misc/authentication-protocol/" title="Authentication Protocols" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tools on Documentation for Hugo Learn Theme</title>
+    <title>Linux on Documentation for Hugo Learn Theme</title>
     <link>/dev/misc/</link>
-    <description>Recent content in Tools on Documentation for Hugo Learn Theme</description>
+    <description>Recent content in Linux on Documentation for Hugo Learn Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 13 Feb 2019 12:24:50 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 14 Feb 2019 18:04:45 -0500</lastBuildDate>
     
 	<atom:link href="/dev/misc/index.xml" rel="self" type="application/rss+xml" />
     
@@ -88,6 +88,19 @@ yaourt -S bat  prettyping &amp;gt; ping fzf &amp;gt; ctrl + r In addition to sea
     </item>
     
     <item>
+      <title>Basic networking commands in Linux</title>
+      <link>/dev/misc/network-cli/</link>
+      <pubDate>Wed, 28 Aug 2019 21:34:45 -0400</pubDate>
+      
+      <guid>/dev/misc/network-cli/</guid>
+      <description>Intro Linux is a powerful operating system, and networking is an essential part of servers.
+It provides lots of built-in and useful third party tools
+Connectivity ping Sends an ICMP echo message (one packet) to a host.
+Ping means a packet was sent from your machine via ICMP, and echoed at the IP level. Ping tells you if the other Host is Up.
+ping -c 3 www.google.com PING www.google.com (172.</description>
+    </item>
+    
+    <item>
       <title>Authentication Protocols</title>
       <link>/dev/misc/authentication-protocol/</link>
       <pubDate>Tue, 27 Aug 2019 14:48:04 -0400</pubDate>
@@ -143,12 +156,53 @@ RUN [&amp;quot;yum&amp;quot;, &amp;quot;install&amp;quot;, &amp;quot;httpd&amp;q
     </item>
     
     <item>
+      <title>Time Command Explaination</title>
+      <link>/dev/misc/time-explain/</link>
+      <pubDate>Tue, 23 Apr 2019 17:17:38 -0400</pubDate>
+      
+      <guid>/dev/misc/time-explain/</guid>
+      <description>Use time # interactive time command # Results # Use it in file \time -o time.log command # Results  Reference Linux time command</description>
+    </item>
+    
+    <item>
+      <title>Shells</title>
+      <link>/dev/misc/shell_compatiability/</link>
+      <pubDate>Thu, 04 Apr 2019 15:20:52 -0400</pubDate>
+      
+      <guid>/dev/misc/shell_compatiability/</guid>
+      <description>Shell types  sh or Bourne Shell: the original shell still used on UNIX systems and in UNIX-related environments. This is the basic shell, a small program with few features. While this is not the standard shell, it is still available on every Linux system for compatibility with UNIX programs. bash or Bourne Again shell: the standard GNU shell, intuitive and flexible. Probably most advisable for beginning users while being at the same time a powerful tool for the advanced and professional user.</description>
+    </item>
+    
+    <item>
       <title>Docker: From Zero to Hero</title>
       <link>/dev/misc/docker_beginner/</link>
       <pubDate>Wed, 13 Mar 2019 18:02:14 -0400</pubDate>
       
       <guid>/dev/misc/docker_beginner/</guid>
       <description>Dockerfile # Dockerfile FROM node:latest WORKDIR /app COPY . . RUN npm install EXPOSE 3000 ENTRYPOINT [&amp;quot;node&amp;quot;, &amp;quot;app.js&amp;quot;]   FROM, this is us selecting an OS image from Docker Hub. Docker Hub is a global repository that contains images that we can pull down locally. In our case we are choosing an image based on Ubuntu that has Node.js installed, it’s called node. We also specify that we want the latest version of it, by using the following tag :latest WORKDIR, this simply means we set a working directory.</description>
+    </item>
+    
+    <item>
+      <title>Bash Cheatsheet on macOS</title>
+      <link>/dev/misc/linux-cheatsheet/</link>
+      <pubDate>Mon, 11 Mar 2019 21:33:22 -0400</pubDate>
+      
+      <guid>/dev/misc/linux-cheatsheet/</guid>
+      <description>Overview Jure did a very impressive job on the Linux cheatsheet.1 It covered generic linux and some part of ubuntu and Debian distribution.
+Since I am a user of macOS, a lot of shortcuts and commands are not available on macOS&amp;rsquo;s platform, thus I am going to write my own cheatsheet.
+You can also see this one as a best practice of using terminal on macOS.
+Terminal shortcuts [macOS iTerm2] Package management Homebrew is a widely used package management tool on macOS platform.</description>
+    </item>
+    
+    <item>
+      <title>Work with Different Shells</title>
+      <link>/dev/misc/work-with-different-shells/</link>
+      <pubDate>Mon, 11 Mar 2019 21:33:22 -0400</pubDate>
+      
+      <guid>/dev/misc/work-with-different-shells/</guid>
+      <description>There are several shells such as bash, sh, ksh, zsh, fish and many other lesser known shells available on Linux.
+Bash (/bin/bash) is a popular shell on most if not all Linux systems, and it’s normally the default shell for user accounts.
+When creating user accounts with the useradd or adduser utilities, the --shell flag can be used to specify the name of a user’s login shell other than that specified in the respective configuration files.</description>
     </item>
     
     <item>
@@ -186,6 +240,15 @@ Schema (database)
 User Account Contains
  username password Email and etc.  Computer Account Contains
  computer name UID and etc.  Groups OU (Organization Unit) </description>
+    </item>
+    
+    <item>
+      <title>Mount a filesystem</title>
+      <link>/dev/misc/systemd_mount/</link>
+      <pubDate>Thu, 14 Feb 2019 18:05:39 -0500</pubDate>
+      
+      <guid>/dev/misc/systemd_mount/</guid>
+      <description>tldr description of mount tldr mount mount Provides access to an entire filesystem in one directory. - Show all mounted filesystems: mount - Mount a device to a directory: mount -t filesystem_type path/to/device_file path/to/target_directory - Mount a CD-ROM device (with the filetype ISO9660) to /cdrom (readonly): mount -t iso9660 -o ro /dev/cdrom /cdrom - Mount all the filesystem defined in /etc/fstab: mount -a - Mount a specific filesystem described in /etc/fstab (e.</description>
     </item>
     
     <item>
